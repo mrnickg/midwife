@@ -191,7 +191,7 @@ function custom_update_job_data_products( $job_id, $values ) {
      'post_author' => $user_id,
      'post_content' => '',
      'post_status' => "publish",
-     'post_title' => "Appointment_".$user_id,
+     'post_title' => "Select a date",
      'post_parent' => '',
      'post_type' => "product",
 
@@ -266,6 +266,8 @@ function custom_update_job_data_products( $job_id, $values ) {
      update_post_meta( $product_post_id, '_wc_booking_requires_confirmation', "no" );
      update_post_meta( $product_post_id, '_wc_booking_availability', array() );
 
+     update_post_meta( $product_post_id, '_vendor_name', $current_user->display_name );
+
 
 
 
@@ -337,3 +339,87 @@ function add_edit_button() {
 }
 
 add_action( 'listify_single_job_listing_actions_after', 'add_edit_button');
+
+function billing_details_title( $title ) {
+	$title = 'Your Details';
+	return $title;
+}
+
+add_filter( 'woocommerce_billing_details_title', 'billing_details_title');
+
+function add_booking_details() {
+	$cart = WC()->cart->get_cart();
+	$booking = array_values($cart)[0];
+	$vendorid = $booking['data']->get_post_data()->post_author;
+	$vendor_data = get_userdata((string)$vendorid);
+	$vendor_name = $vendor_data->first_name." ".$vendor_data->last_name;
+	?>
+	<p>You have chosen an appointment with <?php echo $vendor_name; ?>on <?php echo $booking['booking']['date']." at ".$booking['booking']['time']; ?></p>
+	<p>Please fill in your details and the Midwife will visit you at the address listed.  You will receive a confirmation email shortly.</p>
+		<?php
+}
+
+add_action( 'woocommerce_checkout_before_customer_details', 'add_booking_details');
+
+/**function our_order_review_template($located, $template_name, $args, $template_path, $default_path) {
+	if ($template_name == 'checkout/review-order.php') {
+		$located = wc_locate_template( 'templates/bh-order-review.php', '', '');
+		if ( ! file_exists( $located ) ) {
+			_doing_it_wrong( __FUNCTION__, sprintf( '<code>%s</code> does not exist.', $located ), '2.1' );
+			return null;
+		}
+	}
+
+	return $located;
+}
+
+add_filter( 'wc_get_template', 'our_order_review_template', 10, 5);*/
+
+function show_order_review( $show_order_review) {
+	$show_order_review = false;
+	return $show_order_review;
+}
+
+add_filter( 'woocommerce_show_order_review', 'show_order_review');
+
+function order_button_text( $text ) {
+	$text = 'Book Now';
+	return $text;
+}
+
+add_filter( 'woocommerce_order_button_text', 'order_button_text');
+
+function order_received_text( $text, $order ) {
+	$text = "Thank you.  Your booking has been made.  Your midwife will visit you at the time and location provided.";
+	return $text;
+}
+
+add_filter( 'woocommerce_thankyou_order_received_text', 'order_received_text', 10, 2);
+
+function order_received_display_order_details ( $display_details ) {
+	$display_details = false;
+	return $display_details;
+}
+
+add_filter( 'woocommerce_order_received_display_details', 'order_received_display_order_details');
+
+function booking_details_table( $order_id ) {
+
+	if ( ! $order_id ) return;
+
+	wc_get_template( 'templates/booking-received.php', array(
+		'order_id' => $order_id
+	) );
+
+}
+
+remove_action( 'woocommerce_thankyou', 'woocommerce_order_details_table', 10 );
+remove_action( 'woocommerce_order_details_after_order_table', 'woocommerce_order_again_button', 10 );
+add_action( 'woocommerce_thankyou', 'booking_details_table', 10 );
+
+function remove_items_from_cart() {
+//TODO do this cleaner
+	WC()->cart->empty_cart();
+}
+
+add_action('woocommerce_before_add_to_cart_button', 'remove_items_from_cart');
