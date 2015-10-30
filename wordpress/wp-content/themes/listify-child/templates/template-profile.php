@@ -30,7 +30,7 @@ if (count($current_user_posts) > 0) {
 else {
 
 	//$action_url = get_permalink(wc_get_page_id('submit-listing'));
-    $action_url = '/submit-listing';
+    $action_url = '/submit-profile';
     header('Location: ' . $action_url, true, 301 );
     die();
 

@@ -235,12 +235,6 @@ function custom_submit_job_form_fields( $fields ) {
 add_filter( 'submit_job_form_fields', 'custom_submit_job_form_fields');
 
 
-function add_postpartum_fields_values( $fields, $job) {
-
-}
-
-add_filter('submit_job_form_fields_get_job_data', 'add_postpartum_field_values', 10, 2);
-
 /**
 	Now we have to create our own job when the form is submitted
 */
