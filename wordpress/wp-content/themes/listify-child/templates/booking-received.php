@@ -17,3 +17,4 @@ $order_item = reset($order->get_items());
 <?php wc_get_template( 'templates/midwife-details.php', array( 'order' => $order, 'booking' => $order_item ) ); ?>
 
 <?php wc_get_template( 'templates/customer-details.php', array( 'order' => $order, 'booking' => $order_item ) ); ?>
+	

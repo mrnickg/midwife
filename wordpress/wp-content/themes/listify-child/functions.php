@@ -51,22 +51,62 @@ add_filter('authenticate', 'internet_allow_email_login', 20, 3);
 function wooc_extra_register_fields() {
 	?>
 
-	<p class="form-row form-row-wide">
+	<!--p class="form-row form-row-wide">
 	<label for="reg_user_role"><?php _e( 'I am a...', 'woocommerce' ); ?> <span class="required">*</span></label>
 	<select multiple="multiple" name="role" id="role" class="job-manager-multiselect" >
 			<option value="customer" selected="selected">Parent</option>
 			<option value="shop_manager"  >Midwife</option>
 	</select>
+	</p-->
+	<!--script type="text/javascript">
+		$("input[name=role]").click(function () {
+		    var val = $(this).val();
+		    // hide all optional elements
+		    $('.midwife').css('display','none');
+
+		    if(val == "Midwife") {
+		          $('.midwife').css('display','block');
+		    else {
+		          $('.midwife').css('display','none');
+		    }
+		});
+
+	</script-->
+	<p class="form-row form-row-wide">
+	<label for="reg_user_role"><?php _e( 'I am a...', 'woocommerce' ); ?> <span class="required">*</span></label>
+		<input type="radio" name="role" id="role" value="customer" checked="checked">Parent<br/>
+		<input type="radio" name="role" id="role" value="shop_manager">Midwife
 	</p>
 
 	<?php
 }
 
-add_action( 'woocommerce_register_form', 'wooc_extra_register_fields' );
+add_action( 'woocommerce_register_form_start', 'wooc_extra_register_fields' );
+
+function wooc_extra_register_fields_after() {
+	?>
+	<p class="form-row form-row-wide">
+		<label for="reg_first_name" class="midwife"><?php _e( 'First Name', 'woocommerce' ); ?> <span class="required">*</span></label>
+		<input type="text" class="input-text midwife" name="first_name" id="first_name" value="<?php if ( ! empty( $_POST['first_name'] ) ) echo esc_attr( $_POST['first_name'] ); ?>" />
+	</p>
+	<p class="form-row form-row-wide">
+		<label for="reg_last_name" class="midwife"><?php _e( 'Last Name', 'woocommerce' ); ?> <span class="required">*</span></label>
+		<input type="text" class="input-text midwife" name="last_name" id="last_name" value="<?php if ( ! empty( $_POST['last_name'] ) ) echo esc_attr( $_POST['last_name'] ); ?>" />
+	</p>
+	<?php
+}
+
+add_action( 'woocommerce_register_form', 'wooc_extra_register_fields_after');
 
 function wooc_validate_extra_register_fields( $username, $email, $validation_errors ) {
 	if ( isset( $_POST['role'] ) && empty( $_POST['role'] ) ) {
 		$validation_errors->add( 'roles_error', __( 'Please select Parent or Midwife', 'woocommerce' ) );
+	}
+	if ( isset( $_POST['first_name'] ) && empty( $_POST['first_name'] ) ) {
+		$validation_errors->add( 'roles_error', __( 'Please enter your first name', 'woocommerce' ) );
+	}
+	if ( isset( $_POST['last_name'] ) && empty( $_POST['last_name'] ) ) {
+		$validation_errors->add( 'roles_error', __( 'Please enter your last name', 'woocommerce' ) );
 	}
 
 }
@@ -77,6 +117,12 @@ add_action( 'woocommerce_register_post', 'wooc_validate_extra_register_fields', 
 function custom_new_customer_data($new_customer_data){
 	if ( isset( $_POST['role'])) {
 		$new_customer_data['role'] = $_POST['role'];
+	}
+	if ( isset( $_POST['first_name'])) {
+		$new_customer_data['first_name'] = $_POST['first_name'];
+	}
+	if ( isset( $_POST['last_name'])) {
+		$new_customer_data['last_name'] = $_POST['last_name'];
 	}
     
     return $new_customer_data;
@@ -174,10 +220,26 @@ add_action( 'woocommerce_created_customer', 'wc_create_vendor_on_registration', 
 */
 function custom_submit_job_form_fields( $fields ) {
 	unset($fields['company']['products']);
+
+	$fields[ 'job' ][ '_postpartum' ] = array(
+			'label' => __( 'Postpartum Care Options', 'listify' ),
+			'type' => 'postpartum-options',
+			'placeholder' => '',
+			'required' => false,
+			'priority' => 4.35,
+		);
+
 	return $fields;
 }
 
 add_filter( 'submit_job_form_fields', 'custom_submit_job_form_fields');
+
+
+function add_postpartum_fields_values( $fields, $job) {
+
+}
+
+add_filter('submit_job_form_fields_get_job_data', 'add_postpartum_field_values', 10, 2);
 
 /**
 	Now we have to create our own job when the form is submitted
@@ -187,95 +249,181 @@ function custom_update_job_data_products( $job_id, $values ) {
 	$user_id 		= get_current_user_id();
 	$current_user   = wp_get_current_user();
 
-	$product_post = array(
-     'post_author' => $user_id,
-     'post_content' => '',
-     'post_status' => "publish",
-     'post_title' => "Select a date",
-     'post_parent' => '',
-     'post_type' => "product",
+	$post_args = array(
+		'author' => $user_id,
+		'post_type' => "product"
+	);
+
+	$posts = get_posts($post_args);
+
+	$pre_weeks = $values['job']['_postpartum']['postpartum_pre_weeks'];
+    $post_weeks = $values['job']['_postpartum']['postpartum_post_weeks'];
+
+    $block = $pre_weeks*7 + $post_weeks*7;
+
+	foreach ( $posts as $val ) {
+		if ($val->post_title == 'Postpartum Care') {
+			update_post_meta( $val->ID, '_wc_booking_qty', $values['job']['_postpartum']['postpartum_max_booking'] );
+			update_post_meta( $val->ID, '_wc_booking_duration', $block );
+			return;
+		}
+	}
+
+	if (count($posts) > 0) {
+		return;
+	}
+
+	$service_product = array(
+     	'author' => $user_id,
+     	'post_content' => '',
+     	'post_status' => "publish",
+     	'post_title' => "Service Appointment",
+     	'post_parent' => '',
+     	'post_type' => "product",
 
      );
-      //Create post
-     $product_post_id = wp_insert_post( $product_post, $wp_error );
-     if($product_post_id){
-	     $attach_id = get_post_meta($product_post->parent_id, "_thumbnail_id", true);
-	     add_post_meta($product_post_id, '_thumbnail_id', $attach_id);
-    }
-     wp_set_object_terms($product_post_id, 'booking', 'product_type');
-     wp_set_object_terms($product_post_id, $current_user->user_login, 'shop_vendor');
+
+	//Create post
+	$service_product_id = wp_insert_post( $service_product, $wp_error );
+	if($service_product_id){
+	 	$attach_id = get_post_meta($service_product->parent_id, "_thumbnail_id", true);
+	 	add_post_meta($service_product_id, '_thumbnail_id', $attach_id);
+	}
+
+	//Set Terms
+	wp_set_object_terms($service_product_id, 'booking', 'product_type');
+	wp_set_object_terms($service_product_id, $current_user->user_login, 'shop_vendor');
+
+	// update_post_meta( $service_product_id, '_visibility', 'visible' );
+	// update_post_meta( $service_product_id, '_stock_status', 'instock');
+	// update_post_meta( $service_product_id, 'total_sales', '0');
+	// update_post_meta( $service_product_id, '_downloadable', 'no');
+	update_post_meta( $service_product_id, '_virtual', 'yes');
+	// update_post_meta( $service_product_id, '_regular_price', "" );
+	// update_post_meta( $service_product_id, '_sale_price', "" );
+	// update_post_meta( $service_product_id, '_purchase_note', "" );
+	// update_post_meta( $service_product_id, '_featured', "no" );
+	// update_post_meta( $service_product_id, '_weight', "" );
+	// update_post_meta( $service_product_id, '_length', "" );
+	// update_post_meta( $service_product_id, '_width', "" );
+	// update_post_meta( $service_product_id, '_height', "" );
+	// update_post_meta( $service_product_id, '_sku', "");
+	// update_post_meta( $service_product_id, '_product_attributes', array());
+	// update_post_meta( $service_product_id, '_sale_price_dates_from', "" );
+	// update_post_meta( $service_product_id, '_sale_price_dates_to', "" );
+	// update_post_meta( $service_product_id, '_price', "0" );
+	// update_post_meta( $service_product_id, '_manage_stock', "no" );
+	// update_post_meta( $service_product_id, '_backorders', "no" );
+	// update_post_meta( $service_product_id, '_upsell_ids', array() );
+	// update_post_meta( $service_product_id, '_crosssell_ids', array() );
+	// update_post_meta( $service_product_id, '_wc_booking_min_duration', "1" );
+	// update_post_meta( $service_product_id, '_wc_booking_max_duration', "1" );
+	update_post_meta( $service_product_id, '_wc_booking_enable_range_picker', "no" );
+	update_post_meta( $service_product_id, '_wc_booking_calendar_display_mode', "always_visible");
+	update_post_meta( $service_product_id, '_wc_booking_qty', "1" );
+	// update_post_meta( $service_product_id, '_wc_booking_has_persons', "no" );
+	// update_post_meta( $service_product_id, '_wc_booking_person_qty_multiplier', "no" );
+	// update_post_meta( $service_product_id, '_wc_booking_person_cost_multiplier', "no" );
+	// update_post_meta( $service_product_id, '_wc_booking_min_persons_group', "1" );
+	// update_post_meta( $service_product_id, '_wc_booking_max_persons_group', "1" );
+	// update_post_meta( $service_product_id, '_wc_booking_has_person_types', "no" );
+	update_post_meta( $service_product_id, '_wc_booking_has_resources', "yes" );
+	update_post_meta( $service_product_id, '_wc_booking_resources_assignment', "customer" );
+	update_post_meta( $service_product_id, '_wc_booking_duration_type', "fixed" );
+	update_post_meta( $service_product_id, '_wc_booking_duration', "1" );
+	update_post_meta( $service_product_id, '_wc_booking_duration_unit', "hour" );
+	update_post_meta( $service_product_id, '_wc_booking_user_can_cancel', "yes" );
+	update_post_meta( $service_product_id, '_wc_booking_cancel_limit', "1" );
+	update_post_meta( $service_product_id, '_wc_booking_cancel_limit_unit', "day" );
+	// update_post_meta( $service_product_id, '_wc_booking_max_date', "12" );
+	// update_post_meta( $service_product_id, '_wc_booking_max_date_unit', "month" );
+	// update_post_meta( $service_product_id, '_wc_booking_min_date', "" );
+	// update_post_meta( $service_product_id, '_wc_booking_min_date_unit', "month" );
+	// update_post_meta( $service_product_id, '_wc_booking_default_date_availability', "available" );
+	// update_post_meta( $service_product_id, '_wc_booking_check_availability_against', "" );
+	// update_post_meta( $service_product_id, '_wc_booking_resouce_label', "" );
+	// update_post_meta( $service_product_id, '_wc_booking_pricing', array() );
+	// update_post_meta( $service_product_id, '_has_additional_costs', "no" );
+	// update_post_meta( $service_product_id, '_product_vendors_commission', "" );
+	// update_post_meta( $service_product_id, '_sold_individually', "" );
+	// update_post_meta( $service_product_id, '_stock', "" );
+	// update_post_meta( $service_product_id, '_wc_booking_base_cost', "" );
+	// update_post_meta( $service_product_id, '_wc_booking_cost', "" );
+	// update_post_meta( $service_product_id, '_wc_display_cost', "" );
+	// update_post_meta( $service_product_id, '_wc_booking_first_block_time', "" );
+	update_post_meta( $service_product_id, '_wc_booking_requires_confirmation', "no" );
+	update_post_meta( $service_product_id, '_wc_booking_availability', array() );
 
 
-     update_post_meta( $product_post_id, '_visibility', 'visible' );
-     update_post_meta( $product_post_id, '_stock_status', 'instock');
-     update_post_meta( $product_post_id, 'total_sales', '0');
-     update_post_meta( $product_post_id, '_downloadable', 'no');
-     update_post_meta( $product_post_id, '_virtual', 'yes');
-     update_post_meta( $product_post_id, '_regular_price', "" );
-     update_post_meta( $product_post_id, '_sale_price', "" );
-     update_post_meta( $product_post_id, '_purchase_note', "" );
-     update_post_meta( $product_post_id, '_featured', "no" );
-     update_post_meta( $product_post_id, '_weight', "" );
-     update_post_meta( $product_post_id, '_length', "" );
-     update_post_meta( $product_post_id, '_width', "" );
-     update_post_meta( $product_post_id, '_height', "" );
-     update_post_meta( $product_post_id, '_sku', "");
-     update_post_meta( $product_post_id, '_product_attributes', array());
-     update_post_meta( $product_post_id, '_sale_price_dates_from', "" );
-     update_post_meta( $product_post_id, '_sale_price_dates_to', "" );
-     update_post_meta( $product_post_id, '_price', "0" );
-     update_post_meta( $product_post_id, '_manage_stock', "no" );
-     update_post_meta( $product_post_id, '_backorders', "no" );
-     update_post_meta( $product_post_id, '_upsell_ids', array() );
-     update_post_meta( $product_post_id, '_crosssell_ids', array() );
-     update_post_meta( $product_post_id, '_wc_booking_min_duration', "1" );
-     update_post_meta( $product_post_id, '_wc_booking_max_duration', "1" );
-     update_post_meta( $product_post_id, '_wc_booking_enable_range_picker', "no" );
-     update_post_meta( $product_post_id, '_wc_booking_calendar_display_mode', "always_visible");
-     update_post_meta( $product_post_id, '_wc_booking_qty', "1" );
-     update_post_meta( $product_post_id, '_wc_booking_has_persons', "no" );
-     update_post_meta( $product_post_id, '_wc_booking_person_qty_multiplier', "no" );
-     update_post_meta( $product_post_id, '_wc_booking_person_cost_multiplier', "no" );
-     update_post_meta( $product_post_id, '_wc_booking_min_persons_group', "1" );
-     update_post_meta( $product_post_id, '_wc_booking_max_persons_group', "1" );
-     update_post_meta( $product_post_id, '_wc_booking_has_person_types', "no" );
-     update_post_meta( $product_post_id, '_wc_booking_has_resources', "no" );
-     update_post_meta( $product_post_id, '_wc_booking_resources_assignment', "customer" );
-     update_post_meta( $product_post_id, '_wc_booking_duration_type', "fixed" );
-     update_post_meta( $product_post_id, '_wc_booking_duration', "1" );
-     update_post_meta( $product_post_id, '_wc_booking_duration_unit', "hour" );
-     update_post_meta( $product_post_id, '_wc_booking_user_can_cancel', "yes" );
-     update_post_meta( $product_post_id, '_wc_booking_cancel_limit', "1" );
-     update_post_meta( $product_post_id, '_wc_booking_cancel_limit_unit', "day" );
-     update_post_meta( $product_post_id, '_wc_booking_max_date', "12" );
-     update_post_meta( $product_post_id, '_wc_booking_max_date_unit', "month" );
-     update_post_meta( $product_post_id, '_wc_booking_min_date', "" );
-     update_post_meta( $product_post_id, '_wc_booking_min_date_unit', "month" );
-     update_post_meta( $product_post_id, '_wc_booking_default_date_availability', "available" );
-     update_post_meta( $product_post_id, '_wc_booking_check_availability_against', "" );
-     update_post_meta( $product_post_id, '_wc_booking_resouce_label', "" );
-     update_post_meta( $product_post_id, '_wc_booking_pricing', array() );
-     update_post_meta( $product_post_id, '_has_additional_costs', "no" );
-     update_post_meta( $product_post_id, '_product_vendors_commission', "" );
-     update_post_meta( $product_post_id, '_sold_individually', "" );
-     update_post_meta( $product_post_id, '_stock', "" );
-     update_post_meta( $product_post_id, '_wc_booking_base_cost', "" );
-     update_post_meta( $product_post_id, '_wc_booking_cost', "" );
-     update_post_meta( $product_post_id, '_wc_display_cost', "" );
-     update_post_meta( $product_post_id, '_wc_booking_first_block_time', "" );
-     update_post_meta( $product_post_id, '_wc_booking_requires_confirmation', "no" );
-     update_post_meta( $product_post_id, '_wc_booking_availability', array() );
+	$postpartum_product = array(
+		'author' => $user_id,
+		'post_content' => '',
+		'post_status' => "publish",
+		'post_title' => "Postpartum Care",
+		'post_parent' => '',
+		'post_type' => "product",
 
-     update_post_meta( $product_post_id, '_vendor_name', $current_user->display_name );
+	);
+
+	//Create post
+	$postpartum_product_id = wp_insert_post( $postpartum_product, $wp_error );
+	if($postpartum_product_id){
+	 $attach_id = get_post_meta($postpartum_product->parent_id, "_thumbnail_id", true);
+	 add_post_meta($postpartum_product_id, '_thumbnail_id', $attach_id);
+	}
+
+	//Set Terms
+	wp_set_object_terms($postpartum_product_id, 'booking', 'product_type');
+	wp_set_object_terms($postpartum_product_id, $current_user->user_login, 'shop_vendor');
 
 
 
 
-     update_post_meta( $job_id, '_products', array('0'=>strval($product_post_id)) );
+	update_post_meta( $postpartum_product_id, '_virtual', 'yes');
+	update_post_meta( $postpartum_product_id, '_wc_booking_min_duration', "1" );
+	update_post_meta( $postpartum_product_id, '_wc_booking_max_duration', "1" );
+	update_post_meta( $postpartum_product_id, '_wc_booking_enable_range_picker', "no" );
+	update_post_meta( $postpartum_product_id, '_wc_booking_calendar_display_mode', "");
+	update_post_meta( $postpartum_product_id, '_wc_booking_qty', $values['job']['_postpartum']['postpartum_max_booking'] );
+	update_post_meta( $postpartum_product_id, '_wc_booking_duration_type', "fixed" );
+	update_post_meta( $postpartum_product_id, '_wc_booking_duration', $block );
+	update_post_meta( $postpartum_product_id, '_wc_booking_duration_unit', "day" );
+	update_post_meta( $postpartum_product_id, '_wc_booking_user_can_cancel', "yes" );
+	update_post_meta( $postpartum_product_id, '_wc_booking_cancel_limit', "2" );
+	update_post_meta( $postpartum_product_id, '_wc_booking_cancel_limit_unit', "month" );
+	update_post_meta( $postpartum_product_id, '_wc_booking_requires_confirmation', "no" );
+
+
+
+
+
+	update_post_meta( $service_product_id, '_vendor_name', $current_user->display_name );
+	update_post_meta( $postpartum_product_id, '_vendor_name', $current_user->display_name );
+
+	update_post_meta( $job_id, '_products', array('0'=>strval($service_product_id), '1'=>strval($postpartum_product_id)) );
+
+	//update_post_meta( $job_id, '_products', array('0'=>strval($service_product_id)) );
 
 }
 
 add_action( 'job_manager_update_job_data', 'custom_update_job_data_products', 10, 2);
+
+function custom_update_job_data_profile( $job_id, $values ) {
+	$user_id = get_current_user_id();
+	
+	if (isset($values['company']['phone']) && !empty($values['company']['phone'])) {
+		update_user_meta($user_id, '_phone', $values['company']['phone']);
+	}
+	if (isset($values['job']['job_first_name']) && !empty($values['job']['job_first_name'])) {
+		update_user_meta($user_id, 'first_name', $values['job']['job_first_name']);
+	}
+	if (isset($values['job']['job_last_name']) && !empty($values['job']['job_last_name'])) {
+		update_user_meta($user_id, 'last_name', $values['job']['job_last_name']);
+	}
+
+}
+
+add_action( 'job_manager_update_job_data', 'custom_update_job_data_profile', 10, 2);
 
 /**function set_default_job_business_hours( $fields ) {
 	global $post;
@@ -423,3 +571,20 @@ function remove_items_from_cart() {
 }
 
 add_action('woocommerce_before_add_to_cart_button', 'remove_items_from_cart');
+
+/*function add_custom_booking_template($template, $template_name, $template_path) {
+	if ($template_name == 'booking-form/due-date.php') {
+		$template_path = get_stylesheet_directory()
+		$template = $template_path.$template;
+	}
+
+	return $template;
+}
+
+add_filter('woocommerce_locate_template', 'add_custom_booking_template', 10, 3);*/
+
+function add_type_select_to_booking() {
+	wc_get_template_part('booking-type-selection');
+}
+
+add_action('listify_widget_job_listing_bookings_before', 'add_type_select_to_booking');

@@ -23,7 +23,7 @@ if (count($current_user_posts) > 0) {
 	$jobid = reset($current_user_posts)->ID;
 
 	//$action_url = '/my-account/listings?action=edit&job_id='.$jobid;
-    $action_url = '/archives/'.$jobid;
+    $action_url = get_permalink($jobid);
     header('Location: ' . $action_url, true, 301 );
     die();
 }
