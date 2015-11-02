@@ -3,6 +3,12 @@
  * Listify child theme.
  */
 
+function bh_enqueue_scripts() {
+	wp_enqueue_script( 'toggle_booking_display', get_stylesheet_directory_uri() . "/js/toggle_booking_display.js", array( 'jquery' ) );
+}
+
+add_action('wp_enqueue_scripts', 'bh_enqueue_scripts');
+
 function listify_child_styles() {
     wp_enqueue_style( 'listify-child', get_stylesheet_uri() );
 }
@@ -221,7 +227,7 @@ add_action( 'woocommerce_created_customer', 'wc_create_vendor_on_registration', 
 function custom_submit_job_form_fields( $fields ) {
 	unset($fields['company']['products']);
 
-	$fields[ 'job' ][ '_postpartum' ] = array(
+	$fields[ 'job' ][ 'postpartum' ] = array(
 			'label' => __( 'Postpartum Care Options', 'listify' ),
 			'type' => 'postpartum-options',
 			'placeholder' => '',
@@ -250,14 +256,16 @@ function custom_update_job_data_products( $job_id, $values ) {
 
 	$posts = get_posts($post_args);
 
-	$pre_weeks = $values['job']['_postpartum']['postpartum_pre_weeks'];
-    $post_weeks = $values['job']['_postpartum']['postpartum_post_weeks'];
+	$pre_weeks = $values['job']['postpartum']['pre_weeks'];
+    $post_weeks = $values['job']['postpartum']['post_weeks'];
 
     $block = $pre_weeks*7 + $post_weeks*7;
 
 	foreach ( $posts as $val ) {
 		if ($val->post_title == 'Postpartum Care') {
-			update_post_meta( $val->ID, '_wc_booking_qty', $values['job']['_postpartum']['postpartum_max_booking'] );
+			update_post_meta( $val->ID, '_bh_book_pre_weeks', $pre_weeks);
+			update_post_meta( $val->ID, '_bh_book_post_weeks', $post_weeks);
+			update_post_meta( $val->ID, '_wc_booking_qty', $values['job']['postpartum']['max_booking'] );
 			update_post_meta( $val->ID, '_wc_booking_duration', $block );
 			return;
 		}
@@ -321,8 +329,8 @@ function custom_update_job_data_products( $job_id, $values ) {
 	// update_post_meta( $service_product_id, '_wc_booking_min_persons_group', "1" );
 	// update_post_meta( $service_product_id, '_wc_booking_max_persons_group', "1" );
 	// update_post_meta( $service_product_id, '_wc_booking_has_person_types', "no" );
-	update_post_meta( $service_product_id, '_wc_booking_has_resources', "yes" );
-	update_post_meta( $service_product_id, '_wc_booking_resources_assignment', "customer" );
+	// update_post_meta( $service_product_id, '_wc_booking_has_resources', "yes" );
+	// update_post_meta( $service_product_id, '_wc_booking_resources_assignment', "customer" );
 	update_post_meta( $service_product_id, '_wc_booking_duration_type', "fixed" );
 	update_post_meta( $service_product_id, '_wc_booking_duration', "1" );
 	update_post_meta( $service_product_id, '_wc_booking_duration_unit', "hour" );
@@ -347,7 +355,6 @@ function custom_update_job_data_products( $job_id, $values ) {
 	// update_post_meta( $service_product_id, '_wc_booking_first_block_time', "" );
 	update_post_meta( $service_product_id, '_wc_booking_requires_confirmation', "no" );
 	update_post_meta( $service_product_id, '_wc_booking_availability', array() );
-
 
 	$postpartum_product = array(
 		'author' => $user_id,
@@ -378,8 +385,10 @@ function custom_update_job_data_products( $job_id, $values ) {
 	update_post_meta( $postpartum_product_id, '_wc_booking_max_duration', "1" );
 	update_post_meta( $postpartum_product_id, '_wc_booking_enable_range_picker', "no" );
 	update_post_meta( $postpartum_product_id, '_wc_booking_calendar_display_mode', "");
-	update_post_meta( $postpartum_product_id, '_wc_booking_qty', $values['job']['_postpartum']['postpartum_max_booking'] );
+	update_post_meta( $postpartum_product_id, '_wc_booking_qty', $values['job']['postpartum']['max_booking'] );
 	update_post_meta( $postpartum_product_id, '_wc_booking_duration_type', "fixed" );
+	update_post_meta( $postpartum_product_id, '_bh_book_pre_weeks', $pre_weeks );
+	update_post_meta( $postpartum_product_id, '_bh_book_post_weeks', $post_weeks );
 	update_post_meta( $postpartum_product_id, '_wc_booking_duration', $block );
 	update_post_meta( $postpartum_product_id, '_wc_booking_duration_unit', "day" );
 	update_post_meta( $postpartum_product_id, '_wc_booking_user_can_cancel', "yes" );
@@ -577,8 +586,19 @@ add_action('woocommerce_before_add_to_cart_button', 'remove_items_from_cart');
 
 add_filter('woocommerce_locate_template', 'add_custom_booking_template', 10, 3);*/
 
-function add_type_select_to_booking() {
-	wc_get_template_part('booking-type-selection');
+function booking_form_main( $products ) {
+	$booking_widget = Listify_Widget_Listing_Bookings::this();
+	remove_action('listify_widget_job_listing_bookings', array($booking_widget,'output_bookings'), 10);
+	woocommerce_get_template( 'templates/booking-form/bh_booking.php', array( 'products' => $products ), 'woocommerce-bookings', WC_BOOKINGS_TEMPLATE_PATH );
 }
 
-add_action('listify_widget_job_listing_bookings_before', 'add_type_select_to_booking');
+add_action('listify_widget_job_listing_bookings', 'booking_form_main', 5, 1);
+
+function get_product_handler($product_type, $product) {
+	if ($product->post_title == 'Postpartum Care') {
+		return 'grouped';
+	}
+	return '';
+}
+
+add_action('woocommerce_add_to_cart_handler', 'get_product_handler', 10, 2);

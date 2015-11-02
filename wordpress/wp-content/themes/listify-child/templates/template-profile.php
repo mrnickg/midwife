@@ -24,15 +24,19 @@ if (count($current_user_posts) > 0) {
 
 	//$action_url = '/my-account/listings?action=edit&job_id='.$jobid;
     $action_url = get_permalink($jobid);
-    header('Location: ' . $action_url, true, 301 );
-    die();
+    //header('Location: ' . $action_url, true, 301 );
+    //die();
+	wp_safe_redirect($action_url);
+	exit;
 }
 else {
 
 	//$action_url = get_permalink(wc_get_page_id('submit-listing'));
     $action_url = '/submit-profile';
-    header('Location: ' . $action_url, true, 301 );
-    die();
+    //header('Location: ' . $action_url, true, 301 );
+    //die();
+	wp_safe_redirect($action_url);
+	exit;
 
 }
 
