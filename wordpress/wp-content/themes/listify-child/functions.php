@@ -595,10 +595,67 @@ function booking_form_main( $products ) {
 add_action('listify_widget_job_listing_bookings', 'booking_form_main', 5, 1);
 
 function get_product_handler($product_type, $product) {
-	if ($product->post_title == 'Postpartum Care') {
-		return 'grouped';
+	if ($_POST['service-type'] === 'Postpartum Care') {
+		return "postpartum";
 	}
-	return '';
+
+	return "";
 }
 
-add_action('woocommerce_add_to_cart_handler', 'get_product_handler', 10, 2);
+add_filter('woocommerce_add_to_cart_handler', 'get_product_handler', 10, 2);
+
+function bh_add_to_cart_handler_postpartum( $handler, $was_added_to_cart ) {
+	$added_to_cart     = array();
+
+	if ( !empty($_REQUEST['service-type']) && $_REQUEST['service-type'] === 'Postpartum Care' ) {
+
+		// Process the appointment first
+
+		$productIds = array($_REQUEST['add-to-cart'], $_REQUEST['pp_add-to-cart']);
+
+		$passed_validation = true;
+		$was_added_to_cart = true;
+		foreach ($productIds as $id) {
+			$passed_validation 	&= apply_filters( 'woocommerce_add_to_cart_validation', true, $id, 1 );
+			if ( $passed_validation && WC()->cart->add_to_cart( $id, 1 ) !== false ) {
+				$was_added_to_cart &= true;
+			}
+			else {
+				$was_added_to_cart = false;
+			}
+		}
+		if ( ! $was_added_to_cart ) {
+			wc_add_notice( __( 'Please choose a product to add to your cart&hellip;', 'woocommerce' ), 'error' );
+		} elseif ( $was_added_to_cart ) {
+			wc_add_to_cart_message( $added_to_cart );
+			return true;
+		}
+	}
+	else {
+		/* Link on product archives */
+		wc_add_notice( __( 'Please choose a product to add to your cart&hellip;', 'woocommerce' ), 'error' );
+	}
+	return false;
+
+}
+
+add_action('woocommerce_add_to_cart_handler_postpartum', 'bh_add_to_cart_handler_postpartum', 10, 1);
+
+function bh_get_posted_data( $postedData, $product ) {
+	if ($postedData['service-type'] != 'Postpartum Care') {
+		return $postedData;
+	}
+
+	$newPostedData = $postedData;
+	if ($product->get_post_data()->post_title === 'Postpartum Care') {
+		$newPostedData['wc_bookings_field_start_date_year'] = $newPostedData['pp_wc_bookings_field_start_date_year'];
+		$newPostedData['wc_bookings_field_start_date_month'] = $newPostedData['pp_wc_bookings_field_start_date_month'];
+		$newPostedData['wc_bookings_field_start_date_day'] = $newPostedData['pp_wc_bookings_field_start_date_day'];
+		$newPostedData['add-to-cart'] = $newPostedData['pp_add-to-cart'];
+		$newPostedData['wc_bookings_field_start_date_time'] = "";
+	}
+
+	return $newPostedData;
+}
+
+add_filter('woocommerce_booking_get_posted_data', 'bh_get_posted_data', 10, 2);

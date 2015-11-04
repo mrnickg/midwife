@@ -46,36 +46,50 @@ $initial_select_postpartum = $initial_select == "Postpartum Care";
 	</select>
 </p>
 
-<div name="postpartum_div" id="postpartum_form" style="<?php echo $initial_select_postpartum ? "" : "display:none" ?>">
-	<form class="cart" method="post" enctype='multipart/form-data'>
+<div name="postpartum_div" id="postpartum_div" style="<?php echo $initial_select_postpartum ? "" : "display:none" ?>">
 
-		<?php if ($has_postpartum) {
+	<?php if ($has_postpartum) {
 
-			$pp_booking_form = new WC_Booking_Form( $postpartum_product );
-			$s_booking_form = new WC_Booking_Form( $service_product );
+	$pp_booking_form = new WC_Booking_Form( $postpartum_product );
+	$s_booking_form = new WC_Booking_Form( $service_product );
 
-		?>
-			<div id="wc-bookings-booking-form" class="wc-bookings-booking-form">
-				<p>Please confirm your due date</p>
-				<?php $pp_booking_form->output(); ?>
-				<br/>
-				<p>Please select a date and time for your initial appointment</p>
-				<?php $s_booking_form->output(); ?>
-			</div>
+	?>
+
+
+	<form name="postpartum_hidden_form" id="postpartum_hidden_form" class="cart" method="post" enctype='multipart/form-data'>
+		<div id="bh-bookings-pp-div" class="wc-bookings-booking-form">
+			<p>Please confirm your due date</p>
+			<?php $pp_booking_form->output(); ?>
+			<input type="hidden" name="add-to-cart" value="<?php echo esc_attr( $postpartum_product->id ); ?>" />
+		</div>
+	</form>
+	<br/>
+	<form class="cart" name="postpartum_main_form" style="display:none" id="postpartum_main_form" method="post" enctype='multipart/form-data'>
+		<div id="postpartum-service-form" class="wc-bookings-booking-form">
+			<p>Please select a date and time for your initial appointment</p>
+			<?php $s_booking_form->output(); ?>
+		</div>
+
 
 		<?php
 		} ?>
 
-		<input type="hidden" name="add-to-cart" value="<?php echo esc_attr( $postpartum_product->id ); ?>" />
+		<input type="hidden" name="pp_wc_bookings_field_start_date_year" id="pp_wc_bookings_field_start_date_year" />
+		<input type="hidden" name="pp_wc_bookings_field_start_date_month" id="pp_wc_bookings_field_start_date_month" />
+		<input type="hidden" name="pp_wc_bookings_field_start_date_day" id="pp_wc_bookings_field_start_date_day" />
+
+		<input type="hidden" name="add-to-cart" value="<?php echo esc_attr( $service_product->id ); ?>" />
+		<input type="hidden" name="pp_add-to-cart" value="<?php echo esc_attr( $postpartum_product->id ); ?>" />
+
 		<input type="hidden" name="service-type" value="Postpartum Care"/>
 
-		<button type="submit" class="wc-bookings-booking-form-button single_add_to_cart_button button alt disabled" style="display:none"><?php echo $product->single_add_to_cart_text(); ?></button>
+		<button type="submit" class="wc-bookings-booking-form-button single_add_to_cart_button button alt disabled" style="..."><?php echo $product->single_add_to_cart_text(); ?></button>
 
 		<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
 
 	</form>
 </div>
-<div name="service_div" id="service_form" style="<?php echo $initial_select_postpartum ? "display:none" : "" ?>">
+<div name="service_div" id="service_div" style="<?php echo $initial_select_postpartum ? "display:none" : "" ?>">
 	<form class="cart" id="service_form" name="service_form" method="post" enctype='multipart/form-data'>
 
 		<?php foreach ($products as $product) {
@@ -84,7 +98,7 @@ $initial_select_postpartum = $initial_select == "Postpartum Care";
 
 				$booking_form = new WC_Booking_Form( $product ); ?>
 
-				<div id="wc-bookings-booking-form" class="wc-bookings-booking-form">
+				<div id="bh-service-form" class="wc-bookings-booking-form">
 
 					<?php do_action( 'woocommerce_before_booking_form' ); ?>
 
@@ -100,8 +114,8 @@ $initial_select_postpartum = $initial_select == "Postpartum Care";
 
 		<input type="hidden" name="add-to-cart" value="<?php echo esc_attr( $service_product->id ); ?>" />
 
-		<input type="hidden" name="service_type" value=""/>
-		<button type="submit" class="wc-bookings-booking-form-button single_add_to_cart_button button alt disabled" onsubmit="bhOnSubmit()" style="display:none"><?php echo $product->single_add_to_cart_text(); ?></button>
+		<input type="hidden" name="service_type" id="service_type" value=""/>
+		<button type="submit" class="wc-bookings-booking-form-button single_add_to_cart_button button alt disabled" style="display:none"><?php echo $product->single_add_to_cart_text(); ?></button>
 
 		<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
 
