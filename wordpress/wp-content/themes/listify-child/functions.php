@@ -227,13 +227,15 @@ add_action( 'woocommerce_created_customer', 'wc_create_vendor_on_registration', 
 function custom_submit_job_form_fields( $fields ) {
 	unset($fields['company']['products']);
 
-	$fields[ 'job' ][ 'postpartum' ] = array(
-			'label' => __( 'Postpartum Care Options', 'listify' ),
-			'type' => 'postpartum-options',
-			'placeholder' => '',
-			'required' => false,
-			'priority' => 4.35,
-		);
+	$fields[ 'job' ][ 'bh_max_bookings' ] = array(
+		'label' => __( 'Maximum Postpartum Bookings', 'listify' ),
+		'type' => 'number',
+		'placeholder' => '',
+		'required' => true,
+		'priority' => 4.45,
+		'value' => '4',
+		'description' => 'The maximum number of families per month you will support for postpartum care'
+	);
 
 	return $fields;
 }
@@ -256,17 +258,9 @@ function custom_update_job_data_products( $job_id, $values ) {
 
 	$posts = get_posts($post_args);
 
-	$pre_weeks = $values['job']['postpartum']['pre_weeks'];
-    $post_weeks = $values['job']['postpartum']['post_weeks'];
-
-    $block = $pre_weeks*7 + $post_weeks*7;
-
 	foreach ( $posts as $val ) {
 		if ($val->post_title == 'Postpartum Care') {
-			update_post_meta( $val->ID, '_bh_book_pre_weeks', $pre_weeks);
-			update_post_meta( $val->ID, '_bh_book_post_weeks', $post_weeks);
-			update_post_meta( $val->ID, '_wc_booking_qty', $values['job']['postpartum']['max_booking'] );
-			update_post_meta( $val->ID, '_wc_booking_duration', $block );
+			update_post_meta( $val->ID, '_wc_booking_qty', $values['job']['bh_max_bookings']['value'] );
 			return;
 		}
 	}
@@ -385,11 +379,9 @@ function custom_update_job_data_products( $job_id, $values ) {
 	update_post_meta( $postpartum_product_id, '_wc_booking_max_duration', "1" );
 	update_post_meta( $postpartum_product_id, '_wc_booking_enable_range_picker', "no" );
 	update_post_meta( $postpartum_product_id, '_wc_booking_calendar_display_mode', "");
-	update_post_meta( $postpartum_product_id, '_wc_booking_qty', $values['job']['postpartum']['max_booking'] );
+	update_post_meta( $postpartum_product_id, '_wc_booking_qty', $values['job']['bh_max_bookings']['value'] );
 	update_post_meta( $postpartum_product_id, '_wc_booking_duration_type', "fixed" );
-	update_post_meta( $postpartum_product_id, '_bh_book_pre_weeks', $pre_weeks );
-	update_post_meta( $postpartum_product_id, '_bh_book_post_weeks', $post_weeks );
-	update_post_meta( $postpartum_product_id, '_wc_booking_duration', $block );
+	update_post_meta( $postpartum_product_id, '_wc_booking_duration', "1" );
 	update_post_meta( $postpartum_product_id, '_wc_booking_duration_unit', "day" );
 	update_post_meta( $postpartum_product_id, '_wc_booking_user_can_cancel', "yes" );
 	update_post_meta( $postpartum_product_id, '_wc_booking_cancel_limit', "2" );
@@ -500,14 +492,37 @@ add_filter( 'woocommerce_billing_details_title', 'billing_details_title');
 
 function add_booking_details() {
 	$cart = WC()->cart->get_cart();
-	$booking = array_values($cart)[0];
-	$vendorid = $booking['data']->get_post_data()->post_author;
+	$service_booking = array_values($cart)[0];
+	$postpartum_booking = null;
+
+	if (count($cart) > 1) {
+		foreach (array_values($cart) as $booking) {
+			if ($booking['data']->get_post_data()->post_title === 'Postpartum Care') {
+				$postpartum_booking = $booking;
+			}
+			else {
+				$service_booking = $booking;
+			}
+		}
+	}
+
+	$vendorid = $service_booking['data']->get_post_data()->post_author;
 	$vendor_data = get_userdata((string)$vendorid);
 	$vendor_name = $vendor_data->first_name." ".$vendor_data->last_name;
-	?>
-	<p>You have chosen an appointment with <?php echo $vendor_name; ?>on <?php echo $booking['booking']['date']." at ".$booking['booking']['time']; ?></p>
-	<p>Please fill in your details and the Midwife will visit you at the address listed.  You will receive a confirmation email shortly.</p>
+
+	if ($postpartum_booking) {
+		?>
+		<p>You have requested <b>Postpartum Care Services</b> from <?php echo $vendor_name; ?></p>
+		<p>Please confirm your details below and your Midwife will visit you at the address listed at <b><?php echo $service_booking['booking']['time']." on ".$service_booking['booking']['date']; ?></b> for your initial appointment.</p>
 		<?php
+	}
+	else {
+		?>
+		<p>You have requested an appointment with <?php echo $vendor_name; ?> on <b></b><?php echo $service_booking['booking']['date']." at ".$service_booking['booking']['time']; ?></b></p>
+		<p>Please confirm your details below and your Midwife will visit you at the address listed.</p>
+		<?php
+	}
+
 }
 
 add_action( 'woocommerce_checkout_before_customer_details', 'add_booking_details');
@@ -598,6 +613,9 @@ function get_product_handler($product_type, $product) {
 	if ($_POST['service-type'] === 'Postpartum Care') {
 		return "postpartum";
 	}
+	else {
+		return "service";
+	}
 
 	return "";
 }
@@ -627,7 +645,7 @@ function bh_add_to_cart_handler_postpartum( $handler, $was_added_to_cart ) {
 		if ( ! $was_added_to_cart ) {
 			wc_add_notice( __( 'Please choose a product to add to your cart&hellip;', 'woocommerce' ), 'error' );
 		} elseif ( $was_added_to_cart ) {
-			wc_add_to_cart_message( $added_to_cart );
+			//wc_add_to_cart_message( $added_to_cart );
 			return true;
 		}
 	}
@@ -640,6 +658,20 @@ function bh_add_to_cart_handler_postpartum( $handler, $was_added_to_cart ) {
 }
 
 add_action('woocommerce_add_to_cart_handler_postpartum', 'bh_add_to_cart_handler_postpartum', 10, 1);
+
+function bh_add_to_cart_handler_service( $handler, $was_added_to_cart ) {
+	$product_id = $_REQUEST['add-to-cart'];
+	$quantity 			= empty( $_REQUEST['quantity'] ) ? 1 : wc_stock_amount( $_REQUEST['quantity'] );
+	$passed_validation 	= apply_filters( 'woocommerce_add_to_cart_validation', true, $product_id, $quantity );
+
+	if ( $passed_validation && WC()->cart->add_to_cart( $product_id, $quantity ) !== false ) {
+		return true;
+	}
+}
+
+add_action('woocommerce_add_to_cart_handler_service', 'bh_add_to_cart_handler_service', 10, 1);
+
+
 
 function bh_get_posted_data( $postedData, $product ) {
 	if ($postedData['service-type'] != 'Postpartum Care') {
