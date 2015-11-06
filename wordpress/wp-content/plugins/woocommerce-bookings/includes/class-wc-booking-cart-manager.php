@@ -61,8 +61,10 @@ class WC_Booking_Cart_Manager {
 			return $passed;
 		}
 
+		$posted = apply_filters('woocommerce_booking_get_posted_data', $_POST, $product);
 		$booking_form = new WC_Booking_Form( $product );
-		$data         = $booking_form->get_posted_data();
+
+		$data         = $booking_form->get_posted_data($posted);
 		$validate     = $booking_form->is_bookable( $data );
 
 		if ( is_wp_error( $validate ) ) {

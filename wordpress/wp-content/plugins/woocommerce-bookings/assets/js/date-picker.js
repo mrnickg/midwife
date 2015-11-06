@@ -66,6 +66,7 @@ jQuery( function( $ ) {
 
             if ( year && month && day ) {
                 var date = new Date( year, month - 1, day );
+                var dayOne = new Date( year, month - 1, 1);
                 $picker.datepicker( "setDate", date );
 
                 if ( $picker.data( 'is_range_picker_enabled' ) ) {

@@ -15,10 +15,18 @@ jQuery( document ).ready(function() {
 jQuery( document ).ready(function() {
     jQuery( '#postpartum_main_form' ).submit(function() {
         console.log("Doing onSubmit Postpartum");
+        var year =  jQuery('#postpartum_hidden_form').find('input[name="wc_bookings_field_start_date_year"]').val();
+        var month = jQuery('#postpartum_hidden_form').find('input[name="wc_bookings_field_start_date_month"]').val();
+        var day = jQuery('#postpartum_hidden_form').find('input[name="wc_bookings_field_start_date_day"]').val();
 
-        jQuery( '#pp_wc_bookings_field_start_date_year').val( jQuery('#postpartum_hidden_form').find('input[name="wc_bookings_field_start_date_year"]').val());
-        jQuery( '#pp_wc_bookings_field_start_date_month').val( jQuery('#postpartum_hidden_form').find('input[name="wc_bookings_field_start_date_month"]').val());
-        jQuery( '#pp_wc_bookings_field_start_date_day').val( jQuery('#postpartum_hidden_form').find('input[name="wc_bookings_field_start_date_day"]').val());
+        //jQuery( '#pp_due_date').val( year + '-' + month + '-' + day);
+        //jQuery( '#pp_wc_bookings_field_start_date_year').val(year);
+        //jQuery( '#pp_wc_bookings_field_start_date_month').val(month);
+        //jQuery( '#pp_wc_bookings_field_start_date_day').val(1);
+
+        jQuery( '#pp_wc_bookings_field_start_date_year').val(year);
+        jQuery( '#pp_wc_bookings_field_start_date_month').val(month);
+        jQuery( '#pp_wc_bookings_field_start_date_day').val(day);
 
         return true;
     });

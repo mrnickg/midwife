@@ -77,7 +77,6 @@ $initial_select_postpartum = $initial_select == "Postpartum Care";
 		<input type="hidden" name="pp_wc_bookings_field_start_date_year" id="pp_wc_bookings_field_start_date_year" />
 		<input type="hidden" name="pp_wc_bookings_field_start_date_month" id="pp_wc_bookings_field_start_date_month" />
 		<input type="hidden" name="pp_wc_bookings_field_start_date_day" id="pp_wc_bookings_field_start_date_day" />
-
 		<input type="hidden" name="add-to-cart" value="<?php echo esc_attr( $service_product->id ); ?>" />
 		<input type="hidden" name="pp_add-to-cart" value="<?php echo esc_attr( $postpartum_product->id ); ?>" />
 

@@ -659,3 +659,39 @@ function bh_get_posted_data( $postedData, $product ) {
 }
 
 add_filter('woocommerce_booking_get_posted_data', 'bh_get_posted_data', 10, 2);
+
+
+//function bh_update_booking_form_args($args, $product) {
+//	//Postpartum Products are saved with full month duration but for the purposes of availability we
+//	//only want to check one day
+//	if ($product->get_post_data()->post_title === 'Postpartum Product') {
+//		$args['booking_duration'] = 1;
+//		$args['booking_duration_type'] = 'day';
+//	}
+//
+//	return $args;
+//}
+//
+//add_filter('wc_bookings_booking_form_args', 'bh_update_booking_form_args', 10, 2);
+
+
+function bh_get_booking_range_start($start_date, $product) {
+	if ($product->get_post_data()->post_title === 'Postpartum Care') {
+		$start_date = strtotime(date('Y-m-01', $start_date));
+	}
+
+	return $start_date;
+}
+
+add_filter('woocommerce_get_bookings_in_range_start', 'bh_get_booking_range_start', 10, 2);
+
+
+function bh_get_booking_range_end($end_date, $product) {
+	if ($product->get_post_data()->post_title === 'Postpartum Care') {
+		$end_date = strtotime(date('Y-m-t', $end_date));
+	}
+
+	return $end_date;
+}
+
+add_filter('woocommerce_get_bookings_in_range_end', 'bh_get_booking_range_end', 10, 2);
