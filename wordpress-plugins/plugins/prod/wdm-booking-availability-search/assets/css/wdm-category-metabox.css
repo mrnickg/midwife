@@ -1,0 +1,48 @@
+/* 
+    Document   : wdm-category-metabox
+    Created on : Mar 21, 2015, 3:41:42 PM
+    Author     : Jaitheradevi
+    Description:Purpose of the stylesheet follows.
+    Used to style the layout of the category metabox in bksearch dashboard
+*/
+
+#wdm-main-wrap
+{
+    background-color: white;
+     padding:20px;
+     width:90%;
+}
+.main-title
+{
+    color:#0074a2;;
+}
+.wdm-select-box
+{
+    width:40%;
+}
+.wdm-select
+{
+	width:40%;
+}
+#category-list
+{
+    height: 100px;
+    margin-top: 20px;
+    border:10px;
+    background-color: #eee;
+     
+}
+#wdm-content
+{
+    background-color: #eee;
+    box-shadow: 5px 5px 5px #888888;
+    border-radius: 3px;
+    width:90%;
+    padding:20px;
+    font-size:80%;
+}
+.txt-area-page
+{
+    width:100%;
+}
+
