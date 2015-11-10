@@ -3,8 +3,11 @@
  * Listify child theme.
  */
 
+require_once('inc/integrations/facetwp/due_date.php');
+
 function bh_enqueue_scripts() {
-	wp_enqueue_script( 'toggle_booking_display', get_stylesheet_directory_uri() . "/js/toggle_booking_display.js", array( 'jquery' ) );
+	wp_enqueue_script( 'bh_booking', get_stylesheet_directory_uri() . "/js/booking.js", array( 'jquery' ) );
+	wp_enqueue_script( 'bh_profile', get_stylesheet_directory_uri() . "/js/profile.js", array( 'jquery' ) );
 }
 
 add_action('wp_enqueue_scripts', 'bh_enqueue_scripts');
@@ -17,7 +20,7 @@ add_action( 'wp_enqueue_scripts', 'listify_child_styles', 999 );
 /** Place any new code below this line */
 
 function custom_listify_widget_search_listings_default( $args ) {
-	$args[ 'facets' ] = 'location';
+	$args[ 'facets' ] = 'proximity,category,due_date';
 
 	return $args;
 }
@@ -180,7 +183,7 @@ function wc_create_vendor_on_registration( $customer_id, $new_customer_data ) {
 	} else {
 		// Update vendor data
 		$vendor_data['paypal_email'] = $email; // The email used for the account will be used for the payments
-		$vendor_data['commission']   = '50'; // The commission is 50% for each order
+		$vendor_data['commission']   = '0'; // The commission is 50% for each order
 		$vendor_data['admins'][]     = $customer_id; // The registered account is also the admin of the vendor
 
 		update_option( 'shop_vendor_' . $return['term_id'], $vendor_data );
@@ -208,6 +211,8 @@ function wc_create_vendor_on_registration( $customer_id, $new_customer_data ) {
 		$caps = apply_filters( 'product_vendors_admin_caps', $caps );
 
 		$user = new WP_User( $customer_id );
+		update_user_meta($user->ID, 'product_vendor', $return['term_id']);
+
 		foreach( $caps as $cap ) {
 			$user->add_cap( $cap );
 		}
@@ -256,14 +261,27 @@ function custom_update_job_data_products( $job_id, $values ) {
 		'post_type' => "product"
 	);
 
+	$haspostpartum = false;
+
+	$termid = get_term_by( 'slug', 'postpartum_care', 'service')->term_id;
+	foreach( $values['job']['bh_services'] as $service ) {
+		if ($service == $termid) {
+			$haspostpartum = true;
+			break;
+		}
+	}
+
+
 	$posts = get_posts($post_args);
 
 	foreach ( $posts as $val ) {
-		if ($val->post_title == 'Postpartum Care') {
+		if (has_term( 'postpartum', 'bh_booking_type', $val)) {
 			update_post_meta( $val->ID, '_wc_booking_qty', $values['job']['bh_max_bookings']['value'] );
 			return;
 		}
 	}
+
+	//TODO Need a way to disable postpartum product if the midwife deselects
 
 	if (count($posts) > 0) {
 		return;
@@ -289,6 +307,7 @@ function custom_update_job_data_products( $job_id, $values ) {
 	//Set Terms
 	wp_set_object_terms($service_product_id, 'booking', 'product_type');
 	wp_set_object_terms($service_product_id, $current_user->user_login, 'shop_vendor');
+	wp_set_object_terms($service_product_id, 'serviceappt', 'bh_booking_type');
 
 	// update_post_meta( $service_product_id, '_visibility', 'visible' );
 	// update_post_meta( $service_product_id, '_stock_status', 'instock');
@@ -312,8 +331,8 @@ function custom_update_job_data_products( $job_id, $values ) {
 	// update_post_meta( $service_product_id, '_backorders', "no" );
 	// update_post_meta( $service_product_id, '_upsell_ids', array() );
 	// update_post_meta( $service_product_id, '_crosssell_ids', array() );
-	// update_post_meta( $service_product_id, '_wc_booking_min_duration', "1" );
-	// update_post_meta( $service_product_id, '_wc_booking_max_duration', "1" );
+	update_post_meta( $service_product_id, '_wc_booking_min_duration', "1" );
+	update_post_meta( $service_product_id, '_wc_booking_max_duration', "1" );
 	update_post_meta( $service_product_id, '_wc_booking_enable_range_picker', "no" );
 	update_post_meta( $service_product_id, '_wc_booking_calendar_display_mode', "always_visible");
 	update_post_meta( $service_product_id, '_wc_booking_qty', "1" );
@@ -331,12 +350,12 @@ function custom_update_job_data_products( $job_id, $values ) {
 	update_post_meta( $service_product_id, '_wc_booking_user_can_cancel', "yes" );
 	update_post_meta( $service_product_id, '_wc_booking_cancel_limit', "1" );
 	update_post_meta( $service_product_id, '_wc_booking_cancel_limit_unit', "day" );
-	// update_post_meta( $service_product_id, '_wc_booking_max_date', "12" );
-	// update_post_meta( $service_product_id, '_wc_booking_max_date_unit', "month" );
-	// update_post_meta( $service_product_id, '_wc_booking_min_date', "" );
-	// update_post_meta( $service_product_id, '_wc_booking_min_date_unit', "month" );
-	// update_post_meta( $service_product_id, '_wc_booking_default_date_availability', "available" );
-	// update_post_meta( $service_product_id, '_wc_booking_check_availability_against', "" );
+	update_post_meta( $service_product_id, '_wc_booking_max_date', "12" );
+	update_post_meta( $service_product_id, '_wc_booking_max_date_unit', "month" );
+	update_post_meta( $service_product_id, '_wc_booking_min_date', "" );
+	update_post_meta( $service_product_id, '_wc_booking_min_date_unit', "month" );
+	update_post_meta( $service_product_id, '_wc_booking_default_date_availability', "available" );
+	update_post_meta( $service_product_id, '_wc_booking_check_availability_against', "" );
 	// update_post_meta( $service_product_id, '_wc_booking_resouce_label', "" );
 	// update_post_meta( $service_product_id, '_wc_booking_pricing', array() );
 	// update_post_meta( $service_product_id, '_has_additional_costs', "no" );
@@ -349,6 +368,18 @@ function custom_update_job_data_products( $job_id, $values ) {
 	// update_post_meta( $service_product_id, '_wc_booking_first_block_time', "" );
 	update_post_meta( $service_product_id, '_wc_booking_requires_confirmation', "no" );
 	update_post_meta( $service_product_id, '_wc_booking_availability', array() );
+
+	update_post_meta( $service_product_id, '_vendor_name', $current_user->display_name );
+
+
+
+	update_post_meta( $service_product_id, '_wc_booking_min_duration', "1" );
+	update_post_meta( $service_product_id, '_wc_booking_max_duration', "1" );
+	update_post_meta( $service_product_id, '_wc_booking_max_date', "12" );
+	update_post_meta( $service_product_id, '_wc_booking_max_date_unit', "month" );
+	update_post_meta( $service_product_id, '_wc_booking_min_date', "" );
+	update_post_meta( $service_product_id, '_wc_booking_min_date_unit', "month" );
+	update_post_meta( $service_product_id, '_wc_booking_check_availability_against', "" );
 
 	$postpartum_product = array(
 		'author' => $user_id,
@@ -363,14 +394,14 @@ function custom_update_job_data_products( $job_id, $values ) {
 	//Create post
 	$postpartum_product_id = wp_insert_post( $postpartum_product, $wp_error );
 	if($postpartum_product_id){
-	 $attach_id = get_post_meta($postpartum_product->parent_id, "_thumbnail_id", true);
-	 add_post_meta($postpartum_product_id, '_thumbnail_id', $attach_id);
+		$attach_id = get_post_meta($postpartum_product->parent_id, "_thumbnail_id", true);
+		add_post_meta($postpartum_product_id, '_thumbnail_id', $attach_id);
 	}
 
 	//Set Terms
 	wp_set_object_terms($postpartum_product_id, 'booking', 'product_type');
 	wp_set_object_terms($postpartum_product_id, $current_user->user_login, 'shop_vendor');
-
+	wp_set_object_terms($postpartum_product_id, 'postpartum', 'bh_booking_type');
 
 
 
@@ -387,12 +418,15 @@ function custom_update_job_data_products( $job_id, $values ) {
 	update_post_meta( $postpartum_product_id, '_wc_booking_cancel_limit', "2" );
 	update_post_meta( $postpartum_product_id, '_wc_booking_cancel_limit_unit', "month" );
 	update_post_meta( $postpartum_product_id, '_wc_booking_requires_confirmation', "no" );
+	update_post_meta( $postpartum_product_id, '_wc_booking_default_date_availability', "available" );
+	update_post_meta( $postpartum_product_id, '_wc_booking_min_duration', "1" );
+	update_post_meta( $postpartum_product_id, '_wc_booking_max_duration', "1" );
+	update_post_meta( $postpartum_product_id, '_wc_booking_max_date', "12" );
+	update_post_meta( $postpartum_product_id, '_wc_booking_max_date_unit', "month" );
+	update_post_meta( $postpartum_product_id, '_wc_booking_min_date', "" );
+	update_post_meta( $postpartum_product_id, '_wc_booking_min_date_unit', "month" );
+	update_post_meta( $postpartum_product_id, '_wc_booking_check_availability_against', "" );
 
-
-
-
-
-	update_post_meta( $service_product_id, '_vendor_name', $current_user->display_name );
 	update_post_meta( $postpartum_product_id, '_vendor_name', $current_user->display_name );
 
 	update_post_meta( $job_id, '_products', array('0'=>strval($service_product_id), '1'=>strval($postpartum_product_id)) );
@@ -497,7 +531,7 @@ function add_booking_details() {
 
 	if (count($cart) > 1) {
 		foreach (array_values($cart) as $booking) {
-			if ($booking['data']->get_post_data()->post_title === 'Postpartum Care') {
+			if (has_term('postpartum', 'bh_booking_type', $booking['product_id'])) {
 				$postpartum_booking = $booking;
 			}
 			else {
@@ -679,7 +713,7 @@ function bh_get_posted_data( $postedData, $product ) {
 	}
 
 	$newPostedData = $postedData;
-	if ($product->get_post_data()->post_title === 'Postpartum Care') {
+	if (has_term('postpartum', 'bh_booking_type', $product->id)) {
 		$newPostedData['wc_bookings_field_start_date_year'] = $newPostedData['pp_wc_bookings_field_start_date_year'];
 		$newPostedData['wc_bookings_field_start_date_month'] = $newPostedData['pp_wc_bookings_field_start_date_month'];
 		$newPostedData['wc_bookings_field_start_date_day'] = $newPostedData['pp_wc_bookings_field_start_date_day'];
@@ -708,7 +742,7 @@ add_filter('woocommerce_booking_get_posted_data', 'bh_get_posted_data', 10, 2);
 
 
 function bh_get_booking_range_start($start_date, $product) {
-	if ($product->get_post_data()->post_title === 'Postpartum Care') {
+	if (has_term('postpartum', 'bh_booking_type', $product->id)) {
 		$start_date = strtotime(date('Y-m-01', $start_date));
 	}
 
@@ -719,7 +753,7 @@ add_filter('woocommerce_get_bookings_in_range_start', 'bh_get_booking_range_star
 
 
 function bh_get_booking_range_end($end_date, $product) {
-	if ($product->get_post_data()->post_title === 'Postpartum Care') {
+	if (has_term('postpartum', 'bh_booking_type', $product->id)) {
 		$end_date = strtotime(date('Y-m-t', $end_date));
 	}
 
@@ -727,3 +761,11 @@ function bh_get_booking_range_end($end_date, $product) {
 }
 
 add_filter('woocommerce_get_bookings_in_range_end', 'bh_get_booking_range_end', 10, 2);
+
+
+function add_bh_facet_types($types) {
+	$types['due_date'] = new BH_Due_Date_Facet();
+	return $types;
+}
+
+add_filter('facetwp_facet_types', 'add_bh_facet_types', 10, 1);

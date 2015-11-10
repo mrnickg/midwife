@@ -17,7 +17,7 @@ $postpartum_product;
 $service_product;
 
 foreach ($products as $product) {
-	if ($product->get_post_data()->post_title == 'Postpartum Care') {
+	if (has_term('postpartum', 'bh_booking_type', $product->id )) {
 		$has_postpartum = true;
 		$postpartum_product = $product;
 	}
@@ -93,7 +93,7 @@ $initial_select_postpartum = $initial_select == "Postpartum Care";
 
 		<?php foreach ($products as $product) {
 
-			if ($product->get_post_data()->post_title != 'Postpartum Care') {
+			if (!has_term('postpartum', 'bh_booking_type', $product->id)) {
 
 				$booking_form = new WC_Booking_Form( $product ); ?>
 

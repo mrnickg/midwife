@@ -265,9 +265,6 @@ class WC_Booking_Form {
 		$picker = null;
 
 		$duration_unit = $this->product->get_duration_unit();
-		if ($this->product->get_post_data()->post_title === 'Postpartum Care') {
-			$duration_unit = 'day';
-		}
 
 		// Get date picker specific to the duration unit for this product
 		switch ( $duration_unit ) {
