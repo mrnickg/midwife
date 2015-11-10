@@ -8,9 +8,13 @@ require_once('inc/integrations/facetwp/due_date.php');
 function bh_enqueue_scripts() {
 	wp_enqueue_script( 'bh_booking', get_stylesheet_directory_uri() . "/js/booking.js", array( 'jquery' ) );
 	wp_enqueue_script( 'bh_profile', get_stylesheet_directory_uri() . "/js/profile.js", array( 'jquery' ) );
+
+	if (is_front_page()) {
+		wp_enqueue_script( 'bh_facets', get_stylesheet_directory_uri() . "/js/facetsupport.js", array( 'jquery' ) );
+	}
 }
 
-add_action('wp_enqueue_scripts', 'bh_enqueue_scripts');
+add_action('wp_enqueue_scripts', 'bh_enqueue_scripts', 999);
 
 function listify_child_styles() {
     wp_enqueue_style( 'listify-child', get_stylesheet_uri() );
@@ -26,6 +30,19 @@ function custom_listify_widget_search_listings_default( $args ) {
 }
 
 add_filter( 'listify_widget_search_listings_default', 'custom_listify_widget_search_listings_default');
+
+
+//function add_facet_refresh() {
+//	?>
+<!--	<script>-->
+<!--		jQuery(function() {-->
+<!--			FWP.auto_refresh = true;-->
+<!--		});-->
+<!--	</script>-->
+<!--	--><?php
+//}
+//
+//add_action('listify_content_job_listing_header_before', 'add_facet_refresh');
 
 function custom_listify_the_location_formatted_parts( $output, $location, $post ) {
 
@@ -277,13 +294,13 @@ function custom_update_job_data_products( $job_id, $values ) {
 	foreach ( $posts as $val ) {
 		if (has_term( 'postpartum', 'bh_booking_type', $val)) {
 			update_post_meta( $val->ID, '_wc_booking_qty', $values['job']['bh_max_bookings']['value'] );
-			return;
 		}
 	}
 
 	//TODO Need a way to disable postpartum product if the midwife deselects
 
 	if (count($posts) > 0) {
+		FWP()->indexer->index( $job_id );
 		return;
 	}
 
@@ -430,6 +447,8 @@ function custom_update_job_data_products( $job_id, $values ) {
 	update_post_meta( $postpartum_product_id, '_vendor_name', $current_user->display_name );
 
 	update_post_meta( $job_id, '_products', array('0'=>strval($service_product_id), '1'=>strval($postpartum_product_id)) );
+
+	FWP()->indexer->index( $job_id );
 
 	//update_post_meta( $job_id, '_products', array('0'=>strval($service_product_id)) );
 

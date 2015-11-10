@@ -38,11 +38,12 @@ class BH_Due_Date_Facet {
 
 		foreach ($all_products as $val) {
 			$product = wc_get_product( $val->ID );
-			$available = $product->get_available_bookings( $start_date, $end_date, '', 1 );
-			if ($available && $available > 0) {
+			$bookings = $product->get_bookings_in_date_range($start_date, $end_date);
+			$qty = $product->get_qty();
+			if (count($bookings) < $qty) {
 				$vendors = get_product_vendors($val->ID);
 				foreach ($vendors as $vendor) {
-					$userid = $vendors->admins[0]->ID;
+					$userid = $vendor->admins[0]->ID;
 					$args = array(
 						'posts_per_page'   => 1,
 						'post_type'        => 'job_listing',
@@ -52,7 +53,6 @@ class BH_Due_Date_Facet {
 					$vendorpage = reset(get_posts($args));
 					$available_ids[] = $vendorpage->ID;
 				}
-
 			}
 		}
 
@@ -135,6 +135,7 @@ class BH_Due_Date_Facet {
 	 * @since 2.1.1
 	 */
 	function index_row( $params, $class ) {
+		return $params;
 		//TODO Add indexing
 //		$facet = FWP()->helper->get_facet_by_name( $params['facet_name'] );
 //
