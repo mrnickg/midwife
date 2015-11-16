@@ -100,8 +100,8 @@ class BH_Service_Type_Facet extends FacetWP_Facet_Dropdown
 							duedate.parent().show();
 						}
 						else {
-							category.val('');
-							duedate.val('');
+							category.find(':input').val('');
+							duedate.find(':input').val('');
 							category.parent().hide();
 							duedate.parent().hide();
 						}
@@ -111,6 +111,7 @@ class BH_Service_Type_Facet extends FacetWP_Facet_Dropdown
 				wp.hooks.addAction('facetwp/refresh/service_type', function($this, facet_name) {
 					var val = $this.find('.facetwp-dropdown').val();
 					FWP.facets[facet_name] = val ? [val] : [];
+					FWP.toggle_service_visibility();
 				});
 
 				wp.hooks.addAction('facetwp/ready', function() {
