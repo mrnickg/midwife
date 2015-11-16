@@ -43,15 +43,20 @@ class BH_Due_Date_Facet {
 			if (count($bookings) < $qty) {
 				$vendors = get_product_vendors($val->ID);
 				foreach ($vendors as $vendor) {
-					$userid = $vendor->admins[0]->ID;
-					$args = array(
-						'posts_per_page'   => 1,
-						'post_type'        => 'job_listing',
-						'author'	       => $userid,
-						'post_status'      => 'publish'
-					);
-					$vendorpage = reset(get_posts($args));
-					$available_ids[] = $vendorpage->ID;
+					$admin = reset($vendor->admins);
+					if ($admin) {
+						$userid = $admin->ID;
+						$args = array(
+							'posts_per_page'   => 1,
+							'post_type'        => 'job_listing',
+							'author'	       => $userid,
+							'post_status'      => 'publish'
+						);
+						$posts = get_posts($args);
+						$vendorpage = reset($posts);
+						$available_ids[] = $vendorpage->ID;
+					}
+
 				}
 			}
 		}

@@ -9,7 +9,7 @@ class BH_Service_Type_Facet extends FacetWP_Facet_Dropdown
 	function __construct() {
 		$this->label = __( 'I am looking for...', 'fwp' );
 
-		//add_filter( 'facetwp_store_unfiltered_post_ids', array( $this, 'store_unfiltered_post_ids' ) );
+		add_filter( 'facetwp_store_unfiltered_post_ids', array( $this, 'store_unfiltered_post_ids' ) );
 	}
 
 
@@ -63,6 +63,23 @@ class BH_Service_Type_Facet extends FacetWP_Facet_Dropdown
 		return $output;
 	}
 
+	function admin_scripts() {
+		?>
+		<script>
+			(function($) {
+				wp.hooks.addAction('facetwp/load/service_type', function($this, obj) {
+					$this.find('.facet-source').val(obj.source);
+				});
+
+				wp.hooks.addFilter('facetwp/save/service_type', function($this, obj) {
+					obj['source'] = $this.find('.facet-source').val();
+					return obj;
+				});
+			})(jQuery);
+		</script>
+		<?php
+	}
+
 	/**
 	 * Output any front-end scripts
 	 */
@@ -70,6 +87,27 @@ class BH_Service_Type_Facet extends FacetWP_Facet_Dropdown
 		?>
 		<script>
 			(function($) {
+
+				FWP.toggle_service_visibility = function() {
+					var facet = jQuery('.facetwp-facet-service_type');
+					if (facet && facet.length > 0) {
+						var selected = facet.find(':selected').text();
+						var category =jQuery('.facetwp-facet-category');
+						var duedate = jQuery('.facetwp-facet-due_date');
+
+						if (selected.slice(0, <?php echo strlen($this->postpartum_type); ?>) == "<?php echo $this->postpartum_type; ?>") {
+							category.parent().show();
+							duedate.parent().show();
+						}
+						else {
+							category.val('');
+							duedate.val('');
+							category.parent().hide();
+							duedate.parent().hide();
+						}
+					}
+				}
+
 				wp.hooks.addAction('facetwp/refresh/service_type', function($this, facet_name) {
 					var val = $this.find('.facetwp-dropdown').val();
 					FWP.facets[facet_name] = val ? [val] : [];
@@ -77,49 +115,31 @@ class BH_Service_Type_Facet extends FacetWP_Facet_Dropdown
 
 				wp.hooks.addAction('facetwp/ready', function() {
 					$(document).on('change', '.facetwp-facet .facetwp-dropdown', function() {
-						var facet = jQuery(this).closest('.facetwp-facet-service_type');
-						toggleVisibility(facet);
+						FWP.toggle_service_visibility();
 					});
-					toggleVisibility(jQuery('facetwp-facet-service_type'));
+					FWP.toggle_service_visibility();
 				});
 
 				wp.hooks.addFilter('facetwp/selections/service_type', function(output, params) {
 					return params.el.find('.facetwp-facet-service_type option:selected').text();
 				});
 
+
+
 			})(jQuery);
-
-			function toggleVisibility(facet) {
-				if (facet.length > 0) {
-					var selected = facet.find(':selected').text();
-					var category =jQuery('.facetwp-facet-category');
-					var duedate = jQuery('.facetwp-facet-due_date');
-
-					if (selected.slice(0, <?php echo strlen($this->postpartum_type); ?>) == "<?php echo $this->postpartum_type; ?>") {
-						category.parent().show();
-						duedate.parent().show();
-					}
-					else {
-						category.find(':selected').text('Any');
-						duedate.find(':selected').text('');
-						category.parent().hide();
-						duedate.parent().hide();
-					}
-				}
-			}
 
 		</script>
 		<?php
+	}
+
+	function settings_html() {
+
 	}
 
 	/**
 	 * Store unfiltered post IDs if a dropdown facet exists
 	 */
 	function store_unfiltered_post_ids( $boolean ) {
-		if ( FWP()->helper->facet_setting_exists( 'type', 'service_type' ) ) {
-			return true;
-		}
-
-		return $boolean;
+		return true;
 	}
 }
