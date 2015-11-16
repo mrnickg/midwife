@@ -36,6 +36,8 @@ $initial_select_postpartum = $initial_select == "Postpartum Care";
 <p class="form-field form-field-wide">
 	<label for="type">Service:</label>
 	<select name="booking_type" id="booking_type">
+		<option value="Postpartum Care" selected="<?php echo ($initial_select_postpartum) ? "selected" : ""; ?>">Postpartum Care</option>
+        <option disabled>&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;</option>
 		<?php foreach ( $services as $value ) :
 			$displayText = get_term_by('id', $value, 'service')->name;
 			?>

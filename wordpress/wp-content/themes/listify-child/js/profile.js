@@ -1,13 +1,16 @@
 jQuery( document ).ready(function() {
-    jQuery( '#booking_type' ).change(function() {
-        console.log("."+jQuery(this).find(":selected").text().trim()+".");
-        if (jQuery(this).find(":selected").text().trim() === 'Postpartum Care') {
-            jQuery( '#postpartum_div' ).show();
-            jQuery( '#service_div' ).hide();
+    if (jQuery('#bh_has_postpartum').is(':checked')) {
+        jQuery( '.fieldset-bh_max_bookings' ).show();
+    }
+    else {
+        jQuery( '.fieldset-bh_max_bookings' ).hide();
+    }
+    jQuery( '#bh_has_postpartum' ).change(function() {
+        if (this.checked) {
+            jQuery( '.fieldset-bh_max_bookings' ).show();
         }
         else {
-            jQuery( '#postpartum_div' ).hide();
-            jQuery( '#service_div' ).show();
+            jQuery( '.fieldset-bh_max_bookings' ).hide();
         }
     });
 });

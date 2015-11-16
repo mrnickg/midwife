@@ -4,6 +4,7 @@
  */
 
 require_once('inc/integrations/facetwp/due_date.php');
+require_once('inc/integrations/facetwp/service_type.php');
 
 function bh_enqueue_scripts() {
 	wp_enqueue_script( 'bh_booking', get_stylesheet_directory_uri() . "/js/booking.js", array( 'jquery' ) );
@@ -30,19 +31,6 @@ function custom_listify_widget_search_listings_default( $args ) {
 }
 
 add_filter( 'listify_widget_search_listings_default', 'custom_listify_widget_search_listings_default');
-
-
-//function add_facet_refresh() {
-//	?>
-<!--	<script>-->
-<!--		jQuery(function() {-->
-<!--			FWP.auto_refresh = true;-->
-<!--		});-->
-<!--	</script>-->
-<!--	--><?php
-//}
-//
-//add_action('listify_content_job_listing_header_before', 'add_facet_refresh');
 
 function custom_listify_the_location_formatted_parts( $output, $location, $post ) {
 
@@ -76,28 +64,6 @@ add_filter('authenticate', 'internet_allow_email_login', 20, 3);
 
 function wooc_extra_register_fields() {
 	?>
-
-	<!--p class="form-row form-row-wide">
-	<label for="reg_user_role"><?php _e( 'I am a...', 'woocommerce' ); ?> <span class="required">*</span></label>
-	<select multiple="multiple" name="role" id="role" class="job-manager-multiselect" >
-			<option value="customer" selected="selected">Parent</option>
-			<option value="shop_manager"  >Midwife</option>
-	</select>
-	</p-->
-	<!--script type="text/javascript">
-		$("input[name=role]").click(function () {
-		    var val = $(this).val();
-		    // hide all optional elements
-		    $('.midwife').css('display','none');
-
-		    if(val == "Midwife") {
-		          $('.midwife').css('display','block');
-		    else {
-		          $('.midwife').css('display','none');
-		    }
-		});
-
-	</script-->
 	<p class="form-row form-row-wide">
 	<label for="reg_user_role"><?php _e( 'I am a...', 'woocommerce' ); ?> <span class="required">*</span></label>
 		<input type="radio" name="role" id="role" value="customer" checked="checked">Parent<br/>
@@ -254,9 +220,17 @@ function custom_submit_job_form_fields( $fields ) {
 		'type' => 'number',
 		'placeholder' => '',
 		'required' => true,
-		'priority' => 4.45,
-		'value' => '4',
+		'priority' => 4.26,
 		'description' => 'The maximum number of families per month you will support for postpartum care'
+	);
+
+	$fields['job']['bh_has_postpartum'] = array(
+		'label' => __( 'Do you offer Postpartum Care?', 'listify' ),
+		'type' => 'actionhook',
+		'placeholder' => '',
+		'required' => false,
+		'priority' => 4.25,
+		'meta_key' => 'bh_has_postpartum'
 	);
 
 	return $fields;
@@ -264,6 +238,16 @@ function custom_submit_job_form_fields( $fields ) {
 
 add_filter( 'submit_job_form_fields', 'custom_submit_job_form_fields');
 
+
+function render_postpartum_check_field($field, $key) {
+	?>
+	<div class="field required-field">
+		<input value="1" type="checkbox" name="<?php echo $field['meta_key']; ?>" id="<?php echo $field['meta_key']; ?>" <?php echo $field['value'] == '1' ? 'checked' : ''; ?>/>
+	</div>
+	<?php
+}
+
+add_action('job_manager_field_actionhook_bh_has_postpartum', 'render_postpartum_check_field', 10, 2);
 
 /**
 	Now we have to create our own job when the form is submitted
@@ -278,16 +262,7 @@ function custom_update_job_data_products( $job_id, $values ) {
 		'post_type' => "product"
 	);
 
-	$haspostpartum = false;
-
-	$termid = get_term_by( 'slug', 'postpartum_care', 'service')->term_id;
-	foreach( $values['job']['bh_services'] as $service ) {
-		if ($service == $termid) {
-			$haspostpartum = true;
-			break;
-		}
-	}
-
+	$haspostpartum = $values['job']['bh_has_postpartum']['value'] == '1';
 
 	$posts = get_posts($post_args);
 
@@ -448,6 +423,10 @@ function custom_update_job_data_products( $job_id, $values ) {
 
 	update_post_meta( $job_id, '_products', array('0'=>strval($service_product_id), '1'=>strval($postpartum_product_id)) );
 
+	//TODO sort this out for postpartum
+	wp_set_object_terms($job_id, 'postpartum_type', 'service_type');
+	wp_set_object_terms($job_id, 'other_type', 'service_type');
+
 	FWP()->indexer->index( $job_id );
 
 	//update_post_meta( $job_id, '_products', array('0'=>strval($service_product_id)) );
@@ -473,48 +452,6 @@ function custom_update_job_data_profile( $job_id, $values ) {
 
 add_action( 'job_manager_update_job_data', 'custom_update_job_data_profile', 10, 2);
 
-/**function set_default_job_business_hours( $fields ) {
-	global $post;
-	$postid = $post->ID;
-
-	$hours = array();
-	$hours[1] = array();
-	$hours[1]['start'] = '09:00';
-	$hours[1]['end'] = '17:00';
-	$hours[2] = array();
-	$hours[2]['start'] = '09:00';
-	$hours[2]['end'] = '17:00';
-	$hours[3] = array();
-	$hours[3]['start'] = '09:00';
-	$hours[3]['end'] = '17:00';
-	$hours[4] = array();
-	$hours[4]['start'] = '09:00';
-	$hours[4]['end'] = '17:00';
-	$hours[5] = array();
-	$hours[5]['start'] = '09:00';
-	$hours[5]['end'] = '17:00';
-
-	update_post_meta( $postid, '_job_hours', $hours);
-
-	$fields['job']['job_hours']['value'] = $hours;
-
-	return $fields;
-
-}
-
-add_action( 'submit_job_form_fields', 'set_default_job_business_hours', 10, 1);*/
-
-/**function custom_profile_buttons() {
-?>
-	<div class="content-single-job_listing-actions-start">
-		<?php do_action( 'listify_single_job_listing_actions_start' ); ?>
-	</div>
-
-	<?php do_action( 'listify_single_job_listing_actions_after' ); ?>
-<?php
-}
-
-add_action('listify_single_job_listing_actions', 'custom_profile_buttons');*/
 
 function add_edit_button() {
 
@@ -745,21 +682,6 @@ function bh_get_posted_data( $postedData, $product ) {
 
 add_filter('woocommerce_booking_get_posted_data', 'bh_get_posted_data', 10, 2);
 
-
-//function bh_update_booking_form_args($args, $product) {
-//	//Postpartum Products are saved with full month duration but for the purposes of availability we
-//	//only want to check one day
-//	if ($product->get_post_data()->post_title === 'Postpartum Product') {
-//		$args['booking_duration'] = 1;
-//		$args['booking_duration_type'] = 'day';
-//	}
-//
-//	return $args;
-//}
-//
-//add_filter('wc_bookings_booking_form_args', 'bh_update_booking_form_args', 10, 2);
-
-
 function bh_get_booking_range_start($start_date, $product) {
 	if (has_term('postpartum', 'bh_booking_type', $product->id)) {
 		$start_date = strtotime(date('Y-m-01', $start_date));
@@ -784,6 +706,7 @@ add_filter('woocommerce_get_bookings_in_range_end', 'bh_get_booking_range_end', 
 
 function add_bh_facet_types($types) {
 	$types['due_date'] = new BH_Due_Date_Facet();
+	$types['service_type'] = new BH_Service_Type_Facet();
 	return $types;
 }
 

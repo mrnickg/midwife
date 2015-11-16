@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="midwife">
+    <serverData>
+      <paths name="midwife">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/var/www/html/" local="$PROJECT_DIR$/wordpress/" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/wordpress/database" />
+            <excludedPath local="true" path="$PROJECT_DIR$/wordpress/assets" />
+            <excludedPath local="true" path="$PROJECT_DIR$/wordpress/config" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

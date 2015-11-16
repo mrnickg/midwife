@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpProjectServersManager">
+    <servers>
+      <server host="http://23.251.130.130/" id="ab141347-de30-45f8-8b35-ebf377ce81b7" name="23.251.130.130" use_path_mappings="true">
+        <path_mappings>
+          <mapping local-root="$PROJECT_DIR$/wordpress/wp-content" remote-root="/var/www/html/wp-content" />
+        </path_mappings>
+      </server>
+    </servers>
+  </component>
+</project>
