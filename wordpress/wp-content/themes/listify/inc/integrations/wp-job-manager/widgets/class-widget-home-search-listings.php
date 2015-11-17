@@ -6,6 +6,9 @@
  */
 class Listify_Widget_Search_Listings extends Listify_Widget {
 
+	private $service_type_facet_name = 'service_type';
+	private $postpartum_facet_display = 'Postpartum Care';
+
 	/**
 	 * Constructor
 	 */
@@ -81,6 +84,7 @@ class Listify_Widget_Search_Listings extends Listify_Widget {
 			}
 
 			$done = 0;
+
 			?>
 			<div class="job_search_form">
 				<div class="row">
@@ -107,9 +111,29 @@ class Listify_Widget_Search_Listings extends Listify_Widget {
 
 			</div>
 
+			<?php
+
+			$service_facet = FWP()->instance()->helper->get_facet_by_name( $this->service_type_facet_name );
+			$facet_helper = FWP()->instance()->helper->facet_types['service_type'];
+			$params = array(
+				'facet' => $service_facet
+			);
+			$service_type_result = $facet_helper->load_values($params);
+			$facet_value = '';
+
+			foreach ($service_type_result as $result) {
+				if (isset($result['facet_display_value']) && $result['facet_display_value'] == $this->postpartum_facet_display ) {
+					$facet_value = $result['facet_value'];
+					break;
+				}
+			}
+
+			?>
+
 			<script>
 				function fwp_redirect() {
 					FWP.parse_facets();
+					FWP.facets['<?php echo $this->service_type_facet_name;  ?>'] = '<?php echo $facet_value; ?>';
 					if ('get' == FWP.permalink_type) {
 						var query_string = FWP.build_query_string();
 						if ('' != query_string) {

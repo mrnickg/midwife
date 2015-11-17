@@ -111,6 +111,9 @@ class BH_Service_Type_Facet extends FacetWP_Facet_Dropdown
 						}
 						FWP.autoload();
 					});
+				});
+
+				wp.hooks.addAction('facetwp/loaded', function() {
 					FWP.toggle_service_visibility();
 				});
 
