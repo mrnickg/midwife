@@ -10,7 +10,8 @@ extract($args);
 
 global $post;
 
-$services = reset(get_post_meta($post->ID, '_bh_services'));
+$meta = get_post_meta($post->ID, '_bh_services');
+$services = reset($meta);
 
 $has_postpartum = false;
 $postpartum_product;

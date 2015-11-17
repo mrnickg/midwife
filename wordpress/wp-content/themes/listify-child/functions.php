@@ -230,8 +230,10 @@ function custom_submit_job_form_fields( $fields ) {
 		'placeholder' => '',
 		'required' => false,
 		'priority' => 4.25,
-		'meta_key' => 'bh_has_postpartum'
+		'meta_key' => 'bh_has_postpartum',
+		'description' => ''
 	);
+
 
 	return $fields;
 }
@@ -242,7 +244,7 @@ add_filter( 'submit_job_form_fields', 'custom_submit_job_form_fields');
 function render_postpartum_check_field($field, $key) {
 	?>
 	<div class="field required-field">
-		<input value="1" type="checkbox" name="<?php echo $field['meta_key']; ?>" id="<?php echo $field['meta_key']; ?>" <?php echo $field['value'] == '1' ? 'checked' : ''; ?>/>
+		<input value="1" type="checkbox" name="<?php echo $field['meta_key']; ?>" id="<?php echo $field['meta_key']; ?>" <?php echo isset($field['value']) && ( $field['value'] == '1' ) ? 'checked' : ''; ?>/>
 	</div>
 	<?php
 }
@@ -262,13 +264,13 @@ function custom_update_job_data_products( $job_id, $values ) {
 		'post_type' => "product"
 	);
 
-	$haspostpartum = $values['job']['bh_has_postpartum']['value'] == '1';
+	$haspostpartum = $values['job']['bh_has_postpartum'] == '1';
 
 	$posts = get_posts($post_args);
 
 	foreach ( $posts as $val ) {
 		if (has_term( 'postpartum', 'bh_booking_type', $val)) {
-			update_post_meta( $val->ID, '_wc_booking_qty', $values['job']['bh_max_bookings']['value'] );
+			update_post_meta( $val->ID, '_wc_booking_qty', $values['job']['bh_max_bookings'] );
 		}
 	}
 
@@ -290,11 +292,11 @@ function custom_update_job_data_products( $job_id, $values ) {
      );
 
 	//Create post
-	$service_product_id = wp_insert_post( $service_product, $wp_error );
-	if($service_product_id){
-	 	$attach_id = get_post_meta($service_product->parent_id, "_thumbnail_id", true);
-	 	add_post_meta($service_product_id, '_thumbnail_id', $attach_id);
-	}
+	$service_product_id = wp_insert_post( $service_product, false );
+//	if($service_product_id){
+//	 	$attach_id = get_post_meta($service_product->parent_id, "_thumbnail_id", true);
+//	 	add_post_meta($service_product_id, '_thumbnail_id', $attach_id);
+//	}
 
 	//Set Terms
 	wp_set_object_terms($service_product_id, 'booking', 'product_type');
@@ -384,11 +386,11 @@ function custom_update_job_data_products( $job_id, $values ) {
 	);
 
 	//Create post
-	$postpartum_product_id = wp_insert_post( $postpartum_product, $wp_error );
-	if($postpartum_product_id){
-		$attach_id = get_post_meta($postpartum_product->parent_id, "_thumbnail_id", true);
-		add_post_meta($postpartum_product_id, '_thumbnail_id', $attach_id);
-	}
+	$postpartum_product_id = wp_insert_post( $postpartum_product, false );
+//	if($postpartum_product_id){
+//		$attach_id = get_post_meta($postpartum_product->parent_id, "_thumbnail_id", true);
+//		add_post_meta($postpartum_product_id, '_thumbnail_id', $attach_id);
+//	}
 
 	//Set Terms
 	wp_set_object_terms($postpartum_product_id, 'booking', 'product_type');
@@ -402,7 +404,7 @@ function custom_update_job_data_products( $job_id, $values ) {
 	update_post_meta( $postpartum_product_id, '_wc_booking_max_duration', "1" );
 	update_post_meta( $postpartum_product_id, '_wc_booking_enable_range_picker', "no" );
 	update_post_meta( $postpartum_product_id, '_wc_booking_calendar_display_mode', "");
-	update_post_meta( $postpartum_product_id, '_wc_booking_qty', $values['job']['bh_max_bookings']['value'] );
+	update_post_meta( $postpartum_product_id, '_wc_booking_qty', $values['job']['bh_max_bookings'] );
 	update_post_meta( $postpartum_product_id, '_wc_booking_duration_type', "fixed" );
 	update_post_meta( $postpartum_product_id, '_wc_booking_duration', "1" );
 	update_post_meta( $postpartum_product_id, '_wc_booking_duration_unit', "day" );
@@ -424,8 +426,8 @@ function custom_update_job_data_products( $job_id, $values ) {
 	update_post_meta( $job_id, '_products', array('0'=>strval($service_product_id), '1'=>strval($postpartum_product_id)) );
 
 	//TODO sort this out for postpartum
-	wp_set_object_terms($job_id, 'postpartum_type', 'service_type');
-	wp_set_object_terms($job_id, 'other_type', 'service_type');
+	wp_set_object_terms($job_id, 'postpartum_type', 'service_type', true);
+	wp_set_object_terms($job_id, 'other_type', 'service_type', true);
 
 	FWP()->indexer->index( $job_id );
 
@@ -433,7 +435,7 @@ function custom_update_job_data_products( $job_id, $values ) {
 
 }
 
-add_action( 'job_manager_update_job_data', 'custom_update_job_data_products', 10, 2);
+add_action( 'job_manager_update_job_data', 'custom_update_job_data_products', 99, 2);
 
 function custom_update_job_data_profile( $job_id, $values ) {
 	$user_id = get_current_user_id();
@@ -457,12 +459,11 @@ function add_edit_button() {
 
 	global $post;
 	global $current_user;
-	get_currentuserinfo();
-	$author = get_the_author_id();
+
 	/**if (is_active_sidebar( 'single-job_listing-widget-area' ) || 'preview' == $post->post_type ) {
 		return;
 	}*/
-	if ($author == $current_user->ID) {
+	if ($post->post_author == $current_user->ID) {
 		$action_url = '/my-account/listings?action=edit&job_id='.$post->ID;
 	?>
 		<a href="<?php echo esc_url( $action_url ); ?>" class="single-job_listing-respond button button-secondary"><?php _e( 'Edit Profile', 'listify' ); ?></a>

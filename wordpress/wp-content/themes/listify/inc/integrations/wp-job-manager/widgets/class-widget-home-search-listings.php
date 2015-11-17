@@ -86,27 +86,67 @@ class Listify_Widget_Search_Listings extends Listify_Widget {
 			$done = 0;
 
 			?>
-			<div class="job_search_form">
-				<div class="row">
-					<?php foreach ( $_facets as $facet ) : ?>
-					<?php if ( $count > 4 && $done == 3 ) : ?>
-				</div><div class="row">
-					<?php endif; ?>
+			<div class="tabs">
+				<ul class="tab-links">
+					<li class="active"><a href="#form_postpartum">Postpartum Care</a></li>
+					<li><a href="#form_service">Services</a></li>
+					<li><a href="#form_class">Classes</a></li>
+				</ul>
+			</div>
+			<div>
+				<div class="job_search_form tab active" id="form_postpartum">
+					<div class="row">
+						<?php foreach ( $_facets as $facet ) : ?>
+						<?php if ( $count > 4 && $done == 3 ) : ?>
+					</div><div class="row">
+						<?php endif; ?>
 
-					<div class="search_<?php echo $facet[ 'name' ]; ?> col-xs-12 col-sm-4 col-md-<?php echo $column; ?>">
-						<?php echo do_shortcode( '[facetwp facet="' . $facet[ 'name' ] . '"]' ); ?>
+						<div class="search_<?php echo $facet[ 'name' ]; ?> col-xs-12 col-sm-4 col-md-<?php echo $column; ?>">
+							<?php echo do_shortcode( '[facetwp facet="' . $facet[ 'name' ] . '"]' ); ?>
+						</div>
+						<?php $done++; endforeach; ?>
 					</div>
-					<?php $done++; endforeach; ?>
+
+					<div class="facetwp-submit row">
+						<div class="col-xs-12">
+							<input type="submit" value="<?php _e( 'Search', 'listify' ); ?>" onclick="fwp_redirect()" />
+						</div>
+					</div>
+
+					<div style="display: none;">
+						<?php echo do_shortcode( '[facetwp template="listings"]' ); ?>
+					</div>
+
 				</div>
 
-				<div class="facetwp-submit row">
-					<div class="col-xs-12">
-						<input type="submit" value="<?php _e( 'Search', 'listify' ); ?>" onclick="fwp_redirect()" />
-					</div>
+				<div class="job_search_form tab" id="form_service">
+
+
 				</div>
 
-				<div style="display: none;">
-					<?php echo do_shortcode( '[facetwp template="listings"]' ); ?>
+				<div class="job_search_form tab" id="form_class">
+					<div class="row">
+						<?php foreach ( $_facets as $facet ) : ?>
+						<?php if ( $count > 4 && $done == 3 ) : ?>
+					</div><div class="row">
+						<?php endif; ?>
+
+						<div class="search_<?php echo $facet[ 'name' ]; ?> col-xs-12 col-sm-4 col-md-<?php echo $column; ?>">
+							<?php echo do_shortcode( '[facetwp facet="' . $facet[ 'name' ] . '"]' ); ?>
+						</div>
+						<?php $done++; endforeach; ?>
+					</div>
+
+					<div class="facetwp-submit row">
+						<div class="col-xs-12">
+							<input type="submit" value="<?php _e( 'Search', 'listify' ); ?>" onclick="fwp_redirect()" />
+						</div>
+					</div>
+
+					<div style="display: none;">
+						<?php echo do_shortcode( '[facetwp template="listings"]' ); ?>
+					</div>
+
 				</div>
 
 			</div>
