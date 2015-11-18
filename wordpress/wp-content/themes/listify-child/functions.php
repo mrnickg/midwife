@@ -24,13 +24,24 @@ add_action( 'wp_enqueue_scripts', 'listify_child_styles', 999 );
 
 /** Place any new code below this line */
 
-function custom_listify_widget_search_listings_default( $args ) {
-	$args[ 'facets' ] = 'proximity,category,due_date';
-
+function search_widget_get_all_facets( $args ) {
+	$args[ 'facets' ] = 'proximity,due_date,service';
 	return $args;
 }
 
-add_filter( 'listify_widget_search_listings_default', 'custom_listify_widget_search_listings_default');
+add_filter('listify_widget_search_listings_default', 'search_widget_get_all_facets', 10, 1);
+
+function search_widget_check_postpartum( $facet ) {
+	return $facet['name'] == 'proximity' || $facet['name'] == 'due_date';
+}
+
+add_filter( 'search_widget_is_postpartum_facet', 'search_widget_check_postpartum', 10, 1);
+
+function search_widget_check_service( $facet ) {
+	return $facet['name'] == 'proximity' || $facet['name'] == 'service';
+}
+
+add_filter( 'search_widget_is_service_facet', 'search_widget_check_service', 10, 1);
 
 function custom_listify_the_location_formatted_parts( $output, $location, $post ) {
 

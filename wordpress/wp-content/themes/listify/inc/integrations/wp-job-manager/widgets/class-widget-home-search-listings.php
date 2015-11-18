@@ -7,7 +7,8 @@
 class Listify_Widget_Search_Listings extends Listify_Widget {
 
 	private $service_type_facet_name = 'service_type';
-	private $postpartum_facet_display = 'Postpartum Care';
+	private $postpartum_facet_name = 'postpartum_type';
+	private $service_facet_name = 'other_type';
 
 	/**
 	 * Constructor
@@ -74,42 +75,33 @@ class Listify_Widget_Search_Listings extends Listify_Widget {
 			global $listify_facetwp;
 
 			$facets = isset( $instance[ 'facets' ] ) ? array_map( 'trim', explode( ',', $instance[ 'facets' ] ) ) : listify_theme_mod( 'listing-archive-facetwp-defaults' );
+
 			$_facets = $listify_facetwp->get_homepage_facets( $facets );
-
-			$count  = count( $_facets );
-			$column = ( 0 == $count ) ? 12 : round( 12 / $count );
-
-			if ( $count > 4 ) {
-				$column = 4;
-			}
-
-			$done = 0;
 
 			?>
 			<div class="tabs">
 				<ul class="tab-links">
-					<li class="active"><a href="#form_postpartum">Postpartum Care</a></li>
-					<li><a href="#form_service">Services</a></li>
-					<li><a href="#form_class">Classes</a></li>
+					<li class="active"><a href="postpartum">Postpartum Care</a></li>
+					<li><a href="service">Services</a></li>
+					<li><a href="event">Classes</a></li>
 				</ul>
 			</div>
 			<div>
-				<div class="job_search_form tab active" id="form_postpartum">
+				<div class="job_search_form active postpartum service">
 					<div class="row">
-						<?php foreach ( $_facets as $facet ) : ?>
-						<?php if ( $count > 4 && $done == 3 ) : ?>
-					</div><div class="row">
-						<?php endif; ?>
+						<?php foreach ( $_facets as $facet ) :
+						$is_postpartum = apply_filters('search_widget_is_postpartum_facet', $facet);
+						$is_service = apply_filters('search_widget_is_service_facet', $facet);
+						?>
+							<div class="search_<?php echo $facet[ 'name' ]; ?> col-xs-12 col-sm-4 col-md-3 <?php echo $is_postpartum ? 'postpartum active' : ''; ?> <?php echo $is_service ? 'service' : ''; ?>">
+								<?php echo do_shortcode( '[facetwp facet="' . $facet[ 'name' ] . '"]' ); ?>
+							</div>
+						<?php endforeach; ?>
 
-						<div class="search_<?php echo $facet[ 'name' ]; ?> col-xs-12 col-sm-4 col-md-<?php echo $column; ?>">
-							<?php echo do_shortcode( '[facetwp facet="' . $facet[ 'name' ] . '"]' ); ?>
-						</div>
-						<?php $done++; endforeach; ?>
-					</div>
-
-					<div class="facetwp-submit row">
-						<div class="col-xs-12">
-							<input type="submit" value="<?php _e( 'Search', 'listify' ); ?>" onclick="fwp_redirect()" />
+						<div class="facetwp-submit active postpartum service submit_postpartum">
+							<div class="col-xs-12 col-sm-4 col-md-3">
+								<input type="submit" value="<?php _e( 'Search', 'listify' ); ?>" onclick="fwp_redirect()" />
+							</div>
 						</div>
 					</div>
 
@@ -119,33 +111,8 @@ class Listify_Widget_Search_Listings extends Listify_Widget {
 
 				</div>
 
-				<div class="job_search_form tab" id="form_service">
+				<div class="job_search_form event" id="form_service">
 
-
-				</div>
-
-				<div class="job_search_form tab" id="form_class">
-					<div class="row">
-						<?php foreach ( $_facets as $facet ) : ?>
-						<?php if ( $count > 4 && $done == 3 ) : ?>
-					</div><div class="row">
-						<?php endif; ?>
-
-						<div class="search_<?php echo $facet[ 'name' ]; ?> col-xs-12 col-sm-4 col-md-<?php echo $column; ?>">
-							<?php echo do_shortcode( '[facetwp facet="' . $facet[ 'name' ] . '"]' ); ?>
-						</div>
-						<?php $done++; endforeach; ?>
-					</div>
-
-					<div class="facetwp-submit row">
-						<div class="col-xs-12">
-							<input type="submit" value="<?php _e( 'Search', 'listify' ); ?>" onclick="fwp_redirect()" />
-						</div>
-					</div>
-
-					<div style="display: none;">
-						<?php echo do_shortcode( '[facetwp template="listings"]' ); ?>
-					</div>
 
 				</div>
 
@@ -159,12 +126,19 @@ class Listify_Widget_Search_Listings extends Listify_Widget {
 				'facet' => $service_facet
 			);
 			$service_type_result = $facet_helper->load_values($params);
-			$facet_value = '';
+			$postpartum_facet_value = '';
+			$service_facet_value = '';
 
 			foreach ($service_type_result as $result) {
-				if (isset($result['facet_display_value']) && $result['facet_display_value'] == $this->postpartum_facet_display ) {
-					$facet_value = $result['facet_value'];
-					break;
+				if (isset($result['term_id']) ) {
+					$term = get_term_by('id', $result['term_id'], 'service_type');
+					$slug = $term->slug;
+					if ($slug == $this->postpartum_facet_name) {
+						$postpartum_facet_value = $result['facet_value'];
+					}
+					else if ($slug == $this->service_facet_name) {
+						$service_facet_value = $result['facet_value'];
+					}
 				}
 			}
 
@@ -173,7 +147,14 @@ class Listify_Widget_Search_Listings extends Listify_Widget {
 			<script>
 				function fwp_redirect() {
 					FWP.parse_facets();
-					FWP.facets['<?php echo $this->service_type_facet_name;  ?>'] = '<?php echo $facet_value; ?>';
+					if ( jQuery('.facetwp-submit').hasClass('submit_postpartum') ) {
+						FWP.facets['<?php echo $this->service_type_facet_name;  ?>'] = '<?php echo $postpartum_facet_value; ?>';
+						delete FWP.facets['service'];
+					}
+					else if ( jQuery('.facetwp-submit').hasClass('submit_service') ) {
+						FWP.facets['<?php echo $this->service_type_facet_name;  ?>'] = '<?php echo $service_facet_value; ?>';
+						delete FWP.facets['due_date'];
+					}
 					if ('get' == FWP.permalink_type) {
 						var query_string = FWP.build_query_string();
 						if ('' != query_string) {
