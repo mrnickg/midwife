@@ -1,40 +1,141 @@
-.tabs {
-    width:100%;
-    display:inline-block;
+/*
+Theme Name: Listify - Child Theme
+Theme URI: http://astoundify.com/themes/listify
+Author: Astoundify
+Author URI: http://astoundify.com
+Description: Your beautiful handcrafted directory.
+Version: 1.0.0
+License: GNU General Public License
+License URI: license.txt
+Text Domain: listify-foursquare
+Domain Path: /languages/
+Tags: white, two-columns, one-column, right-sidebar, left-sidebar, responsive-layout, custom-background, custom-header, theme-options, full-width-template, featured-images, flexible-header, custom-menu, translation-ready
+Template: listify
+*/
+
+.bh-search-container {
+    margin :0;
+    border: 0;
+    padding: 0;
 }
 
-.tab-links:after {
+.bh-search-tabs {
+    margin :0;
+    border: 0;
+    padding: 0;
+}
+
+.bh-search-tabs ul {
+    margin :0;
+    border: 0;
+    padding: 0;
+}
+
+.bh-search-content {
+    margin :0;
+    border: 0;
+    padding: 30px 20px 20px 30px;
+    border-radius: 0px 4px 4px 4px;
+    /*background: rgba(240,243,246,.5);*/
+    background: rgba(230,233,236,.9);
+}
+
+.bh-search-content select {
+    box-shadow: none;
+    margin: 0;
+    border: 0;
+    padding: 11px 15px;
+}
+
+.tabbed-search-box {
+    line-height: 1.75;
+    /*background: transparent;*/
+    background: rgba(0, 0, 0, .50);
+    /*background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 0%,rgba(0,0,0,.45) 100%);*/
+    /*background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 0%, rgba(0,0,0,.45) 100%);*/
+    /*background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 0%,rgba(0,0,0,.45) 100%);*/
+    box-shadow: rgba(0, 0, 0, .03) 0 2px 0;
+    border-radius: 4px;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+.tabs:before {
+    display: table;
+}
+
+.tabs {
+    background-color: transparent;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    box-sizing: border-box;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.tab-content {
+    background-color: #e6e9ec;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    box-sizing: border-box;
+    border: 0;
+    margin: 0;
+}
+
+.has-image .tab-links:after {
     display:block;
     clear:both;
     content:'';
 }
 
-.tab-links li {
-    margin:0px 5px;
+.has-image .tab-links li {
     float:left;
     list-style:none;
+    border: 0;
+    margin: 0;
+    padding: 0;
 }
 
-.tab-links a {
-    padding:9px 15px;
+.has-image .tab-links li.active a, li.active a:hover {
+    background: rgba(230,233,236,.9);
+    color: #3396d1;
+}
+
+.has-image .tab-links li a {
+    /*padding:9px 15px;*/
     display:inline-block;
     border-radius:3px 3px 0px 0px;
-    background:#7FB5DA;
-    font-size:16px;
-    font-weight:600;
-    color:#4c4c4c;
-    transition:all linear 0.15s;
+    background: rgba(240,243,246,.5);
+    /*color: #717a8f;*/
+    color: #fff;
+    font-size: 16px;
+    font-weight: 200;
+    text-decoration: none;
+    text-shadow : none;
+    transition: all linear 0.15s;
+    border: 0;
+    margin: 0;
+    padding: 9px 15px;
+    outline: none;
 }
 
-.tab-links a:hover {
-    background:#a7cce5;
+.facetwp-submit input {
+    border: 0;
+    margin: 0;
+    padding: 12px 46px 12px 46px;
+}
+
+.has-image .tab-links li a:hover {
+    background:rgba(230,233,236,.9);
     text-decoration:none;
+    color: #3396d1;
 }
 
-li.active a, li.active a:hover {
-    background:#fff;
-    color:#4c4c4c;
-}
+
 
 .postpartum, .service, .event {
     display:none;

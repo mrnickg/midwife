@@ -78,7 +78,7 @@ function wooc_extra_register_fields() {
 	<p class="form-row form-row-wide">
 	<label for="reg_user_role"><?php _e( 'I am a...', 'woocommerce' ); ?> <span class="required">*</span></label>
 		<input type="radio" name="role" id="role" value="customer" checked="checked">Parent<br/>
-		<input type="radio" name="role" id="role" value="shop_manager">Midwife
+		<input type="radio" name="role" id="role" value="midwife">Midwife
 	</p>
 
 	<?php
@@ -146,7 +146,7 @@ function wooc_save_extra_register_fields( $customer_id ) {
 add_action( 'woocommerce_created_customer', 'wooc_save_extra_register_fields' );
 
 function wc_create_vendor_on_registration( $customer_id, $new_customer_data ) {
-	if ( $new_customer_data['role'] == 'shop_manager') {
+	if ( $new_customer_data['role'] == 'midwife') {
 
 		$username = $new_customer_data['user_login'];
 	$email    = $new_customer_data['user_email'];
@@ -245,11 +245,22 @@ function custom_submit_job_form_fields( $fields ) {
 		'description' => ''
 	);
 
+	$hours = array();
+
+	$hours[0] = array( 'start' => 'Closed', 'end' => 'Closed' );
+	$hours[1] = array( 'start' => '09:00', 'end' => '17:00' );
+	$hours[2] = array( 'start' => '09:00', 'end' => '17:00' );
+	$hours[3] = array( 'start' => '09:00', 'end' => '17:00' );
+	$hours[4] = array( 'start' => '09:00', 'end' => '17:00' );
+	$hours[5] = array( 'start' => '09:00', 'end' => '17:00' );
+	$hours[6] = array( 'start' => 'Closed', 'end' => 'Closed' );
+
+	$fields['job']['job_hours']['value'] = $hours;
 
 	return $fields;
 }
 
-add_filter( 'submit_job_form_fields', 'custom_submit_job_form_fields');
+add_filter( 'submit_job_form_fields', 'custom_submit_job_form_fields', 999, 1);
 
 
 function render_postpartum_check_field($field, $key) {
@@ -279,15 +290,24 @@ function custom_update_job_data_products( $job_id, $values ) {
 
 	$posts = get_posts($post_args);
 
+	$products = array();
+	$ind = 0;
 	foreach ( $posts as $val ) {
 		if (has_term( 'postpartum', 'bh_booking_type', $val)) {
 			update_post_meta( $val->ID, '_wc_booking_qty', $values['job']['bh_max_bookings'] );
 		}
+		else if (has_term( 'serviceappt', 'bh_booking_type', $val)) {
+			update_post_meta( $val->ID, '_wc_booking_availability', parse_booking_availability($values['job']['job_hours']));
+		}
+		$products[$ind] = $val->ID;
+		$ind++;
 	}
 
 	//TODO Need a way to disable postpartum product if the midwife deselects
 
 	if (count($posts) > 0) {
+
+		update_post_meta( $job_id, '_products', $products );
 		FWP()->indexer->index( $job_id );
 		return;
 	}
@@ -359,7 +379,7 @@ function custom_update_job_data_products( $job_id, $values ) {
 	update_post_meta( $service_product_id, '_wc_booking_max_date_unit', "month" );
 	update_post_meta( $service_product_id, '_wc_booking_min_date', "" );
 	update_post_meta( $service_product_id, '_wc_booking_min_date_unit', "month" );
-	update_post_meta( $service_product_id, '_wc_booking_default_date_availability', "available" );
+	update_post_meta( $service_product_id, '_wc_booking_default_date_availability', "non-available" );
 	update_post_meta( $service_product_id, '_wc_booking_check_availability_against', "" );
 	// update_post_meta( $service_product_id, '_wc_booking_resouce_label', "" );
 	// update_post_meta( $service_product_id, '_wc_booking_pricing', array() );
@@ -372,7 +392,7 @@ function custom_update_job_data_products( $job_id, $values ) {
 	// update_post_meta( $service_product_id, '_wc_display_cost', "" );
 	// update_post_meta( $service_product_id, '_wc_booking_first_block_time', "" );
 	update_post_meta( $service_product_id, '_wc_booking_requires_confirmation', "no" );
-	update_post_meta( $service_product_id, '_wc_booking_availability', array() );
+	update_post_meta( $service_product_id, '_wc_booking_availability', parse_booking_availability($values['job']['job_hours']) );
 
 	update_post_meta( $service_product_id, '_vendor_name', $current_user->display_name );
 
@@ -448,6 +468,22 @@ function custom_update_job_data_products( $job_id, $values ) {
 
 add_action( 'job_manager_update_job_data', 'custom_update_job_data_products', 99, 2);
 
+function parse_booking_availability( $jobHours ) {
+	$days = array();
+	foreach( $jobHours as $key => $value ) {
+		if ($value['start'] != 'Closed') {
+			$days[$key] = array(
+				'type' => 'time:'.$key,
+				'bookable' => 'yes',
+				'from' => date("H:i", strtotime($value['start'])),
+				'to' => date("H:i", strtotime($value['end']))
+			);
+		}
+	}
+
+	return $days;
+}
+
 function custom_update_job_data_profile( $job_id, $values ) {
 	$user_id = get_current_user_id();
 	
@@ -465,6 +501,45 @@ function custom_update_job_data_profile( $job_id, $values ) {
 
 add_action( 'job_manager_update_job_data', 'custom_update_job_data_profile', 10, 2);
 
+
+function submit_midwife_profile_steps( $steps ) {
+	unset($steps['preview']);
+
+	return $steps;
+}
+
+add_filter('submit_job_steps', 'submit_midwife_profile_steps', 10, 1);
+
+
+function submit_midwife_submit_button_text( $text ) {
+	$text = 'Submit';
+	return $text;
+}
+
+add_filter('submit_job_form_submit_button_text', 'submit_midwife_submit_button_text', 10, 1);
+
+function submit_midwife_valid_statuses( $statuses ) {
+	unset($statuses['preview']);
+	return $statuses;
+}
+
+add_filter('job_manager_valid_submit_job_statuses', 'submit_midwife_valid_statuses', 10, 1);
+
+function done_submit_midwife( $job_id ) {
+	$job = get_post( $job_id );
+	if ( in_array( $job->post_status, array( 'preview', 'expired' ) ) ) {
+		// Reset expiry
+		delete_post_meta( $job->ID, '_job_expires' );
+		// Update job listing
+		$update_job                  = array();
+		$update_job['ID']            = $job->ID;
+		$update_job['post_status']   = get_option( 'job_manager_submission_requires_approval' ) ? 'pending' : 'publish';
+		$update_job['post_date']     = current_time( 'mysql' );
+		$update_job['post_date_gmt'] = current_time( 'mysql', 1 );
+		wp_update_post( $update_job );
+	}
+}
+add_action( 'job_manager_job_submitted', 'done_submit_midwife' );
 
 function add_edit_button() {
 
@@ -723,3 +798,11 @@ function add_bh_facet_types($types) {
 }
 
 add_filter('facetwp_facet_types', 'add_bh_facet_types', 10, 1);
+
+
+function get_proximity_radius($radius) {
+	$radius = 20;
+	return $radius;
+}
+
+add_filter('facetwp_proximity_radius', 'get_proximity_radius');

@@ -2,7 +2,7 @@ jQuery( document ).ready(function() {
     FWP.auto_refresh = false;
     FWP.loading_handler = function(params) {}
 
-    jQuery('.tabs .tab-links a').on('click', function(e)  {
+    jQuery('.bh-search-tabs .tab-links a').on('click', function(e)  {
         var currentAttrValue = jQuery(this).attr('href');
 
         if (currentAttrValue == 'postpartum') {

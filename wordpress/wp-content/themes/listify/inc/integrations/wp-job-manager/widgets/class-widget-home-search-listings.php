@@ -10,6 +10,9 @@ class Listify_Widget_Search_Listings extends Listify_Widget {
 	private $postpartum_facet_name = 'postpartum_type';
 	private $service_facet_name = 'other_type';
 
+	private $services_name = 'services';
+	private $service_name = 'service';
+
 	/**
 	 * Constructor
 	 */
@@ -79,29 +82,27 @@ class Listify_Widget_Search_Listings extends Listify_Widget {
 			$_facets = $listify_facetwp->get_homepage_facets( $facets );
 
 			?>
-			<div class="tabs">
-				<ul class="tab-links">
-					<li class="active"><a href="postpartum">Postpartum Care</a></li>
-					<li><a href="service">Services</a></li>
-					<li><a href="event">Classes</a></li>
-				</ul>
-			</div>
-			<div>
-				<div class="job_search_form active postpartum service">
-					<div class="row">
+			<div class="bh-search-container">
+				<div class="bh-search-tabs">
+					<ul class="tab-links">
+						<li class="active"><a href="postpartum">Postpartum Care</a></li>
+						<li><a href="service">Services</a></li>
+						<li><a href="event">Classes</a></li>
+					</ul>
+				</div>
+				<div class="bh-search-content active postpartum service">
+					<div class="row active">
 						<?php foreach ( $_facets as $facet ) :
-						$is_postpartum = apply_filters('search_widget_is_postpartum_facet', $facet);
-						$is_service = apply_filters('search_widget_is_service_facet', $facet);
-						?>
-							<div class="search_<?php echo $facet[ 'name' ]; ?> col-xs-12 col-sm-4 col-md-3 <?php echo $is_postpartum ? 'postpartum active' : ''; ?> <?php echo $is_service ? 'service' : ''; ?>">
+							$is_postpartum = apply_filters('search_widget_is_postpartum_facet', $facet);
+							$is_service = apply_filters('search_widget_is_service_facet', $facet);
+							?>
+							<div class="search_<?php echo $facet[ 'name' ]; ?> col-xs-12 col-sm-4 col-md-5 <?php echo $is_postpartum ? 'postpartum active' : ''; ?> <?php echo $is_service ? 'service' : ''; ?>">
 								<?php echo do_shortcode( '[facetwp facet="' . $facet[ 'name' ] . '"]' ); ?>
 							</div>
 						<?php endforeach; ?>
 
-						<div class="facetwp-submit active postpartum service submit_postpartum">
-							<div class="col-xs-12 col-sm-4 col-md-3">
-								<input type="submit" value="<?php _e( 'Search', 'listify' ); ?>" onclick="fwp_redirect()" />
-							</div>
+						<div class="facetwp-submit col-xs-12 col-sm-4 col-md-2 active postpartum service submit_postpartum">
+							<input type="submit" value="<?php _e( 'Search', 'listify' ); ?>" onclick="fwp_redirect()" />
 						</div>
 					</div>
 
@@ -109,19 +110,19 @@ class Listify_Widget_Search_Listings extends Listify_Widget {
 						<?php echo do_shortcode( '[facetwp template="listings"]' ); ?>
 					</div>
 
+
+					<div class="job_search_form event" id="form_service">
+
+
+					</div>
+
 				</div>
-
-				<div class="job_search_form event" id="form_service">
-
-
-				</div>
-
 			</div>
-
 			<?php
 
+			//Sevice Type Facet Config
 			$service_facet = FWP()->instance()->helper->get_facet_by_name( $this->service_type_facet_name );
-			$facet_helper = FWP()->instance()->helper->facet_types['service_type'];
+			$facet_helper = FWP()->instance()->helper->facet_types[$this->service_type_facet_name];
 			$params = array(
 				'facet' => $service_facet
 			);
@@ -153,6 +154,8 @@ class Listify_Widget_Search_Listings extends Listify_Widget {
 					}
 					else if ( jQuery('.facetwp-submit').hasClass('submit_service') ) {
 						FWP.facets['<?php echo $this->service_type_facet_name;  ?>'] = '<?php echo $service_facet_value; ?>';
+						FWP.facets['services'] = FWP.facets['service'];
+						delete FWP.facets['service'];
 						delete FWP.facets['due_date'];
 					}
 					if ('get' == FWP.permalink_type) {
