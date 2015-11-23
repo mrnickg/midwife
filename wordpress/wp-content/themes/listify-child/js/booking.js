@@ -10,9 +10,13 @@ jQuery( document ).ready(function() {
             jQuery( '#service_div' ).show();
         }
     });
-});
 
-jQuery( document ).ready(function() {
+    wp.hooks.addAction('facetwp/loaded', function() {
+        document.cookie='service_type='+jQuery('.facetwp-facet-service_type').find('input:checked').next('label').text()+'; path=/';
+        document.cookie='due_date='+jQuery('.facetwp-facet-due_date').find('input').val()+'; path=/';
+        document.cookie='service='+jQuery('.facetwp-facet-services').find('.checked').first().text()+'; path=/';
+    });
+
     jQuery( '#postpartum_main_form' ).submit(function() {
         console.log("Doing onSubmit Postpartum");
         var year =  jQuery('#postpartum_hidden_form').find('input[name="wc_bookings_field_start_date_year"]').val();
@@ -30,9 +34,7 @@ jQuery( document ).ready(function() {
 
         return true;
     });
-});
 
-jQuery( document ).ready(function() {
     jQuery( '#service_form' ).submit(function() {
         console.log("Doing onSubmit");
         document.service_form.service_type.value = jQuery( '#booking_type').find(":selected").text().trim();

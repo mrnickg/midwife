@@ -27,11 +27,20 @@ foreach ($products as $product) {
 	}
 }
 
-$initial_select="Postpartum Care";
-if (!$has_postpartum) {
-	$initial_select = $services[0];
+$initial_select= '';
+
+$initial_select_postpartum = false;
+
+if (isset($_COOKIE['service_type'])) {
+	$cookietype = $_COOKIE['service_type'];
+	if ($cookietype == 'Postpartum Care' && $has_postpartum) {
+		$initial_select = 'Postpartum Care';
+		$initial_select_postpartum = true;
+	}
+	else {
+		$initial_select = isset($_COOKIE['service']) ? $_COOKIE['service'] : '';
+	}
 }
-$initial_select_postpartum = $initial_select == "Postpartum Care";
 
 ?>
 
@@ -54,7 +63,7 @@ $initial_select_postpartum = $initial_select == "Postpartum Care";
 		<?php foreach ( $services as $value ) :
 			$displayText = get_term_by('id', $value, 'service')->name;
 			?>
-			<option value="<?php echo $value; ?>" <?php if ($displayText === $initial_select) { ?> selected="selected" <?php } ?>>
+			<option value="<?php echo $value; ?>" <?php if (substr($initial_select, 0, strlen($displayText)) === $displayText) { ?> selected="selected" <?php } ?>>
 			<?php echo $displayText; ?>
 			</option>
 		<?php endforeach; ?>

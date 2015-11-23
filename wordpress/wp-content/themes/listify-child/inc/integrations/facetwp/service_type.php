@@ -97,7 +97,7 @@ class BH_Service_Type_Facet extends FacetWP_Facet_Dropdown
 				}
 
 				wp.hooks.addAction('facetwp/refresh/service_type', function($this, facet_name) {
-					var val = $this.find('.facetwp-service_type-radio').val();
+					var val = $this.find(':checked').val();
 					FWP.facets[facet_name] = val ? [val] : [];
 					FWP.toggle_service_visibility();
 				});

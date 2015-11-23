@@ -295,9 +295,14 @@ function custom_update_job_data_products( $job_id, $values ) {
 	foreach ( $posts as $val ) {
 		if (has_term( 'postpartum', 'bh_booking_type', $val)) {
 			update_post_meta( $val->ID, '_wc_booking_qty', $values['job']['bh_max_bookings'] );
+			update_post_meta( $val->ID, '_vendor_name', $haspostpartum ? $current_user->display_name : '' );
 			if ($haspostpartum) {
+				wp_set_object_terms($job_id, 'postpartum_type', 'service_type', true);
 				$products[$ind] = $val->ID;
 				$ind++;
+			}
+			else {
+				wp_remove_object_terms($job_id, 'postpartum_type', 'service_type');
 			}
 		}
 		else if (has_term( 'serviceappt', 'bh_booking_type', $val)) {
@@ -461,11 +466,10 @@ function custom_update_job_data_products( $job_id, $values ) {
 	$productarr = array( '0' => strval($service_product_id));
 	if ($haspostpartum) {
 		$productarr['1'] = strval($postpartum_product_id);
+		wp_set_object_terms($job_id, 'postpartum_type', 'service_type', true);
 	}
 	update_post_meta( $job_id, '_products', $productarr );
 
-	//TODO sort this out for postpartum
-	wp_set_object_terms($job_id, 'postpartum_type', 'service_type', true);
 	wp_set_object_terms($job_id, 'other_type', 'service_type', true);
 
 	FWP()->indexer->index( $job_id );
