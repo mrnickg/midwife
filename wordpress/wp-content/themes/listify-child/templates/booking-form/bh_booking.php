@@ -28,6 +28,9 @@ foreach ($products as $product) {
 }
 
 $initial_select="Postpartum Care";
+if (!$has_postpartum) {
+	$initial_select = $services[0];
+}
 $initial_select_postpartum = $initial_select == "Postpartum Care";
 
 ?>
@@ -37,8 +40,17 @@ $initial_select_postpartum = $initial_select == "Postpartum Care";
 <p class="form-field form-field-wide">
 	<label for="type">Service:</label>
 	<select name="booking_type" id="booking_type">
-		<option value="Postpartum Care" selected="<?php echo ($initial_select_postpartum) ? "selected" : ""; ?>">Postpartum Care</option>
-        <option disabled>&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;</option>
+		<?php
+			if ($has_postpartum) {
+				?>
+				<option value="Postpartum Care"
+				        selected="<?php echo ( $initial_select_postpartum ) ? "selected" : ""; ?>">Postpartum Care
+				</option>
+				<option disabled>
+					&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;</option>
+				<?php
+			}
+		?>
 		<?php foreach ( $services as $value ) :
 			$displayText = get_term_by('id', $value, 'service')->name;
 			?>
@@ -49,16 +61,11 @@ $initial_select_postpartum = $initial_select == "Postpartum Care";
 	</select>
 </p>
 
-<div name="postpartum_div" id="postpartum_div" style="<?php echo $initial_select_postpartum ? "" : "display:none" ?>">
-
-	<?php if ($has_postpartum) {
-
+<?php if ($has_postpartum) {
 	$pp_booking_form = new WC_Booking_Form( $postpartum_product );
 	$s_booking_form = new WC_Booking_Form( $service_product );
-
-	?>
-
-
+?>
+<div name="postpartum_div" id="postpartum_div" style="<?php echo $initial_select_postpartum ? "" : "display:none" ?>">
 	<form name="postpartum_hidden_form" id="postpartum_hidden_form" class="cart" method="post" enctype='multipart/form-data'>
 		<div id="bh-bookings-pp-div" class="wc-bookings-booking-form">
 			<p>Please confirm your due date</p>
@@ -72,10 +79,6 @@ $initial_select_postpartum = $initial_select == "Postpartum Care";
 			<p>Please select a date and time for your initial appointment</p>
 			<?php $s_booking_form->output(); ?>
 		</div>
-
-
-		<?php
-		} ?>
 
 		<input type="hidden" name="pp_wc_bookings_field_start_date_year" id="pp_wc_bookings_field_start_date_year" />
 		<input type="hidden" name="pp_wc_bookings_field_start_date_month" id="pp_wc_bookings_field_start_date_month" />
@@ -91,6 +94,9 @@ $initial_select_postpartum = $initial_select == "Postpartum Care";
 
 	</form>
 </div>
+<?php
+}
+?>
 <div name="service_div" id="service_div" style="<?php echo $initial_select_postpartum ? "display:none" : "" ?>">
 	<form class="cart" id="service_form" name="service_form" method="post" enctype='multipart/form-data'>
 

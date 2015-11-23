@@ -295,15 +295,19 @@ function custom_update_job_data_products( $job_id, $values ) {
 	foreach ( $posts as $val ) {
 		if (has_term( 'postpartum', 'bh_booking_type', $val)) {
 			update_post_meta( $val->ID, '_wc_booking_qty', $values['job']['bh_max_bookings'] );
+			if ($haspostpartum) {
+				$products[$ind] = $val->ID;
+				$ind++;
+			}
 		}
 		else if (has_term( 'serviceappt', 'bh_booking_type', $val)) {
 			update_post_meta( $val->ID, '_wc_booking_availability', parse_booking_availability($values['job']['job_hours']));
+			$products[$ind] = $val->ID;
+			$ind++;
 		}
-		$products[$ind] = $val->ID;
-		$ind++;
+
 	}
 
-	//TODO Need a way to disable postpartum product if the midwife deselects
 
 	if (count($posts) > 0) {
 
@@ -454,7 +458,11 @@ function custom_update_job_data_products( $job_id, $values ) {
 
 	update_post_meta( $postpartum_product_id, '_vendor_name', $current_user->display_name );
 
-	update_post_meta( $job_id, '_products', array('0'=>strval($service_product_id), '1'=>strval($postpartum_product_id)) );
+	$productarr = array( '0' => strval($service_product_id));
+	if ($haspostpartum) {
+		$productarr['1'] = strval($postpartum_product_id);
+	}
+	update_post_meta( $job_id, '_products', $productarr );
 
 	//TODO sort this out for postpartum
 	wp_set_object_terms($job_id, 'postpartum_type', 'service_type', true);
@@ -681,7 +689,11 @@ add_filter('woocommerce_locate_template', 'add_custom_booking_template', 10, 3);
 function booking_form_main( $products ) {
 	$booking_widget = Listify_Widget_Listing_Bookings::this();
 	remove_action('listify_widget_job_listing_bookings', array($booking_widget,'output_bookings'), 10);
-	woocommerce_get_template( 'templates/booking-form/bh_booking.php', array( 'products' => $products ), 'woocommerce-bookings', WC_BOOKINGS_TEMPLATE_PATH );
+	$productarr = $products;
+	if (!is_array($productarr)) {
+		$productarr = array( $products );
+	}
+	woocommerce_get_template( 'templates/booking-form/bh_booking.php', array( 'products' => $productarr ), 'woocommerce-bookings', WC_BOOKINGS_TEMPLATE_PATH );
 }
 
 add_action('listify_widget_job_listing_bookings', 'booking_form_main', 5, 1);
