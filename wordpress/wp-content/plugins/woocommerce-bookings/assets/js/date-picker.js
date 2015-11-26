@@ -179,7 +179,7 @@ jQuery( function( $ ) {
                 onSelect: wc_bookings_date_picker.select_date_trigger,
                 minDate: $picker.data( 'min_date' ),
                 maxDate: $picker.data( 'max_date' ),
-                defaultDate: $picker.data( 'default_date'),
+                defaultDate: $picker.data( 'default_date' ),
                 numberOfMonths: 1,
                 showButtonPanel: false,
                 showOtherMonths: true,
@@ -195,9 +195,18 @@ jQuery( function( $ ) {
                 gotoCurrent: true
             });
 
+
+
             $( '.ui-datepicker-current-day' ).removeClass( 'ui-datepicker-current-day' );
 
             var form  = $picker.closest( 'form' );
+            var pDate = $picker.data( 'initial_date');
+            if ($picker.data( 'initial_date') != '') {
+                var initialDate = new Date($picker.data( 'initial_date'));
+                form.find( 'input.booking_date_year' ).val(initialDate.getFullYear());
+                form.find( 'input.booking_date_month' ).val(initialDate.getMonth()+1);
+                form.find( 'input.booking_date_day' ).val(initialDate.getDate());
+            }
             var year  = parseInt( form.find( 'input.booking_date_year' ).val(), 10 );
             var month = parseInt( form.find( 'input.booking_date_month' ).val(), 10 );
             var day   = parseInt( form.find( 'input.booking_date_day' ).val(), 10 );
@@ -205,6 +214,8 @@ jQuery( function( $ ) {
             if ( year && month && day ) {
                 var date = new Date( year, month - 1, day );
                 $picker.datepicker( "setDate", date );
+                form.find( '.wc-bookings-booking-form').triggerHandler( 'date-selected', date );
+                jQuery( '#postpartum_main_form').show();
             }
         },
         get_input_date: function( fieldset, where ) {

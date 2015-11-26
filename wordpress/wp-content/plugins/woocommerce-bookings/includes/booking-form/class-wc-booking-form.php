@@ -16,6 +16,8 @@ class WC_Booking_Form {
 	 */
 	private $fields;
 
+	public $initial_date = '';
+
 	/**
 	 * Constructor
 	 * @param $product WC_Product_Booking

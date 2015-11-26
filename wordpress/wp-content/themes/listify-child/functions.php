@@ -572,6 +572,16 @@ function add_edit_button() {
 
 add_action( 'listify_single_job_listing_actions_after', 'add_edit_button');
 
+
+function get_default_booking_date( $date, $booking_form ) {
+	if ( $booking_form->initial_date != '') {
+		$date = $booking_form->initial_date;
+	}
+	return $date;
+}
+
+add_filter('woocommerce_initial_booking_date', 'get_default_booking_date', 10, 2);
+
 function billing_details_title( $title ) {
 	$title = 'Your Details';
 	return $title;

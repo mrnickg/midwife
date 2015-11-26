@@ -34,7 +34,8 @@ class WC_Booking_Form_Date_Picker extends WC_Booking_Form_Picker {
 		$this->args['availability_rules']      = array();
 		$this->args['availability_rules'][0]   = $this->booking_form->product->get_availability_rules();
 		$this->args['label']                   = $this->get_field_label( __( 'Date', 'woocommerce-bookings' ) );
-		$this->args['default_date']            = date( 'Y-m-d', $this->get_default_date() );
+		$this->args['default_date']            = $this->get_default_date();
+		$this->args['initial_date']            = apply_filters('woocommerce_initial_booking_date', '', $booking_form );
 
 		if ( $this->booking_form->product->has_resources() ) {
 			foreach ( $this->booking_form->product->get_resources() as $resource ) {

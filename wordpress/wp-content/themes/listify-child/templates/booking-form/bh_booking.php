@@ -72,6 +72,7 @@ if (isset($_COOKIE['service_type'])) {
 
 <?php if ($has_postpartum) {
 	$pp_booking_form = new WC_Booking_Form( $postpartum_product );
+	$pp_booking_form->initial_date = isset($_COOKIE['due_date']) ? $_COOKIE['due_date'] : '';
 	$s_booking_form = new WC_Booking_Form( $service_product );
 ?>
 <div name="postpartum_div" id="postpartum_div" style="<?php echo $initial_select_postpartum ? "" : "display:none" ?>">
