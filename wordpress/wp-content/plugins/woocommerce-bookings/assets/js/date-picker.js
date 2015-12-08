@@ -86,7 +86,7 @@ jQuery( function( $ ) {
                     }
                 }
                 $form.find( '.wc-bookings-booking-form').triggerHandler( 'date-selected', date );
-                jQuery( '#postpartum_main_form').show();
+                jQuery( '#postpartum-service-form').show();
             }
         },
         select_date_trigger: function( date ) {
@@ -162,7 +162,7 @@ jQuery( function( $ ) {
             }
 
             form.find( '.wc-bookings-booking-form' ).triggerHandler( 'date-selected', date, start_or_end_date );
-            jQuery( '#postpartum_main_form').show();
+            jQuery( '#postpartum-service-form').show();
         },
         date_picker_init: function( element ) {
             if ( $( element ).is( '.picker' ) ) {
@@ -215,7 +215,7 @@ jQuery( function( $ ) {
                 var date = new Date( year, month - 1, day );
                 $picker.datepicker( "setDate", date );
                 form.find( '.wc-bookings-booking-form').triggerHandler( 'date-selected', date );
-                jQuery( '#postpartum_main_form').show();
+                jQuery( '#postpartum-service-form').show();
             }
         },
         get_input_date: function( fieldset, where ) {

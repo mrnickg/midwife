@@ -144,3 +144,34 @@ Template: listify
 div.active {
     display:block;
 }
+
+.midwife-meta-wrapper {
+    padding-left: 0px;
+}
+
+.midwife-meta-image {
+    width: 167.5px;
+    height: 175px;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 4px;
+    border-color: #fff;
+}
+
+.midwife-meta-rating {
+    padding-bottom: 16px;
+}
+
+.midwife-meta-inner-wrapper {
+    display: inline-block;
+}
+
+.midwife-meta-text-wrapper {
+    position: absolute;
+    bottom: 3px;
+    padding-left: 30px;
+}
+
+.listing-cover.has-image {
+    padding-bottom: 3em;
+}

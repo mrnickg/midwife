@@ -7,6 +7,11 @@
           <mapping local-root="$PROJECT_DIR$/wordpress/wp-content" remote-root="/var/www/html/wp-content" />
         </path_mappings>
       </server>
+      <server host="http://146.148.123.135/" id="f9a10521-4df4-4131-b733-9259a3e627cd" name="dev" use_path_mappings="true">
+        <path_mappings>
+          <mapping local-root="$PROJECT_DIR$/wordpress/wp-content" remote-root="/var/www/html/wp-content" />
+        </path_mappings>
+      </server>
     </servers>
   </component>
 </project>

@@ -113,6 +113,7 @@ class BH_Due_Date_Facet {
 				wp.hooks.addAction('facetwp/ready', function () {
 					$(document).on('facetwp-loaded', function () {
 						$('.facetwp-date').datepicker({
+							startDate: '1',
 							format: 'yyyy-mm-dd',
 							autoclose: true,
 							clearBtn: true

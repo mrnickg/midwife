@@ -832,3 +832,19 @@ function get_proximity_radius($radius) {
 }
 
 add_filter('facetwp_proximity_radius', 'get_proximity_radius');
+
+function add_profile_meta_header( ) {
+	wc_get_template( 'templates/midwife-profile-header.php' );
+}
+
+add_action( 'single_job_listing_meta_hook', 'add_profile_meta_header', 10 );
+
+function can_upload_pictures( $can ) {
+	global $post;
+	$author_id=$post->post_author;
+	$current = get_current_user_id();
+	$can = $author_id == $current;
+	return $can;
+}
+
+add_filter( 'listify_can_upload_to_listing', 'can_upload_pictures');

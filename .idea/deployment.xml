@@ -6,6 +6,7 @@
         <serverdata>
           <mappings>
             <mapping deploy="/var/www/html/" local="$PROJECT_DIR$/wordpress/" web="/" />
+            <mapping deploy="/var/www/html/wp-content" local="$USER_HOME$/Sites/wordpress/wp-content" web="/" />
           </mappings>
           <excludedPaths>
             <excludedPath local="true" path="$PROJECT_DIR$/wordpress/database" />

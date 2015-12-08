@@ -27,18 +27,18 @@ foreach ($products as $product) {
 	}
 }
 
-$initial_select= '';
+$initial_select= 'Postpartum Care';
 
-$initial_select_postpartum = false;
+$initial_select_postpartum = true;
 
 if (isset($_COOKIE['service_type'])) {
 	$cookietype = $_COOKIE['service_type'];
 	if ($cookietype == 'Postpartum Care' && $has_postpartum) {
 		$initial_select = 'Postpartum Care';
-		$initial_select_postpartum = true;
 	}
-	else {
-		$initial_select = isset($_COOKIE['service']) ? $_COOKIE['service'] : '';
+	else if (isset($_COOKIE['service']) && $_COOKIE['service'] != '') {
+		$initial_select = $_COOKIE['service'];
+		$initial_select_postpartum = false;
 	}
 }
 
@@ -52,8 +52,7 @@ if (isset($_COOKIE['service_type'])) {
 		<?php
 			if ($has_postpartum) {
 				?>
-				<option value="Postpartum Care"
-				        selected="<?php echo ( $initial_select_postpartum ) ? "selected" : ""; ?>">Postpartum Care
+				<option value="Postpartum Care" "<?php echo ( $initial_select_postpartum ) ? "selected" : ""; ?>">Postpartum Care
 				</option>
 				<option disabled>
 					&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;</option>
@@ -63,7 +62,7 @@ if (isset($_COOKIE['service_type'])) {
 		<?php foreach ( $services as $value ) :
 			$displayText = get_term_by('id', $value, 'service')->name;
 			?>
-			<option value="<?php echo $value; ?>" <?php if (substr($initial_select, 0, strlen($displayText)) === $displayText) { ?> selected="selected" <?php } ?>>
+			<option value="<?php echo $value; ?>" <?php if (substr($initial_select, 0, strlen($displayText)) === $displayText) { ?> selected <?php } ?>>
 			<?php echo $displayText; ?>
 			</option>
 		<?php endforeach; ?>
@@ -84,11 +83,14 @@ if (isset($_COOKIE['service_type'])) {
 		</div>
 	</form>
 	<br/>
-	<form class="cart" name="postpartum_main_form" style="display:none" id="postpartum_main_form" method="post" enctype='multipart/form-data'>
-		<div id="postpartum-service-form" class="wc-bookings-booking-form">
-			<p>Please select a date and time for your initial appointment</p>
-			<?php $s_booking_form->output(); ?>
+	<form class="cart" name="postpartum_main_form" id="postpartum_main_form" method="post" enctype='multipart/form-data'>
+		<div id="postpartum-service-form" style="display:none">
+			<div class="wc-bookings-booking-form">
+				<p>Please select a date and time for your initial appointment</p>
+				<?php $s_booking_form->output(); ?>
+			</div>
 		</div>
+
 
 		<input type="hidden" name="pp_wc_bookings_field_start_date_year" id="pp_wc_bookings_field_start_date_year" />
 		<input type="hidden" name="pp_wc_bookings_field_start_date_month" id="pp_wc_bookings_field_start_date_month" />
@@ -98,7 +100,7 @@ if (isset($_COOKIE['service_type'])) {
 
 		<input type="hidden" name="service-type" value="Postpartum Care"/>
 
-		<button type="submit" class="wc-bookings-booking-form-button single_add_to_cart_button button alt disabled" style="..."><?php echo $product->single_add_to_cart_text(); ?></button>
+		<button type="submit" class="wc-bookings-booking-form-button single_add_to_cart_button button alt disabled" ><?php echo $product->single_add_to_cart_text(); ?></button>
 
 		<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
 
