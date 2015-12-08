@@ -112,8 +112,9 @@ Template: listify
     background: rgba(240,243,246,.5);
     /*color: #717a8f;*/
     color: #fff;
-    font-size: 16px;
-    font-weight: 200;
+    /*color: #f4a4a2;*/
+    /*font-size: 16px;*/
+    /*font-weight: 200;*/
     text-decoration: none;
     text-shadow : none;
     transition: all linear 0.15s;
@@ -174,4 +175,18 @@ div.active {
 
 .listing-cover.has-image {
     padding-bottom: 3em;
+}
+
+.nav-menu a, .nav-menu ul a, .nav-menu li a, ul.nav-menu li a {
+    color: #3396d1;
+    /*color: #8ecaac;*/
+    padding: 8px 0;
+}
+
+.nav-menu.primary a, .nav-menu.primary ul ul a {
+    color: #3396d1;
+}
+
+.homepage-cover {
+    padding: 4em 0 26em;
 }

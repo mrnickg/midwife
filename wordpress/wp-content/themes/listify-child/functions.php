@@ -43,6 +43,13 @@ function search_widget_check_service( $facet ) {
 
 add_filter( 'search_widget_is_service_facet', 'search_widget_check_service', 10, 1);
 
+
+function home_page_title($title, $instance, $id) {
+	return $id == 'listify_widget_search_listings' ? false : $title;
+}
+
+add_filter('widget_title', 'home_page_title', 3, 10);
+
 function custom_listify_the_location_formatted_parts( $output, $location, $post ) {
 
 	$output[ 'address' ] = '<span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">' . $post->geolocation_city . '</span>';
