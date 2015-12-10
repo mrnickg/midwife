@@ -855,3 +855,34 @@ function can_upload_pictures( $can ) {
 }
 
 add_filter( 'listify_can_upload_to_listing', 'can_upload_pictures');
+
+function should_allow_comments( $allow ) {
+	$userid = get_current_user_id();
+	$midwife_id = get_the_author_meta( 'ID');
+
+	$args = array(
+		'author'    => $midwife_id,
+		'post_type'      => 'product'
+	);
+
+	$products = get_posts($args);
+
+	$allow = false;
+	foreach ($products as $val) {
+		$product  = wc_get_product( $val->ID );
+		$bookings = $product->get_bookings_in_date_range( strtotime( '2015-01-01') , strtotime( 'midnight tomorrow', current_time( 'timestamp' ) ), $product->ID );
+		foreach( $bookings as $booking ) {
+			if ($booking->customer_id == $userid) {
+				$allow = true;
+				break;
+			}
+		}
+		if ($allow) {
+			break;
+		}
+	}
+
+	return $allow;
+}
+
+add_filter('listify_allow_comments', 'should_allow_comments');

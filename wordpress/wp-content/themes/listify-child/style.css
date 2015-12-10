@@ -110,8 +110,8 @@ Template: listify
     display:inline-block;
     border-radius:3px 3px 0px 0px;
     background: rgba(240,243,246,.5);
-    /*color: #717a8f;*/
-    color: #fff;
+        color: #717a8f;
+    /*color: #fff;*/
     /*color: #f4a4a2;*/
     /*font-size: 16px;*/
     /*font-weight: 200;*/
@@ -189,4 +189,36 @@ div.active {
 
 .homepage-cover {
     padding: 4em 0 26em;
+}
+
+.wc-bookings-booking-form p {
+    color: #3396d1;
+}
+
+.listify_widget_panel_listing_bookings h1 {
+    color: #3396d1;
+}
+
+.button, .butto-secondary {
+    padding: 8px 8px;
+}
+
+.content-single-job_listing-hero.has-image .job_listing-rating-stars .star-icon .ion-ios-star-half:before, .content-single-job_listing-hero.has-image .job_listing-rating-stars .star-icon .ion-ios-star:before {
+    /*color: #72BB47;*/
+    color: #3396d1;
+    text-shadow : none;
+}
+
+
+.ion-ios-star-outline {
+    /*color: #72BB47;*/
+    color: #3396d1;
+    text-shadow: none;
+}
+
+.listify_widget_panel_listing_bookings {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 4px;
+    border-color: #3396d1;
 }

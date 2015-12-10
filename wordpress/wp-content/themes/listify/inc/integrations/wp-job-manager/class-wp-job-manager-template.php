@@ -718,7 +718,7 @@ class Listify_WP_Job_Manager_Template extends listify_Integration {
 		global $post;
 
 		if ( ! comments_open() || ! ( is_active_widget( false, false, 'listify_widget_panel_listing_comments', true ) || !
-				is_active_sidebar( 'single-job_listing-widget-area' ) ) || 'preview' == $post->post_type ) {
+				is_active_sidebar( 'single-job_listing-widget-area' ) ) || 'preview' == $post->post_type || !apply_filters('listify_allow_comments', true) ) {
 			return;
 		}
 
