@@ -95,6 +95,7 @@ if (isset($_COOKIE['service_type'])) {
 		<input type="hidden" name="pp_wc_bookings_field_start_date_year" id="pp_wc_bookings_field_start_date_year" />
 		<input type="hidden" name="pp_wc_bookings_field_start_date_month" id="pp_wc_bookings_field_start_date_month" />
 		<input type="hidden" name="pp_wc_bookings_field_start_date_day" id="pp_wc_bookings_field_start_date_day" />
+		<input type="hidden" name="appt_type" id="appt_type" value="Introductory Appointment"/>
 		<input type="hidden" name="add-to-cart" value="<?php echo esc_attr( $service_product->id ); ?>" />
 		<input type="hidden" name="pp_add-to-cart" value="<?php echo esc_attr( $postpartum_product->id ); ?>" />
 
@@ -135,6 +136,8 @@ if (isset($_COOKIE['service_type'])) {
 		<input type="hidden" name="add-to-cart" value="<?php echo esc_attr( $service_product->id ); ?>" />
 
 		<input type="hidden" name="service_type" id="service_type" value=""/>
+		<input type="hidden" name="appt_type" id="appt_type" value=""/>
+
 		<button type="submit" class="wc-bookings-booking-form-button single_add_to_cart_button button alt disabled" style="display:none"><?php echo $product->single_add_to_cart_text(); ?></button>
 
 		<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>

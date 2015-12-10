@@ -472,6 +472,8 @@ class WC_Booking_Form {
 			}
 		}
 
+		$data['appt_type'] = $posted['appt_type'];
+
 		return $data;
 	}
 

@@ -237,6 +237,10 @@ class WC_Booking_Cart_Manager {
 			$new_booking_data['persons'] = $cart_item_meta['booking']['_persons']; // Count of persons making booking
 		}
 
+		if ( isset( $cart_item_meta['booking']['appt_type'])) {
+			$new_booking_data['appt_type'] = $cart_item_meta['booking']['appt_type'];
+		}
+
 		$new_booking = get_wc_booking( $new_booking_data );
 		$new_booking->create( $status );
 

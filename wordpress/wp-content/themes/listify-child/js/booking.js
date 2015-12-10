@@ -35,6 +35,7 @@ jQuery( document ).ready(function() {
 
     jQuery( '#service_form' ).submit(function() {
         document.service_form.service_type.value = jQuery( '#booking_type').find(":selected").text().trim();
+        document.service_form.appt_type.value = jQuery( '#booking_type').find(":selected").text().trim();
 
         return true;
     });
