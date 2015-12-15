@@ -5,13 +5,13 @@
       <paths name="midwife">
         <serverdata>
           <mappings>
-            <mapping deploy="/var/www/html/" local="$PROJECT_DIR$/wordpress/" web="/" />
-            <mapping deploy="/var/www/html/wp-content" local="$USER_HOME$/Sites/wordpress/wp-content" web="/" />
+            <mapping deploy="/var/www/html/wp-content" local="$PROJECT_DIR$/src/wordpress/wp-content" web="/" />
           </mappings>
           <excludedPaths>
             <excludedPath local="true" path="$PROJECT_DIR$/wordpress/database" />
             <excludedPath local="true" path="$PROJECT_DIR$/wordpress/assets" />
             <excludedPath local="true" path="$PROJECT_DIR$/wordpress/config" />
+            <excludedPath local="true" path="$PROJECT_DIR$/wordpress" />
           </excludedPaths>
         </serverdata>
       </paths>

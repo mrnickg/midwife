@@ -2,16 +2,8 @@
 <project version="4">
   <component name="PhpProjectServersManager">
     <servers>
-      <server host="http://23.251.130.130/" id="ab141347-de30-45f8-8b35-ebf377ce81b7" name="23.251.130.130" use_path_mappings="true">
-        <path_mappings>
-          <mapping local-root="$PROJECT_DIR$/wordpress/wp-content" remote-root="/var/www/html/wp-content" />
-        </path_mappings>
-      </server>
-      <server host="http://146.148.123.135/" id="f9a10521-4df4-4131-b733-9259a3e627cd" name="dev" use_path_mappings="true">
-        <path_mappings>
-          <mapping local-root="$PROJECT_DIR$/wordpress/wp-content" remote-root="/var/www/html/wp-content" />
-        </path_mappings>
-      </server>
+      <server host="http://23.251.130.130/" id="ab141347-de30-45f8-8b35-ebf377ce81b7" name="23.251.130.130" use_path_mappings="true" />
+      <server host="http://104.155.74.172" id="f9a10521-4df4-4131-b733-9259a3e627cd" name="dev" use_path_mappings="true" />
     </servers>
   </component>
 </project>

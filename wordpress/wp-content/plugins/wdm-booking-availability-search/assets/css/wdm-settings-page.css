@@ -1,0 +1,57 @@
+/* 
+    Document   : wdm-settings-page
+    Created on : Mar 27, 2015, 9:14:24 PM
+    Author     : Jaitheradevi
+    Description: Purpose of the stylesheet follows.
+    Used to style the bksearch settings page & "how to use" page.
+*/
+
+
+.main-title
+{
+    color:#0074a2;;
+}
+#wdm-content
+{
+    background-color: #eee;
+    box-shadow: 5px 5px 5px #888888;
+    border-radius: 3px;
+    width:80%;
+    padding:10px;
+    font-size:70%;
+}
+#wdm-entire-wrap
+{
+     background-color: white;
+     padding:20px;
+     width:95%;
+}
+#search_title,
+#before_search
+{
+    width:40%;
+    height:80px;
+    
+}
+#category-list
+{
+    width:100%;
+}
+.wdm-select
+{
+    width:50%;
+}
+#mode-of-charging{
+    width: 20%;
+    height: 28px;
+    line-height: 28px;
+    padding: 2px;
+    vertical-align: middle;
+}
+.bks_info{
+    color: #888;
+    font-size: 10px;
+}
+
+
+

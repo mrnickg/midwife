@@ -1,0 +1,141 @@
+/* 
+    Created on : 19 Feb, 2015, 3:20:06 PM
+    Author     : karthik
+*/
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+	box-sizing: border-box;
+    }
+    
+/* 
+ *  Clearfix solution.
+*/
+
+wdm-clearfix:before,
+.wdm-clearfix:after {
+    content:"";
+    display:table;
+}
+.wdm-clearfix:after {
+    clear:both;
+}
+.wdm-clearfix {
+    zoom:1; /* For IE 6/7 */
+}
+
+/*
+ *   Default row styles.
+*/
+.wdm-row {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*
+ *   Column setup.
+*/
+.wdm-col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 2%;
+}
+
+.wdm-col:nth-child(4n+1) {
+    clear: both;
+    margin-left: 0;
+}
+
+/*
+ *  Grid of four
+*/
+
+.wdm-span-4-of-4 {
+	width: 100%;
+}
+.wdm-span-3-of-4 {
+	width: 74.5%;
+}
+.wdm-span-2-of-4 {
+	width: 49%;
+}
+.wdm-span-1-of-4 {
+	width: 23.5%;
+}
+
+/*
+*   Other customizations.
+*/
+
+.wdm-img{
+   width: 100% !important;
+   margin-bottom: 0 !important;
+}
+
+.wdm-product-title{
+    font-size: 14px!important;
+    font-family: 'OpenSansRegular';
+    line-height: 18px !important;
+    text-transform: none;
+    letter-spacing: 0px;
+    padding: 0.2em 0 0.2em 0;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    color: #444;
+    margin: 0;
+}
+#wdm-title{
+    display:none;
+}
+#wdm-loading-txt{
+    display:none;
+}
+.wdm-product-price{
+    padding-left:5px;
+    font-weight: bold;
+    
+}
+#loader{
+    width:30px;
+    height: 100%;
+    display: inline-block;    
+    margin-bottom: 0px;
+    padding-left:5px;    
+    vertical-align: middle;
+    
+}
+
+/*
+ *   Media Queries
+*/
+
+@media only screen and (max-width:1000px){
+    .wdm-span-1-of-4{
+        width: 49% !important;
+    }
+    .wdm-col:nth-child(2n+1) {
+        margin-left: 0;
+        clear: both;
+    }
+    .wdm-img{
+        width: 100% !important;
+    }
+}
+
+@media only screen and (max-width: 690px) {
+    .wdm-col { 
+	margin: 8% 0 1% 0%;
+    }
+    .wdm-col:first-child{
+        margin-top: 0;
+    }
+    .wdm-span-1-of-4 {
+        width: 100% !important;
+        float: none;
+    }
+}
+
+
+

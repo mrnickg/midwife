@@ -1,0 +1,12 @@
+/* 
+    Document   : wdm-category-metabox
+    Created on : Apr 26, 2015, 4:23:34 PM
+    Author     : Jaitheradevi
+    Description:Purpose of the stylesheet follows.
+    Used to style the datepicker.
+*/
+
+#ui-datepicker-div
+{
+    z-index: 50000 !important;
+}
