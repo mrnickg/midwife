@@ -29,7 +29,7 @@ define('DB_USER', 'root');
 define('DB_PASSWORD', 'ng562051');
 
 /** MySQL hostname */
-define('DB_HOST', 'aa6icjsh3r2uu6.cqkoeb0qtjh8.eu-central-1.rds.amazonaws.com');
+define('DB_HOST', 'aa1s87dobggp8qp.cqkoeb0qtjh8.eu-central-1.rds.amazonaws.com');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8mb4');
@@ -39,8 +39,8 @@ define('DB_COLLATE', '');
 
 define('SCRIPT_DEBUG', false);
 
-define('WP_HOME','http://babyhallo-env.elasticbeanstalk.com');
-define('WP_SITEURL','http://babyhallo-env.elasticbeanstalk.com');
+define('WP_HOME','http://babyhallo-test.elasticbeanstalk.com');
+define('WP_SITEURL','http://babyhallo-test.elasticbeanstalk.com');
 
 /**#@+
  * Authentication Unique Keys and Salts.
