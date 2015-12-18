@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fe07fc4-c8d0-4b04-adcc-7c7115d16147" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify/inc/integrations/wp-job-manager/widgets/class-widget-home-search-listings.php" afterPath="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify/inc/integrations/wp-job-manager/widgets/class-widget-home-search-listings.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/js/facetsupport.js" afterPath="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/js/facetsupport.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/style.css" afterPath="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/style.css" />
     </list>
     <ignored path="midwife.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,20 +23,20 @@
       <content type="file-editors">
         <state>
           <leaf>
-            <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+            <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/style.css">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.0">
-                    <caret line="149" column="1" selection-start-line="149" selection-start-column="1" selection-end-line="149" selection-end-column="1" />
+                  <state vertical-scroll-proportion="0.51894563">
+                    <caret line="53" column="24" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
                     <folding />
                   </state>
                 </provider>
               </entry>
             </file>
-            <file leaf-file-name="class-widget-home-search-listings.php" pinned="false" current-in-tab="true">
+            <file leaf-file-name="class-widget-home-search-listings.php" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify/inc/integrations/wp-job-manager/widgets/class-widget-home-search-listings.php">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.600172">
+                  <state vertical-scroll-proportion="-13.686275">
                     <caret line="163" column="25" selection-start-line="163" selection-start-column="25" selection-end-line="163" selection-end-column="25" />
                     <folding>
                       <element signature="e#3832#3854#0#HTML" expanded="true" />
@@ -238,9 +237,9 @@
         <option value="$PROJECT_DIR$/wordpress/wp-content/themes/listify/inc/integrations/wp-job-manager/class-wp-job-manager-gallery.php" />
         <option value="$PROJECT_DIR$/wordpress/wp-content/themes/listify-child/functions.php" />
         <option value="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/functions.php" />
-        <option value="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/style.css" />
         <option value="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/js/facetsupport.js" />
         <option value="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify/inc/integrations/wp-job-manager/widgets/class-widget-home-search-listings.php" />
+        <option value="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/style.css" />
       </list>
     </option>
   </component>
@@ -1469,14 +1468,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="149" column="1" selection-start-line="149" selection-start-column="1" selection-end-line="149" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/themes/listify/functions.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.083333">
@@ -1528,9 +1519,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/js/facetsupport.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46460176">
+          <caret line="47" column="86" selection-start-line="47" selection-start-column="86" selection-end-line="47" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify/inc/integrations/wp-job-manager/widgets/class-widget-home-search-listings.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.600172">
+        <state vertical-scroll-proportion="-13.686275">
           <caret line="163" column="25" selection-start-line="163" selection-start-column="25" selection-end-line="163" selection-end-column="25" />
           <folding>
             <element signature="e#3832#3854#0#HTML" expanded="true" />
@@ -1538,10 +1537,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/js/facetsupport.js">
+    <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46460176">
-          <caret line="47" column="86" selection-start-line="47" selection-start-column="86" selection-end-line="47" selection-end-column="86" />
+        <state vertical-scroll-proportion="0.51894563">
+          <caret line="53" column="24" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
           <folding />
         </state>
       </provider>

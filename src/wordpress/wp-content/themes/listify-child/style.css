@@ -56,6 +56,11 @@ Template: listify
     float: right;
 }
 
+.bh-search-option-text a{
+    outline: none;
+    text-decoration: none;
+}
+
 .homepage-cover .row.bh-search-row {
     margin-bottom: 0.5em;
 }
