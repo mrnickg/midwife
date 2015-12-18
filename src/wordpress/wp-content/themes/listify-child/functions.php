@@ -25,7 +25,7 @@ add_action( 'wp_enqueue_scripts', 'listify_child_styles', 999 );
 /** Place any new code below this line */
 
 function search_widget_get_all_facets( $args ) {
-	$args[ 'facets' ] = 'proximity,due_date,service';
+	$args[ 'facets' ] = 'title,proximity,due_date,service';
 	return $args;
 }
 
@@ -43,6 +43,11 @@ function search_widget_check_service( $facet ) {
 
 add_filter( 'search_widget_is_service_facet', 'search_widget_check_service', 10, 1);
 
+function search_widget_check_title( $facet ) {
+	return $facet['name'] == 'title';
+}
+
+add_filter( 'search_widget_is_title_facet', 'search_widget_check_title');
 
 function home_page_title($title, $instance, $id) {
 	return $id == 'listify_widget_search_listings' ? false : $title;
