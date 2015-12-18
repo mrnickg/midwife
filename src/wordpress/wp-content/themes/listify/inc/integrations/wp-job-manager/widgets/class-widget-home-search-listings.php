@@ -155,7 +155,18 @@ class Listify_Widget_Search_Listings extends Listify_Widget {
 			<script>
 				function fwp_redirect() {
 					FWP.parse_facets();
-					if ( jQuery('.facetwp-submit').hasClass('submit_postpartum') ) {
+				    if ( jQuery('.facetwp-submit').hasClass('submit_title') ) {
+					    if ( jQuery('.facetwp-submit').hasClass('submit_postpartum') ) {
+						    FWP.facets['<?php echo $this->service_type_facet_name;  ?>'] = '<?php echo $postpartum_facet_value; ?>';
+					    }
+					    else if ( jQuery('.facetwp-submit').hasClass('submit_service') ) {
+						    FWP.facets['<?php echo $this->service_type_facet_name;  ?>'] = '<?php echo $service_facet_value; ?>';
+					    }
+						delete FWP.facets['service'];
+						delete FWP.facets['due_date'];
+						delete FWP.facets['proximity'];
+					}
+					else if ( jQuery('.facetwp-submit').hasClass('submit_postpartum') ) {
 						FWP.facets['<?php echo $this->service_type_facet_name;  ?>'] = '<?php echo $postpartum_facet_value; ?>';
 						delete FWP.facets['service'];
 						delete FWP.facets['title'];
@@ -166,11 +177,6 @@ class Listify_Widget_Search_Listings extends Listify_Widget {
 						delete FWP.facets['service'];
 						delete FWP.facets['due_date'];
 						delete FWP.facets['title']
-					}
-					else if ( jQuery('.facetwp-submit').hasClass('submit_title') ) {
-						delete FWP.facets['service'];
-						delete FWP.facets['due_date'];
-						delete FWP.facets['proximity'];
 					}
 					if ('get' == FWP.permalink_type) {
 						var query_string = FWP.build_query_string();

@@ -41,7 +41,7 @@ jQuery( document ).ready(function() {
             jQuery('.event').hide();
             jQuery('.postpartum').hide();
             jQuery('.title').show();
-            jQuery('.facetwp-submit').removeClass('submit_service').removeClass('submit_postpartum').addClass('submit_title');
+            jQuery('.facetwp-submit').addClass('submit_title');
             jQuery(this).text('or search by midwife service');
         }
         else {
