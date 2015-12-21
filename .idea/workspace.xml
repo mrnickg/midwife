@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fe07fc4-c8d0-4b04-adcc-7c7115d16147" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/functions/account.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/functions/booking.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/functions/profile.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/functions/search.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/functions.php" afterPath="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/functions/booking.php" afterPath="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/functions/booking.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/wordpress/wp-content/plugins/woocommerce/templates/checkout/form-billing.php" afterPath="$PROJECT_DIR$/src/wordpress/wp-content/plugins/woocommerce/templates/checkout/form-billing.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/wordpress/wp-content/plugins/woocommerce/templates/myaccount/my-account.php" afterPath="$PROJECT_DIR$/src/wordpress/wp-content/plugins/woocommerce/templates/myaccount/my-account.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/wordpress/wp-content/plugins/woocommerce/templates/myaccount/my-address.php" afterPath="$PROJECT_DIR$/src/wordpress/wp-content/plugins/woocommerce/templates/myaccount/my-address.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/wordpress/wp-content/plugins/woocommerce-bookings/templates/myaccount/my-bookings.php" afterPath="$PROJECT_DIR$/src/wordpress/wp-content/plugins/woocommerce-bookings/templates/myaccount/my-bookings.php" />
     </list>
     <ignored path="midwife.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,14 +37,24 @@
                 </provider>
               </entry>
             </file>
-            <file leaf-file-name="functions.php" pinned="false" current-in-tab="true">
+            <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/functions.php">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.49137932">
+                  <state vertical-scroll-proportion="-23.75">
                     <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
                     <folding>
                       <element signature="e#6#37#0#PHP" expanded="true" />
                     </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="my-account.php" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/plugins/woocommerce/templates/myaccount/my-account.php">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state vertical-scroll-proportion="0.39717564">
+                    <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+                    <folding />
                   </state>
                 </provider>
               </entry>
@@ -73,26 +82,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="facetsupport.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/js/facetsupport.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="41" column="41" selection-start-line="41" selection-start-column="41" selection-end-line="41" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin-ajax.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wordpress/wp-admin/admin-ajax.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="search.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/functions/search.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -105,14 +94,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="proximity.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="proximity.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/plugins/facetwp/includes/facets/proximity.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6504065">
-              <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
+            <state vertical-scroll-proportion="-3.235294">
+              <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
               <folding>
                 <marker date="1447944042000" expanded="true" signature="1781:2171" placeholder="SELECT DISTI..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="form-billing.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/plugins/woocommerce/templates/checkout/form-billing.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.5882354">
+              <caret line="25" column="53" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -146,28 +145,38 @@
       <file leaf-file-name="booking.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/functions/booking.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="63.764706">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state vertical-scroll-proportion="-9.117647">
+              <caret line="214" column="0" selection-start-line="214" selection-start-column="0" selection-end-line="214" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="class-wc-email-booking-confirmed.php" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/plugins/woocommerce-bookings/includes/emails/class-wc-email-booking-confirmed.php">
+      <file leaf-file-name="my-address.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/plugins/woocommerce/templates/myaccount/my-address.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.5">
-              <caret line="12" column="32" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="32" />
+            <state vertical-scroll-proportion="-8.235294">
+              <caret line="34" column="69" selection-start-line="34" selection-start-column="69" selection-end-line="34" selection-end-column="69" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="class-wc-booking-email-manager.php" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/plugins/woocommerce-bookings/includes/class-wc-booking-email-manager.php">
+      <file leaf-file-name="my-bookings.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/plugins/woocommerce-bookings/templates/myaccount/my-bookings.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.875">
-              <caret line="103" column="7" selection-start-line="103" selection-start-column="7" selection-end-line="103" selection-end-column="7" />
+            <state vertical-scroll-proportion="-10.0">
+              <caret line="88" column="53" selection-start-line="88" selection-start-column="53" selection-end-line="88" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="number-field.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/plugins/wp-job-manager/templates/form-fields/number-field.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.019607844">
+              <caret line="1" column="77" selection-start-line="1" selection-start-column="77" selection-end-line="1" selection-end-column="77" />
               <folding />
             </state>
           </provider>
@@ -189,10 +198,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/wordpress/wp-content/themes/listify-child/templates/booking-received.php" />
-        <option value="$PROJECT_DIR$/wordpress/wp-content/plugins/wp-job-manager/templates/form-fields/number-field.php" />
-        <option value="$PROJECT_DIR$/wordpress/wp-content/themes/listify/inc/integrations/facetwp/includes/proximity.php" />
-        <option value="$USER_HOME$/Sites/wordpress/wp-content/plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form.php" />
         <option value="$USER_HOME$/Sites/wordpress/wp-content/themes/listify-child/functions.php" />
         <option value="$PROJECT_DIR$/wordpress/wp-content/themes/listify-child/templates/booking-form/facetsupport.js" />
         <option value="$PROJECT_DIR$/wordpress/wp-content/themes/listify-child/inc/integrations/facetwp/search_type.php" />
@@ -236,10 +241,14 @@
         <option value="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify/inc/integrations/wp-job-manager/widgets/class-widget-home-search-listings.php" />
         <option value="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/style.css" />
         <option value="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/functions/account.php" />
-        <option value="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/functions/booking.php" />
         <option value="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/functions/profile.php" />
         <option value="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/functions/search.php" />
         <option value="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/functions.php" />
+        <option value="$PROJECT_DIR$/src/wordpress/wp-content/plugins/woocommerce/templates/checkout/form-billing.php" />
+        <option value="$PROJECT_DIR$/src/wordpress/wp-content/plugins/woocommerce/templates/myaccount/my-account.php" />
+        <option value="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/functions/booking.php" />
+        <option value="$PROJECT_DIR$/src/wordpress/wp-content/plugins/woocommerce/templates/myaccount/my-address.php" />
+        <option value="$PROJECT_DIR$/src/wordpress/wp-content/plugins/woocommerce-bookings/templates/myaccount/my-bookings.php" />
       </list>
     </option>
   </component>
@@ -1016,6 +1025,56 @@
               <option name="myItemId" value="plugins" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-job-manager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="form-fields" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="midwife" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="midwife" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wordpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="woocommerce-bookings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myaccount" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1078,6 +1137,112 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="woocommerce-bookings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="midwife" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="midwife" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wordpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="woocommerce" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myaccount" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="midwife" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="midwife" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wordpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="woocommerce" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="checkout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="midwife" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="midwife" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wordpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="woocommerce" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1240,7 +1405,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="45" y="31" width="1328" height="1304" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3259076" sideWeight="0.49717057" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32920793" sideWeight="0.49717057" order="11" side_tool="false" content_ui="tabs" />
@@ -1249,7 +1414,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27371696" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27371696" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.419967" sideWeight="0.3484236" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1521,43 +1686,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/wordpress/wp-admin/async-upload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.88235295">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Sites/wordpress/wp-includes/post.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.125">
-          <caret line="4857" column="35" selection-start-line="4857" selection-start-column="35" selection-end-line="4857" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wordpress/wp-content/themes/listify/inc/integrations/wp-job-manager/class-wp-job-manager-gallery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.941176">
-          <caret line="170" column="52" selection-start-line="170" selection-start-column="52" selection-end-line="170" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/plugins/w3-total-cache/lib/W3/Cdn/S3.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.041667">
-          <caret line="115" column="0" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wordpress-plugins/plugins/prod/w3-total-cache/lib/W3/Plugin/CdnCommon.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36">
-          <caret line="55" column="13" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Sites/wordpress/wp-admin/includes/file.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.041667">
@@ -1866,16 +1994,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/plugins/w3-total-cache/lib/W3/Plugin/Cdn.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="204" column="27" selection-start-line="204" selection-start-column="27" selection-end-line="204" selection-end-column="27" />
-          <folding>
-            <marker date="1440560554000" expanded="true" signature="21120:21211" placeholder="SELECT remot..wp_prefix..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/functions/account.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="4.0588236">
@@ -1884,14 +2002,6 @@
             <marker date="1450691742000" expanded="true" signature="1216:1273" placeholder="..." />
             <marker date="1450691742000" expanded="true" signature="1566:1622" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/functions/booking.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="63.764706">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1906,16 +2016,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49137932">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#37#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/functions/search.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.7058825">
@@ -1926,13 +2026,81 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-23.75">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#37#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/plugins/facetwp/includes/facets/proximity.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6504065">
-          <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
+        <state vertical-scroll-proportion="-3.235294">
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
           <folding>
             <marker date="1447944042000" expanded="true" signature="1781:2171" placeholder="SELECT DISTI..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/plugins/woocommerce/templates/checkout/form-billing.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.5882354">
+          <caret line="25" column="53" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/plugins/w3-total-cache/lib/W3/Plugin/Cdn.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="204" column="27" selection-start-line="204" selection-start-column="27" selection-end-line="204" selection-end-column="27" />
+          <folding>
+            <marker date="1440560554000" expanded="true" signature="21120:21211" placeholder="SELECT remot..wp_prefix..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/functions/booking.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.117647">
+          <caret line="214" column="0" selection-start-line="214" selection-start-column="0" selection-end-line="214" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/plugins/woocommerce/templates/myaccount/my-address.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.235294">
+          <caret line="34" column="69" selection-start-line="34" selection-start-column="69" selection-end-line="34" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/plugins/woocommerce/templates/myaccount/my-account.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39717564">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/plugins/woocommerce-bookings/templates/myaccount/my-bookings.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.0">
+          <caret line="88" column="53" selection-start-line="88" selection-start-column="53" selection-end-line="88" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/plugins/wp-job-manager/templates/form-fields/number-field.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.019607844">
+          <caret line="1" column="77" selection-start-line="1" selection-start-column="77" selection-end-line="1" selection-end-column="77" />
+          <folding />
         </state>
       </provider>
     </entry>

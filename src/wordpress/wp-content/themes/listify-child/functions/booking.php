@@ -187,14 +187,29 @@ function add_booking_details() {
 	//TODO figure out how to internationlaise this
 	if ($postpartum_booking) {
 		?>
-		<p>You have requested <b>Postpartum Care Services</b> from <?php echo $vendor_name; ?></p>
-		<p>Please confirm your details below and your Midwife will visit you at the address listed at <b><?php echo $service_booking['booking']['time']." on ".$service_booking['booking']['date']; ?></b> for your initial appointment.</p>
+		<p>
+		<?php
+		printf(
+		__( 'You have requested <b>Postpartum Care Services</b> from %1$s', 'babyhallo'), $vendor_name);
+		?>
+		</p>
+		<?php
+		printf(
+		__( 'Please confirm your details below and your Midwife will visit you at the address listed at <b>%1$s on %2$s</b> for your initial appointment.', 'babyhallo'), $service_booking['booking']['time'], $service_booking['booking']['date']);
+		?>
+		</p>
 		<?php
 	}
 	else {
 		?>
-		<p>You have requested an appointment with <?php echo $vendor_name; ?> on <b></b><?php echo $service_booking['booking']['date']." at ".$service_booking['booking']['time']; ?></b></p>
-		<p>Please confirm your details below and your Midwife will visit you at the address listed.</p>
+		<p>
+		<?php
+		printf(
+		__( 'You have requested an appointment with %1$s on <b>%2$s at %3$s</b>', 'babyhallo'), $vendor_name, $service_booking['booking']['date'], $service_booking['booking']['time']
+		);
+		 ?>
+		</p>
+		<p><?php _e('Please confirm your details below and your Midwife will visit you at the address listed.', 'babyhallo'); ?></p>
 		<?php
 	}
 

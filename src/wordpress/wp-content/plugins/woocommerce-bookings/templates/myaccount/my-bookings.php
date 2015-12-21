@@ -36,11 +36,12 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 			$profile = reset( $posts );
 		}
 
+		printf(
+			__('You are booked for Postpartum Care with <a href="%1$%s">%2$s</a> for an expected due date of %3$s</p>', 'babyhallo'), get_permalink($profile->ID), get_the_title($profile->ID), $postpartum_booking->get_start_date( wc_date_format())
+		);
 		?>
-			You are booked for Postpartum Care with <a href="<?php echo get_permalink($profile->ID); ?>">
-									<?php echo get_the_title($profile->ID); ?>
-								</a> for an expected due date of <?php echo $postpartum_booking->get_start_date( wc_date_format() ); ?></p>
-			<p><a href="<?php echo $postpartum_booking->get_cancel_url(); ?>" class="button cancel"><?php _e( 'Cancel Postpartum Care', 'woocommerce-bookings' ); ?></a></p>
+
+		<p><a href="<?php echo $postpartum_booking->get_cancel_url(); ?>" class="button cancel"><?php _e( 'Cancel Postpartum Care', 'babyhallo' ); ?></a></p>
 		<?php
 	}
 ?>
