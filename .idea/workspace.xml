@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0fe07fc4-c8d0-4b04-adcc-7c7115d16147" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/templates/booking-form/bh_booking.php" afterPath="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/templates/booking-form/bh_booking.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/templates/booking-received.php" afterPath="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/templates/booking-received.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/booking-type-selection.php" afterPath="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/booking-type-selection.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/js/booking.js" afterPath="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/js/booking.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify/inc/integrations/wp-job-manager/widgets/class-widget-home-search-listings.php" afterPath="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify/inc/integrations/wp-job-manager/widgets/class-widget-home-search-listings.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/templates/customer-details.php" afterPath="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/templates/customer-details.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/inc/integrations/facetwp/due_date.php" afterPath="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/inc/integrations/facetwp/due_date.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/templates/midwife-details.php" afterPath="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/templates/midwife-details.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/templates/midwife-profile-header.php" afterPath="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/templates/midwife-profile-header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/inc/integrations/facetwp/service_type.php" afterPath="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/inc/integrations/facetwp/service_type.php" />
-    </list>
+    <list default="true" id="0fe07fc4-c8d0-4b04-adcc-7c7115d16147" name="Default" comment="" />
     <ignored path="midwife.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -50,16 +39,6 @@
                     <folding>
                       <element signature="e#6#37#0#PHP" expanded="true" />
                     </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="my-account.php" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/plugins/woocommerce/templates/myaccount/my-account.php">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="-8.823529">
-                    <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-                    <folding />
                   </state>
                 </provider>
               </entry>
@@ -1460,7 +1439,7 @@
     <frame x="41" y="44" width="1328" height="1304" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3259076" sideWeight="0.49717057" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3259076" sideWeight="0.49717057" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32920793" sideWeight="0.49717057" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32920793" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3259076" sideWeight="0.5869038" order="1" side_tool="false" content_ui="tabs" />
@@ -2163,16 +2142,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49137932">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#37#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/booking-type-selection.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.25">
@@ -2188,6 +2157,16 @@
         <state vertical-scroll-proportion="0.5882353">
           <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49137932">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#37#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
