@@ -52,7 +52,7 @@ if (isset($_COOKIE['service_type'])) {
 		<?php
 			if ($has_postpartum) {
 				?>
-				<option value="Postpartum Care" "<?php echo ( $initial_select_postpartum ) ? "selected" : ""; ?>">Postpartum Care
+				<option value="Postpartum Care" "<?php echo ( $initial_select_postpartum ) ? "selected" : ""; ?>"><?php _e('Postpartum Care', 'babyhallo'); ?>
 				</option>
 				<option disabled>
 					&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;</option>
@@ -77,7 +77,7 @@ if (isset($_COOKIE['service_type'])) {
 <div name="postpartum_div" id="postpartum_div" style="<?php echo $initial_select_postpartum ? "" : "display:none" ?>">
 	<form name="postpartum_hidden_form" id="postpartum_hidden_form" class="cart" method="post" enctype='multipart/form-data'>
 		<div id="bh-bookings-pp-div" class="wc-bookings-booking-form">
-			<p>Please confirm your due date</p>
+			<p><?php _e('Please confirm your due date', 'babyhallo'); ?></p>
 			<?php $pp_booking_form->output(); ?>
 			<input type="hidden" name="add-to-cart" value="<?php echo esc_attr( $postpartum_product->id ); ?>" />
 		</div>
@@ -86,7 +86,7 @@ if (isset($_COOKIE['service_type'])) {
 	<form class="cart" name="postpartum_main_form" id="postpartum_main_form" method="post" enctype='multipart/form-data'>
 		<div id="postpartum-service-form" style="display:none">
 			<div class="wc-bookings-booking-form">
-				<p>Please select a date and time for your initial appointment</p>
+				<p><?php _e('Please select a date and time for your initial appointment', 'babyhallo'); ?></p>
 				<?php $s_booking_form->output(); ?>
 			</div>
 		</div>

@@ -86,9 +86,9 @@ class Listify_Widget_Search_Listings extends Listify_Widget {
 			<div class="bh-search-container">
 				<div class="bh-search-tabs">
 					<ul class="tab-links">
-						<li class="active"><a href="postpartum">Postpartum Care</a></li>
-						<li><a href="service">Services</a></li>
-						<li><a href="event">Classes</a></li>
+						<li class="active"><a href="postpartum"><?php _e('Postpartum Care', 'babyhallo'); ?></a></li>
+						<li><a href="service"><?php _e('Services', 'babyhallo'); ?></a></li>
+						<li><a href="event"><?php _e('Classes', 'babyhallo'); ?></a></li>
 					</ul>
 				</div>
 				<div class="bh-search-content active">
@@ -110,7 +110,7 @@ class Listify_Widget_Search_Listings extends Listify_Widget {
 					<div class="row bh-search-option">
 
 						<div class="col-xs-12 col-sm-4 col-md-2 bh-search-option-text">
-							<a class="bh-search-opt-service" href="change_search_type">or search by midwife name</a>
+							<a class="bh-search-opt-service" href="change_search_type"><?php _e('or search by midwife name', 'babyhallo'); ?></a>
 						</div>
 					</div>
 					<div style="display: none;">
