@@ -76,3 +76,40 @@ function get_proximity_radius($radius) {
 }
 
 add_filter('facetwp_proximity_radius', 'get_proximity_radius');
+
+/*
+ * FacetWP select clause for checkboxes to include translated names
+ */
+function translated_facet_select($select_clause, $facet) {
+	if ($facet['name'] == 'Services') {
+		$select_clause = 'f.facet_value, f.facet_display_value, t.target AS translated_display_value, f.term_id, f.parent_id, f.depth, 0 AS counter';
+	}
+	return $select_clause;
+}
+
+add_filter('facetwp_facet_select', 'translated_facet_select', 2, 10);
+
+/*
+ * FacetWP from clause for checkboxes to include translated names
+ */
+function translated_facet_from($from_clause, $facet) {
+	global $wpdb;
+	if ($facet['name'] == 'Services') {
+		$from_clause = $from_clause . ', ' . $wpdb->prefix . 'translations t';
+	}
+	return $from_clause;
+}
+
+add_filter('facetwp_facet_from', 'translated_facet_from', 2, 10);
+
+/*
+ * FacetWP where clause for checkboxes to include translated names
+ */
+function translated_facet_where($where_clause, $facet) {
+	if ($facet['name'] == 'Services') {
+		$where_clause = 'AND t.source = f.facet_display_value AND t.code = ' . get_locale();
+	}
+	return $where_clause;
+}
+
+add_filter('facetwp_facet_where', 'translated_facet_where', 2, 10);
