@@ -147,7 +147,7 @@ class FacetWP_Facet_Checkboxes
 			$selected = in_array( $result['facet_value'], $selected_values ) ? ' checked' : '';
 			$selected .= ( 0 == $result['counter'] ) ? ' disabled' : '';
 			$output .= '<div class="facetwp-checkbox' . $selected . '" data-value="' . $result['facet_value'] . '">';
-			$output .= translated_display($result) . ' <span class="facetwp-counter">(' . $result['counter'] . ')</span>';
+			$output .= $this->translated_display($result) . ' <span class="facetwp-counter">(' . $result['counter'] . ')</span>';
 			$output .= '</div>';
 		}
 
@@ -181,7 +181,7 @@ class FacetWP_Facet_Checkboxes
 			$selected = in_array( $result['facet_value'], $selected_values ) ? ' checked' : '';
 			$selected .= ( 0 == $result['counter'] ) ? ' disabled' : '';
 			$output .= '<div class="facetwp-checkbox' . $selected . '" data-value="' . $result['facet_value'] . '">';
-			$output .= translated_display($result) . ' <span class="facetwp-counter">(' . $result['counter'] . ')</span>';
+			$output .= $this->translated_display($result) . ' <span class="facetwp-counter">(' . $result['counter'] . ')</span>';
 			$output .= '</div>';
 
 			$last_depth = $depth;
@@ -438,7 +438,7 @@ class FacetWP_Facet_Checkboxes
 		return $boolean;
 	}
 
-	private function translated_display($result) {
+	function translated_display($result) {
 		if (isset($result['translated_display_value']) && $result['translated_display_value'] != '') {
 			return $result['translated_display_value'];
 		}
