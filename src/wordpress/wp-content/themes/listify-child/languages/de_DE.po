@@ -1,0 +1,1060 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: babyhallo\n"
+"POT-Creation-Date: 2016-01-07 10:34+0000\n"
+"PO-Revision-Date: 2016-01-09 13:10+0000\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-Basepath: ../../..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"Last-Translator: \n"
+"Language: de_DE\n"
+"X-Poedit-SearchPath-0: plugins\n"
+"X-Poedit-SearchPath-1: themes\n"
+
+#: plugins/facetwp/includes/class-helper.php:369
+msgid "Posts"
+msgstr ""
+
+#: plugins/facetwp/includes/class-helper.php:371
+msgid "Post Type"
+msgstr ""
+
+#: plugins/facetwp/includes/class-helper.php:372
+msgid "Post Date"
+msgstr ""
+
+#: plugins/facetwp/includes/class-helper.php:373
+msgid "Post Modified"
+msgstr ""
+
+#: plugins/facetwp/includes/class-helper.php:374
+msgid "Post Title"
+msgstr ""
+
+#: plugins/facetwp/includes/class-helper.php:375
+msgid "Post Author"
+msgstr ""
+
+#: plugins/facetwp/includes/class-helper.php:379
+msgid "Taxonomies"
+msgstr ""
+
+#: plugins/facetwp/includes/class-helper.php:383
+msgid "Custom Fields"
+msgstr ""
+
+#: plugins/facetwp/includes/facets/checkboxes.php:7
+msgid "Checkboxes"
+msgstr ""
+
+#: plugins/facetwp/includes/facets/checkboxes.php:325
+msgid "Parent term"
+msgstr ""
+
+#: plugins/facetwp/includes/facets/checkboxes.php:340
+msgid "Sort by"
+msgstr ""
+
+#: plugins/facetwp/includes/facets/checkboxes.php:343
+msgid "Highest Count"
+msgstr ""
+
+#: plugins/facetwp/includes/facets/checkboxes.php:344
+msgid "Display Value"
+msgstr ""
+
+#: plugins/facetwp/includes/facets/checkboxes.php:345
+msgid "Raw Value"
+msgstr ""
+
+#: plugins/facetwp/includes/facets/checkboxes.php:351
+msgid "Behavior"
+msgstr ""
+
+#: plugins/facetwp/includes/facets/checkboxes.php:354
+msgid "How should multiple selections affect the results?"
+msgstr ""
+
+#: plugins/facetwp/includes/facets/checkboxes.php:359
+msgid "Narrow the result set"
+msgstr ""
+
+#: plugins/facetwp/includes/facets/checkboxes.php:360
+msgid "Widen the result set"
+msgstr ""
+
+#: plugins/facetwp/includes/facets/checkboxes.php:366
+msgid "Hierarchical"
+msgstr ""
+
+#: plugins/facetwp/includes/facets/checkboxes.php:369
+msgid "Is this a hierarchical taxonomy?"
+msgstr ""
+
+#: plugins/facetwp/includes/facets/checkboxes.php:374
+#: plugins/facetwp/includes/facets/checkboxes.php:389
+#: plugins/facetwp/includes/facets/checkboxes.php:404
+msgid "No"
+msgstr ""
+
+#: plugins/facetwp/includes/facets/checkboxes.php:375
+#: plugins/facetwp/includes/facets/checkboxes.php:390
+#: plugins/facetwp/includes/facets/checkboxes.php:405
+msgid "Yes"
+msgstr ""
+
+#: plugins/facetwp/includes/facets/checkboxes.php:381
+msgid "Show ghosts"
+msgstr ""
+
+#: plugins/facetwp/includes/facets/checkboxes.php:384
+msgid "Show choices that would return zero results?"
+msgstr ""
+
+#: plugins/facetwp/includes/facets/checkboxes.php:396
+msgid "Preserve ghost order"
+msgstr ""
+
+#: plugins/facetwp/includes/facets/checkboxes.php:399
+msgid "Keep ghost choices in the same order?"
+msgstr ""
+
+#: plugins/facetwp/includes/facets/checkboxes.php:411
+msgid "Count"
+msgstr ""
+
+#: plugins/facetwp/includes/facets/checkboxes.php:414
+msgid "The maximum number of facet choices to show"
+msgstr ""
+
+#: plugins/facetwp/includes/facets/proximity.php:19
+msgid "Proximity"
+msgstr ""
+
+#: plugins/facetwp/includes/facets/proximity.php:42
+msgid "Enter location"
+msgstr ""
+
+#: plugins/facetwp/includes/facets/proximity.php:250
+msgid "Unit of measurement"
+msgstr ""
+
+#: plugins/facetwp/includes/facets/proximity.php:254
+msgid "Miles"
+msgstr ""
+
+#: plugins/facetwp/includes/facets/proximity.php:255
+msgid "Kilometers"
+msgstr ""
+
+#: plugins/facetwp/includes/facets/proximity.php:297
+msgid "Distance"
+msgstr ""
+
+#: plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form-date-picker.php:36
+msgid "Date"
+msgstr ""
+
+#: plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form.php:38
+msgid "Close"
+msgstr ""
+
+#: plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form.php:39
+msgid "Today"
+msgstr ""
+
+#: plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form.php:75
+msgid "This date is unavailable"
+msgstr ""
+
+#: plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form.php:76
+msgid "Choose a Start Date"
+msgstr ""
+
+#: plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form.php:77
+msgid "Choose an End Date"
+msgstr ""
+
+#: plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form.php:78
+msgid "Dates"
+msgstr ""
+
+#: plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form.php:79
+msgid "Please select the options for your booking above first"
+msgstr ""
+
+#: plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form.php:119
+#, php-format
+msgid "&times; %s Months"
+msgstr ""
+
+#: plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form.php:121
+msgid "Month(s)"
+msgstr ""
+
+#: plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form.php:126
+#: plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form.php:142
+#, php-format
+msgid "&times; %s weeks"
+msgstr ""
+
+#: plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form.php:128
+#: plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form.php:140
+msgid "Week(s)"
+msgstr ""
+
+#: plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form.php:134
+#, php-format
+msgid "&times; %s days"
+msgstr ""
+
+#: plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form.php:136
+msgid "Day(s)"
+msgstr ""
+
+#: plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form.php:148
+#, php-format
+msgid "&times; %s hours"
+msgstr ""
+
+#: plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form.php:150
+msgid "Hour(s)"
+msgstr ""
+
+#: plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form.php:155
+#, php-format
+msgid "&times; %s minutes"
+msgstr ""
+
+#: plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form.php:157
+msgid "Minute(s)"
+msgstr ""
+
+#: plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form.php:165
+msgid "Duration"
+msgstr ""
+
+#: plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form.php:204
+#: plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form.php:395
+msgid "Persons"
+msgstr ""
+
+#: plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form.php:233
+#, php-format
+msgid "+%s per month"
+msgstr ""
+
+#: plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form.php:236
+#, php-format
+msgid "+%s per day"
+msgstr ""
+
+#: plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form.php:239
+#, php-format
+msgid "+%s per block"
+msgstr ""
+
+#: plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form.php:256
+msgid "Type"
+msgstr ""
+
+#: plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form.php:490
+msgid "Please choose a resource type"
+msgstr ""
+
+#: plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form.php:501
+msgid "Duration is required - please enter a duration greater than zero above"
+msgstr ""
+
+#: plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form.php:504
+#, php-format
+msgid "The maximum duration is %d"
+msgstr ""
+
+#: plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form.php:507
+#, php-format
+msgid "The minimum duration is %d"
+msgstr ""
+
+#: plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form.php:513
+msgid "Date is required - please choose one above"
+msgstr ""
+
+#: plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form.php:516
+msgid "Time is required - please choose one above"
+msgstr ""
+
+#: plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form.php:519
+#: plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form.php:522
+msgid "You must choose a future date and time."
+msgstr ""
+
+#: plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form.php:537
+#, php-format
+msgid "The earliest booking possible is currently %s."
+msgstr ""
+
+#: plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form.php:543
+#, php-format
+msgid "The latest booking possible is currently %s."
+msgstr ""
+
+#: plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form.php:552
+msgid "Persons are required - please enter the number of persons above"
+msgstr ""
+
+#: plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form.php:555
+#, php-format
+msgid "The maximum persons per group is %d"
+msgstr ""
+
+#: plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form.php:558
+#, php-format
+msgid "The minimum persons per group is %d"
+msgstr ""
+
+#: plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form.php:566
+#, php-format
+msgid "The maximum %s per group is %d"
+msgstr ""
+
+#: plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form.php:571
+#, php-format
+msgid "The minimum %s per group is %d"
+msgstr ""
+
+#: plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form.php:587
+msgid "Sorry, the selected block is not available"
+msgstr ""
+
+#: plugins/woocommerce-bookings/includes/class-wc-booking-cart-manager.php:177
+#, php-format
+msgid "A booking for %s has been removed from your cart due to inactivity."
+msgstr ""
+
+#: plugins/woocommerce-bookings/includes/class-wc-booking-cart-manager.php:306
+msgid "Booking ID"
+msgstr ""
+
+#: plugins/woocommerce-bookings/includes/class-wc-booking-cart-manager.php:366
+msgid ""
+"A booking that requires confirmation has been removed from your cart. It is "
+"not possible to complete the purchased along with a booking that doesn't "
+"require confirmation."
+msgstr ""
+
+#: plugins/woocommerce-bookings/includes/class-wc-booking.php:152
+#, php-format
+msgid "Booking &ndash; %s"
+msgstr ""
+
+#: plugins/woocommerce-bookings/includes/class-wc-booking.php:312
+#, php-format
+msgid "Booking #%d status changed from \"%s\" to \"%s"
+msgstr ""
+
+#: plugins/woocommerce-bookings/includes/class-wc-product-booking.php:238
+#, php-format
+msgid "From: %s"
+msgstr ""
+
+#: plugins/woocommerce-bookings/includes/class-wc-product-booking.php:243
+msgid "Free"
+msgstr ""
+
+#: plugins/woocommerce-bookings/includes/class-wc-product-booking.php:418
+msgid "Check Availability"
+msgstr ""
+
+#: plugins/woocommerce-bookings/includes/class-wc-product-booking.php:418
+msgid "Book now"
+msgstr ""
+
+#: plugins/woocommerce-bookings/includes/class-wc-product-booking.php:502
+msgid "This block cannot be booked."
+msgstr ""
+
+#: plugins/woocommerce-bookings/templates/booking-form/date-picker.php:5
+msgid "F j, Y"
+msgstr ""
+
+#: plugins/woocommerce-bookings/templates/booking-form/date-picker.php:9
+msgid "Choose..."
+msgstr ""
+
+#: plugins/woocommerce-bookings/templates/booking-form/date-picker.php:16
+msgid "Start"
+msgstr ""
+
+#: plugins/woocommerce-bookings/templates/booking-form/date-picker.php:21
+#: plugins/woocommerce-bookings/templates/booking-form/date-picker.php:32
+#: plugins/woocommerce-bookings/templates/booking-form/date-picker.php:46
+#: plugins/woocommerce-bookings/templates/booking-form/date-picker.php:57
+msgid "mm"
+msgstr ""
+
+#: plugins/woocommerce-bookings/templates/booking-form/date-picker.php:22
+#: plugins/woocommerce-bookings/templates/booking-form/date-picker.php:33
+#: plugins/woocommerce-bookings/templates/booking-form/date-picker.php:47
+#: plugins/woocommerce-bookings/templates/booking-form/date-picker.php:58
+msgid "Month"
+msgstr ""
+
+#: plugins/woocommerce-bookings/templates/booking-form/date-picker.php:24
+#: plugins/woocommerce-bookings/templates/booking-form/date-picker.php:29
+#: plugins/woocommerce-bookings/templates/booking-form/date-picker.php:49
+#: plugins/woocommerce-bookings/templates/booking-form/date-picker.php:54
+msgid "dd"
+msgstr ""
+
+#: plugins/woocommerce-bookings/templates/booking-form/date-picker.php:25
+#: plugins/woocommerce-bookings/templates/booking-form/date-picker.php:30
+#: plugins/woocommerce-bookings/templates/booking-form/date-picker.php:50
+#: plugins/woocommerce-bookings/templates/booking-form/date-picker.php:55
+msgid "Day"
+msgstr ""
+
+#: plugins/woocommerce-bookings/templates/booking-form/date-picker.php:36
+#: plugins/woocommerce-bookings/templates/booking-form/date-picker.php:61
+msgid "YYYY"
+msgstr ""
+
+#: plugins/woocommerce-bookings/templates/booking-form/date-picker.php:37
+#: plugins/woocommerce-bookings/templates/booking-form/date-picker.php:62
+msgid "Year"
+msgstr ""
+
+#: plugins/woocommerce-bookings/templates/booking-form/date-picker.php:43
+msgid "End"
+msgstr ""
+
+#: plugins/woocommerce-bookings/templates/myaccount/my-bookings.php:10
+msgid "My bookings"
+msgstr ""
+
+#: plugins/woocommerce-bookings/templates/myaccount/my-bookings.php:40
+msgid ""
+"You are booked for Postpartum Care with <a href=\"%1$%s\">%2$s</a> for an "
+"expected due date of %3$s</p>"
+msgstr ""
+
+#: plugins/woocommerce-bookings/templates/myaccount/my-bookings.php:44
+msgid "Cancel Postpartum Care"
+msgstr ""
+
+#: plugins/woocommerce-bookings/templates/myaccount/my-bookings.php:52
+msgid "ID"
+msgstr ""
+
+#: plugins/woocommerce-bookings/templates/myaccount/my-bookings.php:53
+msgid "Appointment"
+msgstr ""
+
+#: plugins/woocommerce-bookings/templates/myaccount/my-bookings.php:54
+#: themes/listify-child/functions/account.php:28
+msgid "Midwife"
+msgstr ""
+
+#: plugins/woocommerce-bookings/templates/myaccount/my-bookings.php:55
+msgid "Time"
+msgstr ""
+
+#: plugins/woocommerce-bookings/templates/myaccount/my-bookings.php:56
+msgid "Status"
+msgstr ""
+
+#: plugins/woocommerce-bookings/templates/myaccount/my-bookings.php:104
+msgid "Cancel"
+msgstr ""
+
+#: plugins/woocommerce/includes/class-wc-form-handler.php:85
+#: plugins/woocommerce/includes/class-wc-form-handler.php:184
+msgid "is a required field."
+msgstr ""
+
+#: plugins/woocommerce/includes/class-wc-form-handler.php:98
+msgid "Please enter a valid postcode/ZIP."
+msgstr ""
+
+#: plugins/woocommerce/includes/class-wc-form-handler.php:107
+msgid "is not a valid phone number."
+msgstr ""
+
+#: plugins/woocommerce/includes/class-wc-form-handler.php:114
+msgid "is not a valid email address."
+msgstr ""
+
+#: plugins/woocommerce/includes/class-wc-form-handler.php:129
+msgid "Address changed successfully."
+msgstr ""
+
+#: plugins/woocommerce/includes/class-wc-form-handler.php:177
+#: themes/listify-child/functions/account.php:43
+msgid "First Name"
+msgstr ""
+
+#: plugins/woocommerce/includes/class-wc-form-handler.php:178
+#: themes/listify-child/functions/account.php:47
+msgid "Last Name"
+msgstr ""
+
+#: plugins/woocommerce/includes/class-wc-form-handler.php:179
+msgid "Email address"
+msgstr ""
+
+#: plugins/woocommerce/includes/class-wc-form-handler.php:190
+msgid "Please provide a valid email address."
+msgstr ""
+
+#: plugins/woocommerce/includes/class-wc-form-handler.php:192
+msgid "This email address is already registered."
+msgstr ""
+
+#: plugins/woocommerce/includes/class-wc-form-handler.php:198
+msgid "Your current password is incorrect."
+msgstr ""
+
+#: plugins/woocommerce/includes/class-wc-form-handler.php:203
+msgid "Please fill out all password fields."
+msgstr ""
+
+#: plugins/woocommerce/includes/class-wc-form-handler.php:206
+msgid "Please enter your current password."
+msgstr ""
+
+#: plugins/woocommerce/includes/class-wc-form-handler.php:209
+msgid "Please re-enter your password."
+msgstr ""
+
+#: plugins/woocommerce/includes/class-wc-form-handler.php:212
+msgid "New passwords do not match."
+msgstr ""
+
+#: plugins/woocommerce/includes/class-wc-form-handler.php:233
+msgid "Account details changed successfully."
+msgstr ""
+
+#: plugins/woocommerce/includes/class-wc-form-handler.php:358
+msgid "Payment method added."
+msgstr ""
+
+#: plugins/woocommerce/includes/class-wc-form-handler.php:393
+msgid "Item"
+msgstr ""
+
+#: plugins/woocommerce/includes/class-wc-form-handler.php:398
+#, php-format
+msgid "%s removed. %sUndo?%s"
+msgstr ""
+
+#: plugins/woocommerce/includes/class-wc-form-handler.php:400
+#, php-format
+msgid "%s removed."
+msgstr ""
+
+#: plugins/woocommerce/includes/class-wc-form-handler.php:447
+#, php-format
+msgid "You can only have 1 %s in your cart."
+msgstr ""
+
+#: plugins/woocommerce/includes/class-wc-form-handler.php:471
+msgid "Cart updated."
+msgstr ""
+
+#: plugins/woocommerce/includes/class-wc-form-handler.php:537
+msgid "The cart has been filled with the items from your previous order."
+msgstr ""
+
+#: plugins/woocommerce/includes/class-wc-form-handler.php:560
+msgid "Order cancelled by customer."
+msgstr ""
+
+#: plugins/woocommerce/includes/class-wc-form-handler.php:563
+msgid "Your order was cancelled."
+msgstr ""
+
+#: plugins/woocommerce/includes/class-wc-form-handler.php:568
+msgid ""
+"Your order can no longer be cancelled. Please contact us if you need "
+"assistance."
+msgstr ""
+
+#: plugins/woocommerce/includes/class-wc-form-handler.php:570
+msgid "Invalid order."
+msgstr ""
+
+#: plugins/woocommerce/includes/class-wc-form-handler.php:680
+msgid ""
+"Please choose the quantity of items you wish to add to your cart&hellip;"
+msgstr ""
+
+#: plugins/woocommerce/includes/class-wc-form-handler.php:688
+#: themes/listify-child/functions/booking.php:71
+#: themes/listify-child/functions/booking.php:79
+msgid "Please choose a product to add to your cart&hellip;"
+msgstr ""
+
+#: plugins/woocommerce/includes/class-wc-form-handler.php:743
+msgid "Please choose product options&hellip;"
+msgstr ""
+
+#: plugins/woocommerce/includes/class-wc-form-handler.php:769
+#: plugins/woocommerce/includes/class-wc-form-handler.php:773
+#: plugins/woocommerce/includes/class-wc-form-handler.php:777
+#: plugins/woocommerce/includes/class-wc-form-handler.php:786
+#: plugins/woocommerce/includes/class-wc-form-handler.php:917
+msgid "Error"
+msgstr ""
+
+#: plugins/woocommerce/includes/class-wc-form-handler.php:773
+msgid "Username is required."
+msgstr ""
+
+#: plugins/woocommerce/includes/class-wc-form-handler.php:777
+msgid "Password is required."
+msgstr ""
+
+#: plugins/woocommerce/includes/class-wc-form-handler.php:786
+msgid "A user could not be found with this email address."
+msgstr ""
+
+#: plugins/woocommerce/includes/class-wc-form-handler.php:813
+#, php-format
+msgid "You are now logged in as <strong>%s</strong>"
+msgstr ""
+
+#: plugins/woocommerce/includes/class-wc-form-handler.php:857
+msgid "Please enter your password."
+msgstr ""
+
+#: plugins/woocommerce/includes/class-wc-form-handler.php:861
+msgid "Passwords do not match."
+msgstr ""
+
+#: plugins/woocommerce/includes/class-wc-form-handler.php:900
+msgid "Anti-spam field was filled in."
+msgstr ""
+
+#: plugins/woocommerce/templates/checkout/form-billing.php:19
+msgid "Billing &amp; Shipping"
+msgstr ""
+
+#: plugins/woocommerce/templates/checkout/form-billing.php:45
+msgid "Create an account?"
+msgstr ""
+
+#: plugins/woocommerce/templates/checkout/form-billing.php:56
+msgid ""
+"Create an account by entering the information below. If you are a returning "
+"customer please login at the top of the page."
+msgstr ""
+
+#: plugins/woocommerce/templates/checkout/form-checkout.php:20
+msgid "You must be logged in to checkout."
+msgstr ""
+
+#: plugins/woocommerce/templates/checkout/form-checkout.php:49
+msgid "Your order"
+msgstr ""
+
+#: plugins/woocommerce/templates/checkout/thankyou.php:18
+msgid ""
+"Unfortunately your order cannot be processed as the originating bank/"
+"merchant has declined your transaction."
+msgstr ""
+
+#: plugins/woocommerce/templates/checkout/thankyou.php:22
+msgid "Please attempt your purchase again or go to your account page."
+msgstr ""
+
+#: plugins/woocommerce/templates/checkout/thankyou.php:24
+msgid "Please attempt your purchase again."
+msgstr ""
+
+#: plugins/woocommerce/templates/checkout/thankyou.php:28
+msgid "Pay"
+msgstr ""
+
+#: plugins/woocommerce/templates/checkout/thankyou.php:30
+msgid "My Account"
+msgstr ""
+
+#: plugins/woocommerce/templates/checkout/thankyou.php:36
+#: plugins/woocommerce/templates/checkout/thankyou.php:79
+msgid "Thank you. Your order has been received."
+msgstr ""
+
+#: plugins/woocommerce/templates/checkout/thankyou.php:46
+msgid "Order Number:"
+msgstr ""
+
+#: plugins/woocommerce/templates/checkout/thankyou.php:50
+msgid "Date:"
+msgstr ""
+
+#: plugins/woocommerce/templates/checkout/thankyou.php:54
+msgid "Total:"
+msgstr ""
+
+#: plugins/woocommerce/templates/checkout/thankyou.php:59
+msgid "Payment Method:"
+msgstr ""
+
+#: plugins/woocommerce/templates/myaccount/my-account.php:19
+#, php-format
+msgid "Hello <strong>%1$s</strong> (not %1$s? <a href=\"%2$s\">Sign out</a>)."
+msgstr ""
+
+#: plugins/woocommerce/templates/myaccount/my-account.php:24
+#, php-format
+msgid ""
+"From your account dashboard you can view your recent bookings, manage your "
+"address and <a href=\"%s\">edit your password and account details</a>."
+msgstr ""
+"[GERMAN]From your account dashboard you can view your recent bookings, "
+"manage your address and <a href=\"%s\">edit your password and account "
+"details</a>."
+
+#: plugins/woocommerce/templates/myaccount/my-address.php:17
+msgid "My Addresses"
+msgstr ""
+
+#: plugins/woocommerce/templates/myaccount/my-address.php:19
+#: plugins/woocommerce/templates/myaccount/my-address.php:25
+msgid "Billing Address"
+msgstr ""
+
+#: plugins/woocommerce/templates/myaccount/my-address.php:20
+#: themes/listify-child/templates/customer-details.php:60
+msgid "Shipping Address"
+msgstr ""
+
+#: plugins/woocommerce/templates/myaccount/my-address.php:23
+msgid "My Address"
+msgstr ""
+
+#: plugins/woocommerce/templates/myaccount/my-address.php:35
+msgid ""
+"The following address will be used by default on the booking page for any at-"
+"home appointments with Midwives."
+msgstr ""
+
+#: plugins/woocommerce/templates/myaccount/my-address.php:44
+msgid "Edit"
+msgstr ""
+
+#: plugins/woocommerce/templates/myaccount/my-address.php:63
+msgid "You have not set up this type of address yet."
+msgstr ""
+
+#: themes/listify-child/booking-type-selection.php:5
+msgid "Type:"
+msgstr ""
+
+#: themes/listify-child/functions/account.php:26
+msgid "I am a..."
+msgstr ""
+
+#: themes/listify-child/functions/account.php:27
+msgid "Parent"
+msgstr ""
+
+#: themes/listify-child/functions/account.php:61
+msgid "Please select Parent or Midwife"
+msgstr ""
+
+#: themes/listify-child/functions/account.php:64
+msgid "Please enter your first name"
+msgstr ""
+
+#: themes/listify-child/functions/account.php:67
+msgid "Please enter your last name"
+msgstr ""
+
+#: themes/listify-child/functions/account.php:140
+msgid ""
+"<strong>ERROR</strong>: Unable to create the vendor account for this user. "
+"Please contact the administrator to register your account."
+msgstr ""
+
+#: themes/listify-child/functions/booking.php:156
+#: themes/listify-child/templates/customer-details.php:14
+msgid "Your Details"
+msgstr ""
+
+#: themes/listify-child/functions/booking.php:193
+#, php-format
+msgid "You have requested <b>Postpartum Care Services</b> from %1$s"
+msgstr ""
+
+#: themes/listify-child/functions/booking.php:198
+#, php-format
+msgid ""
+"Please confirm your details below and your Midwife will visit you at the "
+"address listed at <b>%1$s on %2$s</b> for your initial appointment."
+msgstr ""
+
+#: themes/listify-child/functions/booking.php:208
+#, php-format
+msgid "You have requested an appointment with %1$s on <b>%2$s at %3$s</b>"
+msgstr ""
+
+#: themes/listify-child/functions/booking.php:212
+msgid ""
+"Please confirm your details below and your Midwife will visit you at the "
+"address listed."
+msgstr ""
+
+#: themes/listify-child/functions/booking.php:234
+#: themes/listify/inc/integrations/woocommerce-bookings/widgets/class-widget-job_listing-bookings.php:55
+msgid "Book Now"
+msgstr ""
+
+#: themes/listify-child/functions/booking.php:244
+msgid ""
+"Thank you.  Your booking has been made.  Your midwife will visit you at the "
+"time and location provided."
+msgstr ""
+
+#: themes/listify-child/functions/profile.php:28
+msgid "Maximum Postpartum Bookings"
+msgstr ""
+
+#: themes/listify-child/functions/profile.php:33
+msgid ""
+"The maximum number of families per month you will support for postpartum care"
+msgstr ""
+
+#: themes/listify-child/functions/profile.php:37
+msgid "Do you offer Postpartum Care?"
+msgstr ""
+
+#: themes/listify-child/functions/profile.php:48
+#: themes/listify-child/functions/profile.php:54
+msgid "Closed"
+msgstr ""
+
+#: themes/listify-child/functions/profile.php:317
+msgid "Submit"
+msgstr ""
+
+#: themes/listify-child/functions/profile.php:357
+msgid "Edit Profile"
+msgstr ""
+
+#: themes/listify-child/inc/integrations/facetwp/due_date.php:6
+#: themes/listify-child/inc/integrations/facetwp/due_date.php:19
+msgid "Due Date"
+msgstr ""
+
+#: themes/listify-child/inc/integrations/facetwp/service_type.php:10
+msgid "I am looking for..."
+msgstr ""
+
+#: themes/listify-child/inc/integrations/facetwp/service_type.php:14
+#: themes/listify-child/templates/booking-form/bh_booking.php:55
+#: themes/listify/inc/integrations/wp-job-manager/widgets/class-widget-home-search-listings.php:89
+msgid "Postpartum Care"
+msgstr ""
+
+#: themes/listify-child/templates/booking-form/bh_booking.php:47
+msgid "Your browser must support JavaScript in order to make a booking."
+msgstr ""
+
+#: themes/listify-child/templates/booking-form/bh_booking.php:80
+msgid "Please confirm your due date"
+msgstr ""
+
+#: themes/listify-child/templates/booking-form/bh_booking.php:89
+msgid "Please select a date and time for your initial appointment"
+msgstr ""
+
+#: themes/listify-child/templates/booking-received.php:30
+msgid "Postpartum Care Details"
+msgstr ""
+
+#: themes/listify-child/templates/booking-received.php:32
+#, php-format
+msgid ""
+"You are now booked for Postpartum Care with %1$s with an expected due date "
+"of %2$s"
+msgstr ""
+
+#: themes/listify-child/templates/booking-received.php:40
+msgid "Appointment Details"
+msgstr ""
+
+#: themes/listify-child/templates/customer-details.php:19
+msgid "Note:"
+msgstr ""
+
+#: themes/listify-child/templates/customer-details.php:26
+#: themes/listify-child/templates/midwife-details.php:26
+msgid "Email:"
+msgstr ""
+
+#: themes/listify-child/templates/customer-details.php:33
+msgid "Telephone:"
+msgstr ""
+
+#: themes/listify-child/templates/customer-details.php:49
+msgid "Address"
+msgstr ""
+
+#: themes/listify-child/templates/customer-details.php:52
+#: themes/listify-child/templates/customer-details.php:63
+msgid "N/A"
+msgstr ""
+
+#: themes/listify-child/templates/midwife-details.php:7
+msgid "Midwife Details"
+msgstr ""
+
+#: themes/listify-child/templates/midwife-details.php:19
+msgid "Name:"
+msgstr ""
+
+#: themes/listify-child/templates/midwife-profile-header.php:18
+#, php-format
+msgid "%d Reviews"
+msgstr ""
+
+#: themes/listify/comments.php:26
+msgid "Sort By"
+msgstr ""
+
+#: themes/listify/comments.php:48
+msgid "Comment navigation"
+msgstr ""
+
+#: themes/listify/comments.php:49
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: themes/listify/comments.php:50
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: themes/listify/comments.php:60
+msgid "Comments are closed."
+msgstr ""
+
+#: themes/listify/comments.php:66
+msgid "Publish Review"
+msgstr ""
+
+#: themes/listify/comments.php:66 themes/listify/comments.php:71
+msgid "Publish Reply"
+msgstr ""
+
+#: themes/listify/comments.php:72 themes/listify/comments.php:76
+msgid "Leave a Reply"
+msgstr ""
+
+#: themes/listify/comments.php:76
+msgid "Leave a Review"
+msgstr ""
+
+#: themes/listify/inc/integrations/woocommerce-bookings/widgets/class-widget-job_listing-bookings.php:17
+msgid "Display the booking form for the linked bookable product."
+msgstr ""
+
+#: themes/listify/inc/integrations/woocommerce-bookings/widgets/class-widget-job_listing-bookings.php:19
+msgid "Listify - Listing: Bookings"
+msgstr ""
+
+#: themes/listify/inc/integrations/woocommerce-bookings/widgets/class-widget-job_listing-bookings.php:24
+#: themes/listify/inc/integrations/wp-job-manager/widgets/class-widget-home-search-listings.php:30
+msgid "Title:"
+msgstr ""
+
+#: themes/listify/inc/integrations/woocommerce-bookings/widgets/class-widget-job_listing-bookings.php:29
+msgid "Icon:"
+msgstr ""
+
+#: themes/listify/inc/integrations/wp-job-manager/class-wp-job-manager-template.php:308
+#, php-format
+msgid "%s Archives - Sidebar"
+msgstr ""
+
+#: themes/listify/inc/integrations/wp-job-manager/class-wp-job-manager-template.php:317
+#, php-format
+msgid "Single %s - Main Content"
+msgstr ""
+
+#: themes/listify/inc/integrations/wp-job-manager/class-wp-job-manager-template.php:326
+#, php-format
+msgid "Single %s - Sidebar"
+msgstr ""
+
+#: themes/listify/inc/integrations/wp-job-manager/class-wp-job-manager-template.php:353
+#, php-format
+msgid "Browse %s"
+msgstr ""
+
+#: themes/listify/inc/integrations/wp-job-manager/class-wp-job-manager-template.php:370
+#, php-format
+msgid "Select a %s"
+msgstr ""
+
+#: themes/listify/inc/integrations/wp-job-manager/class-wp-job-manager-template.php:388
+msgid "View All"
+msgstr ""
+
+#: themes/listify/inc/integrations/wp-job-manager/class-wp-job-manager-template.php:731
+msgid "Submit a Review"
+msgstr ""
+
+#: themes/listify/inc/integrations/wp-job-manager/class-wp-job-manager-template.php:792
+msgid "Filter by type:"
+msgstr ""
+
+#: themes/listify/inc/integrations/wp-job-manager/class-wp-job-manager-template.php:814
+msgid "Loading..."
+msgstr ""
+
+#: themes/listify/inc/integrations/wp-job-manager/class-wp-job-manager-template.php:880
+#, php-format
+msgid "<span class=\"results-found\">%s</span> Results Found"
+msgstr ""
+
+#: themes/listify/inc/integrations/wp-job-manager/class-wp-job-manager-template.php:897
+msgid "Toggle Filters"
+msgstr ""
+
+#: themes/listify/inc/integrations/wp-job-manager/widgets/class-widget-home-search-listings.php:23
+msgid "Display a search form to search listings"
+msgstr ""
+
+#: themes/listify/inc/integrations/wp-job-manager/widgets/class-widget-home-search-listings.php:25
+msgid "Listify - Page: Search Listings"
+msgstr ""
+
+#: themes/listify/inc/integrations/wp-job-manager/widgets/class-widget-home-search-listings.php:35
+msgid "Description:"
+msgstr ""
+
+#: themes/listify/inc/integrations/wp-job-manager/widgets/class-widget-home-search-listings.php:43
+msgid "Facets:"
+msgstr ""
+
+#: themes/listify/inc/integrations/wp-job-manager/widgets/class-widget-home-search-listings.php:90
+msgid "Services"
+msgstr ""
+
+#: themes/listify/inc/integrations/wp-job-manager/widgets/class-widget-home-search-listings.php:91
+msgid "Classes"
+msgstr ""
+
+#: themes/listify/inc/integrations/wp-job-manager/widgets/class-widget-home-search-listings.php:107
+msgid "Search"
+msgstr ""
+
+#: themes/listify/inc/integrations/wp-job-manager/widgets/class-widget-home-search-listings.php:113
+msgid "or search by midwife name"
+msgstr ""

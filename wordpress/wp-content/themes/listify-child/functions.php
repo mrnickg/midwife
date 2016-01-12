@@ -11,7 +11,7 @@ include_once('functions/booking.php');
 include_once('functions/profile.php');
 include_once('functions/search.php');
 
-
+load_theme_textdomain( 'babyhallo', get_stylesheet_directory() . "/languages" );
 
 function bh_enqueue_scripts() {
 	wp_enqueue_script( 'bh_booking', get_stylesheet_directory_uri() . "/js/booking.js", array( 'jquery' ) );

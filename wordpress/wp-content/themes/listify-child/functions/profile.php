@@ -427,3 +427,20 @@ function job_manager_upload_dir_for_cdn($upload_dir) {
 }
 
 add_filter('job_manager_upload_dir', 'job_manager_upload_dir_for_cdn', 99);
+
+/*
+ * Hook to replace category names with translated names
+ */
+function translate_category_name($name) {
+	global $wpdb;
+	$sql = "select target from wp_translations where code ='" . get_locale() . "' and source = '" . $name . "'";
+	$output = $wpdb->get_results( $sql, ARRAY_A );
+
+	if (count($output) > 0) {
+		$name = $output[0]['target'];
+	}
+
+	return $name;
+}
+
+add_filter('the_category', 'translate_category_name');
