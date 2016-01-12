@@ -9,6 +9,7 @@ class Listify_Widget_Search_Listings extends Listify_Widget {
 	private $service_type_facet_name = 'service_type';
 	private $postpartum_facet_name = 'postpartum_type';
 	private $service_facet_name = 'other_type';
+	private $title_facet_name = 'title';
 
 	private $services_name = 'services';
 	private $service_name = 'service';
@@ -85,27 +86,33 @@ class Listify_Widget_Search_Listings extends Listify_Widget {
 			<div class="bh-search-container">
 				<div class="bh-search-tabs">
 					<ul class="tab-links">
-						<li class="active"><a href="postpartum">Postpartum Care</a></li>
-						<li><a href="service">Services</a></li>
-						<li><a href="event">Classes</a></li>
+						<li class="active"><a href="postpartum"><?php _e('Postpartum Care', 'babyhallo'); ?></a></li>
+						<li><a href="service"><?php _e('Services', 'babyhallo'); ?></a></li>
+						<li><a href="event"><?php _e('Classes', 'babyhallo'); ?></a></li>
 					</ul>
 				</div>
-				<div class="bh-search-content active postpartum service">
-					<div class="row active">
+				<div class="bh-search-content active">
+					<div class="row bh-search-row active">
 						<?php foreach ( $_facets as $facet ) :
 							$is_postpartum = apply_filters('search_widget_is_postpartum_facet', $facet);
 							$is_service = apply_filters('search_widget_is_service_facet', $facet);
+							$is_title = apply_filters('search_widget_is_title_facet', $facet);
 							?>
-							<div class="search_<?php echo $facet[ 'name' ]; ?> col-xs-12 col-sm-4 col-md-5 <?php echo $is_postpartum ? 'postpartum active' : ''; ?> <?php echo $is_service ? 'service' : ''; ?>">
+							<div class="search_<?php echo $facet[ 'name' ]; ?> <?php echo $is_title ? 'col-xs-12 col-sm-8 col-md-10' : 'col-xs-12 col-sm-4 col-md-5'; ?> <?php echo $is_postpartum ? 'postpartum active' : ''; ?> <?php echo $is_service ? 'service' : ''; ?> <?php  echo $is_title ? 'title' : ''; ?>">
 								<?php echo do_shortcode( '[facetwp facet="' . $facet[ 'name' ] . '"]' ); ?>
 							</div>
 						<?php endforeach; ?>
 
-						<div class="facetwp-submit col-xs-12 col-sm-4 col-md-2 active postpartum service submit_postpartum">
+						<div class="facetwp-submit col-xs-12 col-sm-4 col-md-2 active postpartum service title submit_postpartum">
 							<input type="submit" value="<?php _e( 'Search', 'listify' ); ?>" onclick="fwp_redirect()" />
 						</div>
 					</div>
+					<div class="row bh-search-option">
 
+						<div class="col-xs-12 col-sm-4 col-md-2 bh-search-option-text">
+							<a class="bh-search-opt-service" href="change_search_type"><?php _e('or search by midwife name', 'babyhallo'); ?></a>
+						</div>
+					</div>
 					<div style="display: none;">
 						<?php echo do_shortcode( '[facetwp template="listings"]' ); ?>
 					</div>
@@ -148,15 +155,28 @@ class Listify_Widget_Search_Listings extends Listify_Widget {
 			<script>
 				function fwp_redirect() {
 					FWP.parse_facets();
-					if ( jQuery('.facetwp-submit').hasClass('submit_postpartum') ) {
+				    if ( jQuery('.facetwp-submit').hasClass('submit_title') ) {
+					    if ( jQuery('.facetwp-submit').hasClass('submit_postpartum') ) {
+						    FWP.facets['<?php echo $this->service_type_facet_name;  ?>'] = '<?php echo $postpartum_facet_value; ?>';
+					    }
+					    else if ( jQuery('.facetwp-submit').hasClass('submit_service') ) {
+						    FWP.facets['<?php echo $this->service_type_facet_name;  ?>'] = '<?php echo $service_facet_value; ?>';
+					    }
+						delete FWP.facets['service'];
+						delete FWP.facets['due_date'];
+						delete FWP.facets['proximity'];
+					}
+					else if ( jQuery('.facetwp-submit').hasClass('submit_postpartum') ) {
 						FWP.facets['<?php echo $this->service_type_facet_name;  ?>'] = '<?php echo $postpartum_facet_value; ?>';
 						delete FWP.facets['service'];
+						delete FWP.facets['title'];
 					}
 					else if ( jQuery('.facetwp-submit').hasClass('submit_service') ) {
 						FWP.facets['<?php echo $this->service_type_facet_name;  ?>'] = '<?php echo $service_facet_value; ?>';
 						FWP.facets['services'] = FWP.facets['service'];
 						delete FWP.facets['service'];
 						delete FWP.facets['due_date'];
+						delete FWP.facets['title']
 					}
 					if ('get' == FWP.permalink_type) {
 						var query_string = FWP.build_query_string();

@@ -27,13 +27,17 @@ if ($postpartum_item) {
 	$midwife_name = $midwife_data->first_name." ".$midwife_data->last_name;
 	$due_date = $postpartum_item['item_meta']['Booking Date'][0];
 ?>
-<h2><?php _e( 'Postpartum Care Details', 'woocommerce' ); ?></h2>
-<p>You are now booked for Postpartum Care with <?php echo $midwife_name; ?> with an expected due date of <?php echo $due_date;  ?> </p>
+<h2><?php _e( 'Postpartum Care Details', 'babyhallo' ); ?></h2>
+<p><?php printf(
+		_e('You are now booked for Postpartum Care with %1$s with an expected due date of %2$s', 'babyhallo'), $midwife_name, $due_date
+);
+?>
+</P>
 <?php
 }
 ?>
 
-<h2><?php _e( 'Appointment Details', 'woocommerce' ); ?></h2>
+<h2><?php _e( 'Appointment Details', 'babyhallo' ); ?></h2>
 <?php
 		$order->display_item_meta( $service_item );
 ?>

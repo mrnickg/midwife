@@ -1,6 +1,6 @@
 jQuery( document ).ready(function() {
     jQuery( '#booking_type' ).change(function() {
-        if (jQuery(this).find(":selected").text().trim() === 'Postpartum Care') {
+        if (jQuery(this).find(":selected").val() === 'Postpartum Care') {
             jQuery( '#postpartum_div' ).show();
             jQuery( '#service_div' ).hide();
         }

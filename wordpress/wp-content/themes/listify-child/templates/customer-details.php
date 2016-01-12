@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
-<header><h2><?php _e( 'Your Details', 'woocommerce' ); ?></h2></header>
+<header><h2><?php _e( 'Your Details', 'babyhallo' ); ?></h2></header>
 
 <table class="shop_table shop_table_responsive customer_details">
 	<?php if ( $order->customer_note ) : ?>
