@@ -10,6 +10,7 @@ include_once('functions/account.php');
 include_once('functions/booking.php');
 include_once('functions/profile.php');
 include_once('functions/search.php');
+include_once('functions/landing.php');
 
 define( 'BH_VERSION', '1.0.0' );
 
