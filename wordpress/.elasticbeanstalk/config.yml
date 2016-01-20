@@ -1,6 +1,10 @@
 branch-defaults:
   default:
+<<<<<<< HEAD
     environment: babyhallo-dev
+=======
+    environment: babyhallo-test
+>>>>>>> cce5aecd82b8a4aa0b0aa391b125a42090833a8f
 global:
   application_name: babyhallo
   default_ec2_keyname: null
