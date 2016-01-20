@@ -15,6 +15,8 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,300italic' rel='stylesheet' type='text/css'>
+
 	<?php wp_head(); ?>
 </head>
 
@@ -31,32 +33,34 @@
 						<?php if ( ! empty( $header_image ) ) : ?>
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" class="custom-header"><img src="<?php echo esc_url( $header_image ); ?>" alt=""></a>
 						<?php endif; ?>
-
+						<?php do_action( 'listify_header_flavour'); ?>
 						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 						<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 					</div>
-
+					<?php if ( apply_filters( 'listify_display_menus', true)) : ?>
 					<div class="primary nav-menu">
 						<?php
-							wp_nav_menu( array(
-								'theme_location' => 'primary',
-								'container_class' => 'nav-menu-container'
-							) );
+						wp_nav_menu( array(
+							'theme_location' => 'primary',
+							'container_class' => 'nav-menu-container'
+						) );
 						?>
 					</div>
+					<?php endif; ?>
 				</div>
 
 				<?php if ( ! listify_has_integration( 'facetwp' ) && listify_theme_mod( 'nav-search' ) ) : ?>
-				<div id="search-header" class="search-overlay">
-					<div class="container">
-						<?php locate_template( array( 'searchform-header.php', 'searchform.php' ), true, false ); ?>
-						<a href="#search-header" data-toggle="#search-header" class="ion-close search-overlay-toggle"></a>
+					<div id="search-header" class="search-overlay">
+						<div class="container">
+							<?php locate_template( array( 'searchform-header.php', 'searchform.php' ), true, false ); ?>
+							<a href="#search-header" data-toggle="#search-header" class="ion-close search-overlay-toggle"></a>
+						</div>
 					</div>
-				</div>
-                <?php endif; ?>
+				<?php endif; ?>
 			</div>
 		</div>
 
+		<?php if ( apply_filters('listify_display_menus', true)) : ?>
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<div class="container">
 				<a href="#" class="navigation-bar-toggle">
@@ -66,17 +70,17 @@
 
 				<div class="navigation-bar-wrapper">
 					<?php
-						wp_nav_menu( array(
-							'theme_location' => 'primary',
-							'container_class' => 'primary nav-menu',
-							'menu_class' => 'primary nav-menu'
-						) );
+					wp_nav_menu( array(
+						'theme_location' => 'primary',
+						'container_class' => 'primary nav-menu',
+						'menu_class' => 'primary nav-menu'
+					) );
 
-						wp_nav_menu( array(
-							'theme_location' => 'secondary',
-							'container_class' => 'secondary nav-menu',
-							'menu_class' => 'secondary nav-menu'
-						) );
+					wp_nav_menu( array(
+						'theme_location' => 'secondary',
+						'container_class' => 'secondary nav-menu',
+						'menu_class' => 'secondary nav-menu'
+					) );
 					?>
 				</div>
 
@@ -90,6 +94,7 @@
 				<?php endif; ?>
 			</div>
 		</nav><!-- #site-navigation -->
+		<?php endif; ?>
 	</header><!-- #masthead -->
 
 	<?php do_action( 'listify_content_before' ); ?>

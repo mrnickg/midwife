@@ -360,7 +360,42 @@ function add_edit_button() {
 
 }
 
-add_action( 'listify_single_job_listing_actions_after', 'add_edit_button');
+add_action( 'listify_single_job_listing_actions_after', 'add_edit_button', 10);
+
+/*
+ * Profile - Add a Contact email button
+ */
+function add_email_button() {
+
+	global $post;
+	global $current_user;
+
+	if ($post->post_author != $current_user->ID) {
+		?>
+		<a href="#job_listing-author-apply" data-mfp-src=".job_application" class="popup-trigger single-job_listing-respond button button-secondary"><?php _e( 'Contact', 'babyhallo' ); ?></a>
+		<?php get_job_manager_template( 'job-application.php' ); ?>
+		<?php
+	}
+
+}
+
+add_action( 'listify_single_job_listing_actions_after', 'add_email_button', 8);
+
+/*
+ * Profile - Hook to add the midwife as the recipient for contact emails
+ */
+function add_recipient( $value ) {
+
+	global $post;
+
+	$data = get_userdata( $post->post_author );
+
+	$value = $data->user_email;
+
+	return $value;
+}
+
+add_filter('wpcf7_hidden_field_value_midwife', 'add_recipient');
 
 /*
  * Profile - Custom header
@@ -390,6 +425,10 @@ add_filter( 'listify_can_upload_to_listing', 'can_upload_pictures');
 function should_allow_comments( $allow ) {
 	$userid = get_current_user_id();
 	$midwife_id = get_the_author_meta( 'ID');
+
+	if ($userid == $midwife_id) {
+		return true;
+	}
 
 	$args = array(
 		'author'    => $midwife_id,
