@@ -4,13 +4,14 @@ include_once(FACETWP_DIR . '/includes/facets/dropdown.php');
 
 class BH_Service_Type_Facet extends FacetWP_Facet_Dropdown
 {
-	private $postpartum_type = "Postpartum Care";
+	private $postpartum_type = "";
 
 	function __construct() {
-		$this->label = __( 'I am looking for...', 'fwp' );
+		$this->label = __( 'I am looking for...', 'babyhallo' );
 
 		add_filter( 'facetwp_store_unfiltered_post_ids', array( $this, 'store_unfiltered_post_ids' ) );
 
+		$this->postpartum_type = __('Postpartum Care', 'babyhallo');
 	}
 
 	/**

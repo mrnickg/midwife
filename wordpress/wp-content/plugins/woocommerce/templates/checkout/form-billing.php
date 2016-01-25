@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php 
 			$billing_details_title = apply_filters('woocommerce_billing_details_title', $billing_details_title);
 		?>
-		<h3><?php _e( $billing_details_title, 'woocommerce' ); ?></h3>
+		<h3><?php echo $billing_details_title; ?></h3>
 
 	<?php endif; ?>
 
