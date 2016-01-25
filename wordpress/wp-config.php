@@ -29,7 +29,6 @@ define('DB_USER', 'root');
 define('DB_PASSWORD', 'ng562051');
 
 /** MySQL hostname */
-define('DB_HOST', 'aa1e0bh9015lkku.cqkoeb0qtjh8.eu-central-1.rds.amazonaws.com');
 define('DB_HOST', 'aan0ghlptv7h6k.cqkoeb0qtjh8.eu-central-1.rds.amazonaws.com');
 
 /** Database Charset to use in creating database tables. */
@@ -40,8 +39,6 @@ define('DB_COLLATE', '');
 
 define('SCRIPT_DEBUG', false);
 
-define('WP_HOME','http://babyhallo-dev.elasticbeanstalk.com');
-define('WP_SITEURL','http://babyhallo-dev.elasticbeanstalk.com');
 define('WP_HOME','http://babyhallo-test.elasticbeanstalk.com');
 define('WP_SITEURL','http://babyhallo-test.elasticbeanstalk.com');
 
