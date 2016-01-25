@@ -4,7 +4,7 @@
  * Disable menus for the landing page
  */
 function display_menus( $display ) {
-	return get_the_title() != 'Landing';
+	return get_the_title() != 'Landing' && get_the_title() != 'Disclaimer';
 }
 
 add_filter( 'listify_display_menus', 'display_menus');
@@ -14,7 +14,7 @@ add_filter( 'listify_display_menus', 'display_menus');
  */
 function add_header_banner() {
 ?>
-	<div class="header-banner"><?php _e('launching Spring 2016!', 'babyhallo'); ?></div>
+	<div class="header-banner"><?php _e('LAUNCHING SPRING 2016', 'babyhallo'); ?></div>
 <?php
 }
 

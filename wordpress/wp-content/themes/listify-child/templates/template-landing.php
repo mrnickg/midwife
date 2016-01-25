@@ -10,30 +10,69 @@ if (has_post_thumbnail( $post->ID )) :
 	$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
 ?>
 
-	<div style="background-image: url('<?php echo $image[0]; ?>')"
-	     class="landing-cover homepage-cover page-cover entry-cover has-image">
-		<div class="cover-wrapper container landing-container">
-			<div class="landing-tag">
-				Helping parents find midwives - a new service launching in Spring 2016
-			</div>
-			<div class="landing-brief">
-				<p><span class="landing-brief-bold">Are you a parent?</span></p>
-				<p>Are you looking for a midwife to help you through pregnancy and your infant's first months?</p>
-				<p>At babyhallo we can help.  With us, you will be able to search for qualified local midwives and book services with them directly, without ever needing to pick up the phone or write an email.</p>
-				<p>If you are interested in hearing more about our service and our progress towards launch then please fill in your email address below.</p>
-				<p>
-				<?php echo do_shortcode('[mc4wp_form id="572"]'); ?>
-				</p>
-			</div>
-			<div class="landing-brief">
-				<p><span class="landing-brief-bold">Are you a midwife?</span></p>
-				<p>Do you want help to manage your business and grow an online presence?</p>
-				<p>If so then babyhallo may be the service for you.  Please fill in your email below and we will contact you with details of how you can join our family and start growing your business today!</p>
-				<?php echo do_shortcode('[mc4wp_form id="578"]'); ?>
+	<div class="landing-cover container">
+		<div class="landing-block-container col-xs12 col-sm-12 col-md-12" >
+			<div class="landing-block col-xs12 col-sm-12 col-md-12" id="tag">
+				<p><?php _e('CONNECTING PARENTS AND MIDWIVES', 'babyhallo'); ?></p>
 			</div>
 		</div>
-		<div class="cover-wrapper container landing-container posts-container">
-			<?php echo do_shortcode('[rpwe limit="5" excerpt="true" length="10000"]'); ?>
+		<div class="landing-block-container col-xs12 col-sm-12 col-md-12" >
+			<div class="landing-block col-xs12 col-sm-12 col-md-12" id="action">
+				<div class="landing-block-item-container col-xs-12 col-sm-6 col-md-6">
+					<div class="landing-block-item" id="parent">
+						<div class="landing-block-item-title"><?php _e('PARENTS', 'babyhallo'); ?></div>
+						<ul>
+							<li><?php _e('Looking for postnatal care, lactation consultation, mother baby courses and more?', 'babyhallo'); ?></li>
+							<li><span class="logo_baby">baby</span><span class="logo_hallo">hallo</span> <?php _e('is the simplest way to find your perfect midwife!', 'babyhallo'); ?></li>
+						</ul>
+						<ul class="aligned">
+							<li><?php _e('<b>Search</b> for local midwives', 'babyhallo'); ?></li>
+							<li><?php _e('<b>Browse</b> midwife profiles to learn about their experience and qualifications', 'babyhallo'); ?></li>
+							<li><?php _e('<b>Read</b> reviews written by other parents', 'babyhallo'); ?></li>
+							<li><?php _e('<b>Contact</b> midwives directly', 'babyhallo'); ?></li>
+							<li><?php _e('<b>Book</b> appointments with one click', 'babyhallo'); ?></li>
+						</ul>
+						<div class="buffer"></div>
+						<div class="landing-block-item-subscribe">
+							<?php echo do_shortcode('[mc4wp_form id="572"]'); ?>
+						</div>
+					</div>
+				</div>
+				<div class="landing-block-item-container col-xs-12 col-sm-6 col-md-6">
+					<div class="landing-block-item" id="midwife">
+						<div class="landing-block-item-title"><?php _e('MIDWIVES', 'babyhallo'); ?></div>
+						<ul>
+							<li><?php _e('Do you need help managing your busy schedule and building an online presence?', 'babyhallo'); ?></li>
+							<li><span class="logo_baby">baby</span><span class="logo_hallo">hallo</span> <?php _e('is the digital assistant for your midwifery business!', 'babyhallo'); ?></li>
+						</ul>
+						<ul class="aligned">
+							<li><?php _e('<b>Create</b> your profile page as if it were your own website', 'babyhallo'); ?></li>
+							<li><?php _e('<b>Advertise</b> your services and classes', 'babyhallo'); ?></li>
+							<li><?php _e('<b>Manage</b> your availability and appointments automatically', 'babyhallo'); ?></li>
+							<li><?php _e('<b>Receive</b> email and SMS notifications about upcoming activities', 'babyhallo'); ?></li>
+							<li><?php _e('<b>Receive</b> monthly summaries about your business activities', 'babyhallo'); ?></li>
+						</ul>
+						<div class="landing-block-item-subscribe">
+							<?php echo do_shortcode('[mc4wp_form id="578"]'); ?>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="landing-block-container col-xs12 col-sm-12 col-md-12">
+			<div class="landing-block col-xs12 col-sm-12 col-md-12">
+				<div class="landing-block-item-container col-xs12 col-sm-12 col-md-12">
+					<div class="landing-block-item has-image">
+						<img src="<?php echo $image[0]; ?>"/>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="landing-block-container col-xs12 col-sm-12 col-md-12" >
+			<div class="landing-block col-xs12 col-sm-12 col-md-12" id="blog">
+				<?php echo do_shortcode('[rpwe limit="5" excerpt="true" length="10000"]'); ?>
+			</div>
 		</div>
 	</div>
 
