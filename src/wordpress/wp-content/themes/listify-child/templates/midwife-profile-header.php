@@ -15,7 +15,7 @@
 					) );
 				?>
 				<div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating" class="rating-<?php echo floor(
-					$rating->output() ); ?> job_listing-rating-wrapper midwife-meta-rating" title="<?php printf( '%d Reviews', $rating->count() ); ?>">
+					$rating->output() ); ?> job_listing-rating-wrapper midwife-meta-rating" title="<?php printf( _e('%d Reviews','babyhallo'), $rating->count() ); ?>">
 					<span class="job_listing-rating-stars">
 						<?php echo $rating->stars(); ?>
 					</span>

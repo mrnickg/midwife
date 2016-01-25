@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
-<header><h2><?php _e( 'Midwife Details', 'woocommerce' ); ?></h2></header>
+<header><h2><?php _e( 'Midwife Details', 'babyhallo' ); ?></h2></header>
 
 <?php
 	$product = $order->get_product_from_item($booking);
