@@ -2,8 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fe07fc4-c8d0-4b04-adcc-7c7115d16147" name="Default" comment="">
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/languages/en_DE.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/languages/en_DE.po" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/functions.php" afterPath="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+=======
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/wordpress/wp-content/plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form.php" afterPath="$PROJECT_DIR$/src/wordpress/wp-content/plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/functions.php" afterPath="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/functions.php" />
+>>>>>>> cce5aecd82b8a4aa0b0aa391b125a42090833a8f
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+>>>>>>> 140116
     </list>
     <ignored path="midwife.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -19,6 +31,7 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+<<<<<<< HEAD
   <component name="DockManager">
     <window id="1">
       <content type="file-editors">
@@ -37,8 +50,13 @@
             <file leaf-file-name="functions.php" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/functions.php">
                 <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+                  <state vertical-scroll-proportion="0.4525862">
+                    <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+=======
                   <state vertical-scroll-proportion="0.51724136">
                     <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+>>>>>>> cce5aecd82b8a4aa0b0aa391b125a42090833a8f
                     <folding>
                       <element signature="e#6#37#0#PHP" expanded="true" />
                     </folding>
@@ -91,72 +109,180 @@
       </content>
     </window>
   </component>
+=======
+>>>>>>> 140116
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="midwife" />
   </component>
   <component name="FileEditorManager">
     <leaf>
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/themes/listify/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+              <folding>
+                <element signature="e#6#414#0#PHP" expanded="true" />
+              </folding>
+=======
       <file leaf-file-name="my-account.php" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/plugins/woocommerce/templates/myaccount/my-account.php">
+=======
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Sites/wordpress/index.php">
+>>>>>>> 140116
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.25">
-              <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
+            <state vertical-scroll-proportion="-1.25">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
+>>>>>>> cce5aecd82b8a4aa0b0aa391b125a42090833a8f
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="facetsupport.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/js/facetsupport.js">
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/themes/listify/functions.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="28" column="46" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
+              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+              <folding>
+                <marker date="1446213434000" expanded="true" signature="12149:12223" placeholder="SELECT ID FR..wp_posts..." />
+                <marker date="1446213434000" expanded="true" signature="13467:13588" placeholder="SELECT COUNT..wp_posts..." />
+              </folding>
+=======
+      <file leaf-file-name="facetsupport.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/js/facetsupport.js">
+=======
+      <file leaf-file-name="cart-empty.php" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/plugins/woocommerce/templates/cart/cart-empty.php">
+>>>>>>> 140116
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.0">
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding />
+>>>>>>> cce5aecd82b8a4aa0b0aa391b125a42090833a8f
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <file leaf-file-name="my-account.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/plugins/woocommerce/templates/myaccount/my-account.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+=======
       <file leaf-file-name="booking.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/js/booking.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+>>>>>>> cce5aecd82b8a4aa0b0aa391b125a42090833a8f
+=======
+      <file leaf-file-name="wc-core-functions.php" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/plugins/woocommerce/includes/wc-core-functions.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.916667">
+              <caret line="197" column="0" selection-start-line="197" selection-start-column="0" selection-end-line="197" selection-end-column="0" />
+>>>>>>> 140116
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <file leaf-file-name="my-account.php" pinned="false" current-in-tab="true">
+        <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/plugins/woocommerce/templates/myaccount/my-account.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.23275863">
+              <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
+=======
       <file leaf-file-name="bh_booking.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/templates/booking-form/bh_booking.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-13.823529">
               <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+>>>>>>> cce5aecd82b8a4aa0b0aa391b125a42090833a8f
+=======
+      <file leaf-file-name="class-wc-shortcode-cart.php" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-cart.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-27.833334">
+              <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+>>>>>>> 140116
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wordpress/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+=======
       <file leaf-file-name="date-picker.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/plugins/woocommerce-bookings/assets/js/date-picker.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="145" column="0" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
+>>>>>>> cce5aecd82b8a4aa0b0aa391b125a42090833a8f
+=======
+      <file leaf-file-name="class-wc-shortcodes.php" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/plugins/woocommerce/includes/class-wc-shortcodes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.916667">
+              <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+>>>>>>> 140116
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <file leaf-file-name="listify.pot" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/themes/listify/languages/listify.pot">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="39" column="17" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
+=======
       <file leaf-file-name="date-picker.min.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/plugins/woocommerce-bookings/assets/js/date-picker.min.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="0" column="7848" selection-start-line="0" selection-start-column="7848" selection-end-line="0" selection-end-column="7848" />
+>>>>>>> cce5aecd82b8a4aa0b0aa391b125a42090833a8f
+=======
+      <file leaf-file-name="shortcodes.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wordpress/wp-includes/shortcodes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.9607844">
+              <caret line="214" column="0" selection-start-line="214" selection-start-column="0" selection-end-line="214" selection-end-column="0" />
+>>>>>>> 140116
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <file leaf-file-name="es_AR.po" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/themes/listify/languages/es_AR.po">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+=======
       <file leaf-file-name="woocommmerce-bookings.php" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/plugins/woocommerce-bookings/woocommmerce-bookings.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -167,38 +293,84 @@
                 <marker date="1440781650000" expanded="true" signature="3646:3758" placeholder="SELECT post_..wp_postmeta..." />
                 <marker date="1440781650000" expanded="true" signature="4174:4272" placeholder="SELECT ID, p..wp_posts..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="class-wc-booking-form.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form.php">
+>>>>>>> cce5aecd82b8a4aa0b0aa391b125a42090833a8f
+=======
+      <file leaf-file-name="plugin.php" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Sites/wordpress/wp-includes/plugin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.62059623">
-              <caret line="76" column="65" selection-start-line="76" selection-start-column="65" selection-end-line="76" selection-end-column="65" />
+            <state vertical-scroll-proportion="-10.916667">
+              <caret line="219" column="0" selection-start-line="219" selection-start-column="0" selection-end-line="219" selection-end-column="0" />
               <folding />
+>>>>>>> 140116
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="readme.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/plugins/wdm-booking-availability-search/readme.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.6551723">
-              <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wordpress/index.php">
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <file leaf-file-name="template.php" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Sites/wordpress/wp-admin/includes/template.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
+              <caret line="103" column="65" selection-start-line="103" selection-start-column="65" selection-end-line="103" selection-end-column="65" />
+              <folding>
+                <marker date="1442148864000" expanded="false" signature="20399:20413" placeholder="..." />
+                <marker date="1442148864000" expanded="true" signature="20414:20625" placeholder="..." />
+                <marker date="1442148864000" expanded="true" signature="20423:20537" placeholder="..." />
+                <marker date="1442148864000" expanded="true" signature="20429:20527" placeholder="..." />
+                <marker date="1442148864000" expanded="true" signature="20586:20616" placeholder="..." />
+                <marker date="1442148864000" expanded="true" signature="23714:23864" placeholder="SELECT DISTI..wp_postmeta..." />
+                <marker date="1442148864000" expanded="true" signature="31498:31616" placeholder="SELECT ID, p..wp_posts..." />
+              </folding>
+=======
+      <file leaf-file-name="class-wc-booking-form.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form.php">
+=======
+      <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/functions.php">
+>>>>>>> 140116
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.470589">
+              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+              <folding />
+>>>>>>> cce5aecd82b8a4aa0b0aa391b125a42090833a8f
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <file leaf-file-name="booking.php" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/themes/listify-child/functions/booking.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+      <file leaf-file-name="readme.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/plugins/wdm-booking-availability-search/readme.txt">
+=======
+      <file leaf-file-name="landing.php" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/themes/listify-child/functions/landing.php">
+>>>>>>> 140116
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-16.875">
+              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="landing.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/functions/landing.php">
+          <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state vertical-scroll-proportion="0.0">
               <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+>>>>>>> cce5aecd82b8a4aa0b0aa391b125a42090833a8f
+=======
+            <state vertical-scroll-proportion="0.49872124">
+              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+>>>>>>> 140116
               <folding />
             </state>
           </provider>
@@ -220,6 +392,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
         <option value="$PROJECT_DIR$/wordpress/wp-content/themes/listify-child/js/toggle_booking_display.js" />
         <option value="$PROJECT_DIR$/wordpress/wp-content/themes/listify/inc/integrations/woocommerce-bookings/includes/booking-form/class-wc-boooking-form-date-picker.php" />
         <option value="$PROJECT_DIR$/wordpress/wp-content/plugins/woocommerce-bookings/includes/booking-form/class-wc-boooking-form-date-picker.php" />
@@ -228,6 +403,8 @@
         <option value="$PROJECT_DIR$/wordpress/wp-content/themes/listify-child/templates/booking-received.php" />
         <option value="$PROJECT_DIR$/wordpress/wp-content/plugins/wp-job-manager/templates/form-fields/number-field.php" />
         <option value="$PROJECT_DIR$/wordpress/wp-content/themes/listify/inc/integrations/facetwp/includes/proximity.php" />
+=======
+>>>>>>> 140116
         <option value="$USER_HOME$/Sites/wordpress/wp-content/plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form.php" />
         <option value="$USER_HOME$/Sites/wordpress/wp-content/themes/listify-child/functions.php" />
         <option value="$PROJECT_DIR$/wordpress/wp-content/themes/listify-child/templates/booking-form/facetsupport.js" />
@@ -243,6 +420,7 @@
         <option value="$PROJECT_DIR$/wordpress/wp-content/themes/listify-child/inc/integrations/facetwp/service_type.php" />
         <option value="$USER_HOME$/Sites/wordpress/wp-content/plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form-date-picker.php" />
         <option value="$PROJECT_DIR$/wordpress/wp-content/themes/listify/inc/integrations/woocommerce-bookings/templates/booking-form/date-picker.php" />
+>>>>>>> cce5aecd82b8a4aa0b0aa391b125a42090833a8f
         <option value="$PROJECT_DIR$/wordpress/wp-content/plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form-date-picker.php" />
         <option value="$PROJECT_DIR$/wordpress/wp-content/plugins/woocommerce-bookings/assets/js/data-picker.min.js" />
         <option value="$PROJECT_DIR$/wordpress/wp-content/themes/listify-child/js/facetsupport.js" />
@@ -268,9 +446,48 @@
         <option value="$PROJECT_DIR$/wordpress-plugins/themes/Listify-Theme-Full-Package/listify/inc/integrations/wp-job-manager/class-wp-job-manager-gallery.php" />
         <option value="$PROJECT_DIR$/wordpress/wp-content/themes/listify/inc/integrations/wp-job-manager/class-wp-job-manager-gallery.php" />
         <option value="$PROJECT_DIR$/wordpress/wp-content/themes/listify-child/functions.php" />
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/js/facetsupport.js" />
+        <option value="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/style.css" />
+        <option value="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/functions/account.php" />
+        <option value="$PROJECT_DIR$/src/wordpress/wp-content/plugins/woocommerce/templates/checkout/form-billing.php" />
+        <option value="$PROJECT_DIR$/src/wordpress/wp-content/plugins/woocommerce/templates/myaccount/my-account.php" />
+        <option value="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/functions/booking.php" />
+        <option value="$PROJECT_DIR$/src/wordpress/wp-content/plugins/woocommerce/templates/myaccount/my-address.php" />
+        <option value="$PROJECT_DIR$/src/wordpress/wp-content/plugins/woocommerce-bookings/templates/myaccount/my-bookings.php" />
+        <option value="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify/inc/integrations/wp-job-manager/widgets/class-widget-home-search-listings.php" />
+        <option value="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/inc/integrations/facetwp/due_date.php" />
+        <option value="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/inc/integrations/facetwp/service_type.php" />
+        <option value="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/js/booking.js" />
+        <option value="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/templates/booking-form/bh_booking.php" />
+        <option value="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/templates/booking-received.php" />
+        <option value="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/templates/customer-details.php" />
+        <option value="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/templates/midwife-details.php" />
+        <option value="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/templates/midwife-profile-header.php" />
+        <option value="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/booking-type-selection.php" />
+        <option value="$USER_HOME$/Sites/wordpress/wp-content/plugins/facetwp/includes/facets/checkboxes.php" />
+        <option value="$USER_HOME$/Sites/wordpress/wp-content/themes/listify-child/functions/search.php" />
+        <option value="$PROJECT_DIR$/src/wordpress/wp-content/plugins/facetwp/includes/facets/checkboxes.php" />
+        <option value="$PROJECT_DIR$/src/wordpress/wp-content/plugins/facetwp/includes/facets/dropdown.php" />
+        <option value="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/functions/search.php" />
+        <option value="$USER_HOME$/Sites/wordpress/wp-content/themes/listify-child/functions/profile.php" />
+        <option value="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/functions/profile.php" />
+=======
         <option value="$PROJECT_DIR$/src/wordpress/wp-content/plugins/woocommerce-bookings/assets/js/date-picker.min.js" />
         <option value="$PROJECT_DIR$/src/wordpress/wp-content/plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form.php" />
+<<<<<<< HEAD
+>>>>>>> cce5aecd82b8a4aa0b0aa391b125a42090833a8f
+=======
+        <option value="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify/inc/integrations/wp-job-manager/widgets/class-widget-home-search-listings.php" />
+        <option value="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify/inc/integrations/wp-job-manager/class-wp-job-manager-template.php" />
+        <option value="$PROJECT_DIR$/src/wordpress/wp-content/plugins/woocommerce-bookings/templates/myaccount/my-bookings.php" />
+        <option value="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/functions/profile.php" />
+>>>>>>> 140116
         <option value="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/functions.php" />
+        <option value="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify/header.php" />
+        <option value="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/style.css" />
+        <option value="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/templates/template-landing.php" />
+        <option value="$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/functions/landing.php" />
       </list>
     </option>
   </component>
@@ -327,6 +544,12 @@
           <mapping local-root="$PROJECT_DIR$/wordpress/wp-content" remote-root="/var/www/html/wp-content" />
         </path_mappings>
       </server>
+      <server host="104.155.74.172" id="fc7931a0-b3fa-439e-81c7-de455abe4e88" name="104.155.74.172" use_path_mappings="true">
+        <path_mappings>
+          <mapping local-root="$USER_HOME$/Sites/wordpress/wp-content" remote-root="/var/www/html/wp-content" />
+          <mapping local-root="$PROJECT_DIR$/wordpress" remote-root="/var/www/html" />
+        </path_mappings>
+      </server>
       <server host="http://23.251.130.130/" id="ab141347-de30-45f8-8b35-ebf377ce81b7" name="23.251.130.130" use_path_mappings="true">
         <path_mappings>
           <mapping local-root="$USER_HOME$/Sites/wordpress/wp-content" remote-root="/var/www/html/wp-content" />
@@ -335,14 +558,15 @@
       </server>
       <server host="http://104.155.74.172" id="f9a10521-4df4-4131-b733-9259a3e627cd" name="dev" use_path_mappings="true">
         <path_mappings>
+          <mapping local-root="$USER_HOME$/Sites/wordpress/index.php" remote-root="/var/www/html/index.php" />
           <mapping local-root="$USER_HOME$/Sites/wordpress/wp-content" remote-root="/var/www/html/wp-content" />
+<<<<<<< HEAD
           <mapping local-root="$PROJECT_DIR$/wordpress/wp-content" remote-root="/var/www/html/wp-content" />
-        </path_mappings>
-      </server>
-      <server host="104.155.74.172" id="fc7931a0-b3fa-439e-81c7-de455abe4e88" name="104.155.74.172" use_path_mappings="true">
-        <path_mappings>
-          <mapping local-root="$USER_HOME$/Sites/wordpress/wp-content" remote-root="/var/www/html/wp-content" />
+=======
+          <mapping local-root="$USER_HOME$/Sites/wordpress/wp-content/plugins/php-code-for-posts/PHPPostCode.php" remote-root="/var/www/html/wp-content/plugins/php-code-for-posts/PHPPostCode.php" />
+          <mapping local-root="$USER_HOME$/Sites/wordpress/wp-includes/plugin.php" remote-root="/var/www/html/wp-includes/plugin.php" />
           <mapping local-root="$PROJECT_DIR$/wordpress" remote-root="/var/www/html" />
+>>>>>>> 140116
         </path_mappings>
       </server>
     </servers>
@@ -354,10 +578,20 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <option name="x" value="40" />
+    <option name="y" value="56" />
+=======
     <option name="x" value="148" />
     <option name="y" value="402" />
+>>>>>>> cce5aecd82b8a4aa0b0aa391b125a42090833a8f
+=======
+    <option name="x" value="160" />
+    <option name="y" value="23" />
+>>>>>>> 140116
     <option name="width" value="1330" />
-    <option name="height" value="1304" />
+    <option name="height" value="1344" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -402,6 +636,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -440,6 +675,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="wp-includes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="midwife" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.jetbrains.php.config.PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PHP" />
+              <option name="myItemType" value="com.jetbrains.php.config.PhpExternalLibrariesNodePatcher$PatchedLibraryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wordpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="wp-content" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -466,37 +723,19 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="midwife" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.jetbrains.php.config.PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PHP" />
-              <option name="myItemType" value="com.jetbrains.php.config.PhpExternalLibrariesNodePatcher$PatchedLibraryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wordpress" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
+<<<<<<< HEAD
               <option name="myItemId" value="plugins" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+<<<<<<< HEAD
+              <option name="myItemId" value="woocommerce" />
+=======
               <option name="myItemId" value="woocommerce-bookings" />
+>>>>>>> cce5aecd82b8a4aa0b0aa391b125a42090833a8f
+=======
+              <option name="myItemId" value="themes" />
+>>>>>>> 140116
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -522,6 +761,69 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="listify-child" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+<<<<<<< HEAD
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+=======
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="midwife" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+<<<<<<< HEAD
+              <option name="myItemId" value="midwife" />
+>>>>>>> cce5aecd82b8a4aa0b0aa391b125a42090833a8f
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+=======
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.jetbrains.php.config.PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
+>>>>>>> 140116
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PHP" />
+              <option name="myItemType" value="com.jetbrains.php.config.PhpExternalLibrariesNodePatcher$PatchedLibraryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+<<<<<<< HEAD
+<<<<<<< HEAD
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.jetbrains.php.config.PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PHP" />
+              <option name="myItemType" value="com.jetbrains.php.config.PhpExternalLibrariesNodePatcher$PatchedLibraryNode" />
+=======
+              <option name="myItemId" value="midwife" />
+=======
+              <option name="myItemId" value="wordpress" />
+>>>>>>> 140116
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+>>>>>>> cce5aecd82b8a4aa0b0aa391b125a42090833a8f
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="listify-child" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+<<<<<<< HEAD
+<<<<<<< HEAD
               <option name="myItemId" value="plugins" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -529,6 +831,19 @@
               <option name="myItemId" value="woocommerce" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myaccount" />
+=======
+              <option name="myItemId" value="themes" />
+=======
+              <option name="myItemId" value="functions" />
+>>>>>>> 140116
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -569,6 +884,14 @@
               <option name="myItemId" value="listify-child" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+<<<<<<< HEAD
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+>>>>>>> cce5aecd82b8a4aa0b0aa391b125a42090833a8f
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+=======
+>>>>>>> 140116
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -579,6 +902,8 @@
               <option name="myItemId" value="midwife" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+<<<<<<< HEAD
+=======
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -603,44 +928,14 @@
               <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="midwife" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="midwife" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wordpress" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="listify-child" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
+<<<<<<< HEAD
             <PATH_ELEMENT>
               <option name="myItemId" value="booking-form" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+>>>>>>> cce5aecd82b8a4aa0b0aa391b125a42090833a8f
+=======
+>>>>>>> 140116
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -671,10 +966,13 @@
               <option name="myItemId" value="listify-child" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+<<<<<<< HEAD
+=======
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+>>>>>>> cce5aecd82b8a4aa0b0aa391b125a42090833a8f
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -933,6 +1231,7 @@
               <option name="myItemId" value="wp-content" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+<<<<<<< HEAD
             <PATH_ELEMENT>
               <option name="myItemId" value="plugins" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -958,6 +1257,8 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="midwife" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+<<<<<<< HEAD
+=======
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
@@ -1026,10 +1327,13 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="midwife" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+>>>>>>> cce5aecd82b8a4aa0b0aa391b125a42090833a8f
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+<<<<<<< HEAD
+=======
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="wordpress" />
@@ -1060,6 +1364,7 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+>>>>>>> cce5aecd82b8a4aa0b0aa391b125a42090833a8f
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="wordpress" />
@@ -1073,6 +1378,8 @@
               <option name="myItemId" value="plugins" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+<<<<<<< HEAD
+=======
             <PATH_ELEMENT>
               <option name="myItemId" value="woocommerce" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -1081,6 +1388,7 @@
               <option name="myItemId" value="includes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+>>>>>>> cce5aecd82b8a4aa0b0aa391b125a42090833a8f
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1153,16 +1461,17 @@
               <option name="myItemId" value="facets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+=======
+>>>>>>> 140116
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/wordpress" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="web.server" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="FullScreen" value="false" />
     <property name="recentsLimit" value="5" />
@@ -1175,6 +1484,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/wordpress/wp-content/plugins/woocommerce-bookings/templates" />
       <recent name="$PROJECT_DIR$/wordpress/wp-content/themes/listify-child/js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -1229,31 +1539,61 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="148" y="402" width="1330" height="1304" extended-state="0" />
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <frame x="40" y="56" width="1330" height="1304" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3259076" sideWeight="0.49717057" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32920793" sideWeight="0.49717057" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32920793" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+=======
+    <frame x="148" y="402" width="1330" height="1304" extended-state="0" />
+=======
+    <frame x="160" y="23" width="1330" height="1344" extended-state="0" />
+>>>>>>> 140116
+    <editor active="true" />
+    <layout>
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32507986" sideWeight="0.49717057" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32920793" sideWeight="0.49717057" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32920793" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3259076" sideWeight="0.5869038" order="1" side_tool="false" content_ui="tabs" />
+>>>>>>> cce5aecd82b8a4aa0b0aa391b125a42090833a8f
+=======
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32428116" sideWeight="0.5869038" order="1" side_tool="false" content_ui="tabs" />
+>>>>>>> 140116
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28881988" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29813665" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.6515764" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.419967" sideWeight="0.3484236" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3259076" sideWeight="0.49717057" order="7" side_tool="false" content_ui="tabs" />
+=======
+>>>>>>> cce5aecd82b8a4aa0b0aa391b125a42090833a8f
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3259076" sideWeight="0.5869038" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32983023" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41831684" sideWeight="0.6515764" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1297,6 +1637,12 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
+<<<<<<< HEAD
+<<<<<<< HEAD
+          <url>file://$USER_HOME$/Sites/wordpress/wp-content/plugins/woocommerce/templates/myaccount/my-account.php</url>
+          <line>23</line>
+          <option name="timeStamp" value="329" />
+=======
           <url>file://$USER_HOME$/Sites/wordpress/wp-content/plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form-date-picker.php</url>
           <line>39</line>
           <option name="timeStamp" value="236" />
@@ -1360,77 +1706,93 @@
           <url>file://$PROJECT_DIR$/wordpress/wp-content/plugins/w3-total-cache/lib/W3/Cdn/Base.php</url>
           <line>65</line>
           <option name="timeStamp" value="272" />
+=======
+          <url>file://$USER_HOME$/Sites/wordpress/plugins/contact-form-7/includes/submission.php</url>
+          <line>237</line>
+          <option name="timeStamp" value="330" />
+>>>>>>> 140116
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$USER_HOME$/Sites/wordpress/wp-content/plugins/w3-total-cache/lib/W3/Cdn/Base.php</url>
-          <line>65</line>
-          <option name="timeStamp" value="273" />
+          <url>file://$USER_HOME$/Sites/wordpress/wp-content/themes/listify-child/functions/profile.php</url>
+          <line>390</line>
+          <option name="timeStamp" value="332" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$USER_HOME$/Sites/wordpress/wp-content/plugins/w3-total-cache/lib/W3/Cdn/Rscf.php</url>
-          <line>161</line>
-          <option name="timeStamp" value="274" />
+          <url>file://$USER_HOME$/Sites/wordpress/wp-content/plugins/contact-form-7-modules/hidden.php</url>
+          <line>95</line>
+          <option name="timeStamp" value="333" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$USER_HOME$/Sites/wordpress/wp-content/plugins/w3-total-cache/lib/W3/Cdn/S3/Cf.php</url>
-          <line>102</line>
-          <option name="timeStamp" value="275" />
+          <url>file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/functions/profile.php</url>
+          <line>390</line>
+          <option name="timeStamp" value="334" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/wordpress/wp-content/themes/listify/inc/integrations/wp-job-manager/class-wp-job-manager-gallery.php</url>
-          <line>131</line>
-          <option name="timeStamp" value="278" />
+          <url>file://$USER_HOME$/Sites/wordpress/wp-content/plugins/contact-form-7/includes/submission.php</url>
+          <line>237</line>
+          <option name="timeStamp" value="335" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$USER_HOME$/Sites/wordpress/wp-content/plugins/w3-total-cache/lib/W3/Plugin/Cdn.php</url>
-          <line>148</line>
-          <option name="timeStamp" value="279" />
+          <url>file://$USER_HOME$/Sites/wordpress/wp-content/plugins/contact-form-7/includes/mail.php</url>
+          <line>40</line>
+          <option name="timeStamp" value="338" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$USER_HOME$/Sites/wordpress/wp-content/themes/listify/inc/integrations/wp-job-manager/class-wp-job-manager-gallery.php</url>
-          <line>129</line>
-          <option name="timeStamp" value="280" />
+          <url>file://$USER_HOME$/Sites/wordpress/wp-content/themes/listify/index.php</url>
+          <line>27</line>
+          <option name="timeStamp" value="340" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$USER_HOME$/Sites/wordpress/wp-admin/includes/file.php</url>
-          <line>214</line>
-          <option name="timeStamp" value="281" />
+          <url>file://$USER_HOME$/Sites/wordpress/wp-includes/template-loader.php</url>
+          <line>5</line>
+          <option name="timeStamp" value="341" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$USER_HOME$/Sites/wordpress/wp-admin/includes/file.php</url>
-          <line>406</line>
-          <option name="timeStamp" value="282" />
+          <url>file://$USER_HOME$/Sites/wordpress/wp-content/plugins/woocommerce/templates/cart/cart.php</url>
+          <line>9</line>
+          <option name="timeStamp" value="343" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/wordpress/wp-admin/includes/file.php</url>
-          <line>406</line>
-          <option name="timeStamp" value="283" />
+          <url>file://$USER_HOME$/Sites/wordpress/plugins/woocommerce/templates/cart/cart-empty.php</url>
+          <line>9</line>
+          <option name="timeStamp" value="344" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/wordpress/wp-admin/includes/file.php</url>
-          <line>331</line>
-          <option name="timeStamp" value="284" />
+          <url>file://$USER_HOME$/Sites/wordpress/wp-content/plugins/woocommerce/templates/cart/cart-empty.php</url>
+          <line>13</line>
+          <option name="timeStamp" value="345" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/wordpress/wp-content/themes/listify/functions.php</url>
-          <line>349</line>
-          <option name="timeStamp" value="290" />
+          <url>file://$PROJECT_DIR$/wordpress/wp-includes/template-loader.php</url>
+          <line>74</line>
+          <option name="timeStamp" value="346" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/wordpress-plugins/themes/Listify-Theme-Full-Package/listify/functions.php</url>
-          <line>349</line>
-          <option name="timeStamp" value="291" />
+          <url>file://$PROJECT_DIR$/wordpress/wp-includes/post-template.php</url>
+          <line>229</line>
+          <option name="timeStamp" value="347" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
+<<<<<<< HEAD
           <url>file://$USER_HOME$/Sites/wordpress/wp-content/plugins/w3-total-cache/lib/W3/Plugin/Cdn.php</url>
           <line>183</line>
           <option name="timeStamp" value="295" />
+>>>>>>> cce5aecd82b8a4aa0b0aa391b125a42090833a8f
+=======
+          <url>file://$USER_HOME$/Sites/wordpress/wp-content/themes/listify-child/functions/landing.php</url>
+          <line>29</line>
+          <option name="timeStamp" value="349" />
+>>>>>>> 140116
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="296" />
+<<<<<<< HEAD
+      <option name="time" value="330" />
+=======
+      <option name="time" value="350" />
+>>>>>>> 140116
     </breakpoint-manager>
     <watches-manager>
       <configuration name="wp-login.php">
@@ -1443,6 +1805,13 @@
         <watch expression="getdate($end_date)" language="PHP" />
         <watch expression="FWP()-&gt;helper-&gt;get_facet_by_name('service_type')" language="PHP" />
         <watch expression="get_term('364','bh_booking_type')" language="PHP" />
+<<<<<<< HEAD
+        <watch expression="$output[0]['target']" language="PHP" />
+=======
+        <watch expression="wpcf7_get_current_contact_form()" language="PHP" />
+        <watch expression="$tag-&gt;get_id_option()" language="PHP" />
+        <watch expression="$data-&gt;user_email" language="PHP" />
+>>>>>>> 140116
       </configuration>
       <configuration name="async-upload.php">
         <watch expression="wc_price( $display_price )" language="PHP" />
@@ -1457,6 +1826,9 @@
         <watch expression="getdate($end_date)" language="PHP" />
         <watch expression="FWP()-&gt;helper-&gt;get_facet_by_name('service_type')" language="PHP" />
         <watch expression="get_term('364','bh_booking_type')" language="PHP" />
+        <watch expression="wpcf7_get_current_contact_form()" language="PHP" />
+        <watch expression="$tag-&gt;get_id_option()" language="PHP" />
+        <watch expression="$data-&gt;user_email" language="PHP" />
       </configuration>
       <configuration name="options-general.php">
         <watch expression="$product-&gt;get_post_data()-&gt;id" language="PHP" />
@@ -1497,6 +1869,57 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/inc/integrations/facetwp/due_date.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.823529">
+          <caret line="157" column="0" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/inc/integrations/facetwp/service_type.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.352941">
+          <caret line="118" column="19" selection-start-line="118" selection-start-column="19" selection-end-line="118" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/functions/booking.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.235294">
+          <caret line="28" column="33" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/js/profile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/js/booking.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/templates/booking-form/bh_booking.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/templates/booking-form/due-date.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/templates/booking-received.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1546,6 +1969,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/js/facetsupport.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/themes/listify-child/readme.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1557,7 +1987,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.75">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1701,29 +2130,401 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/templates/booking-received.php">
+=======
+    <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/themes/listify/page.php">
+>>>>>>> 140116
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-22.5">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/themes/listify/page-templates/template-home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-22.5">
+          <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/themes/listify/content.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6125">
+          <caret line="53" column="39" selection-start-line="53" selection-start-column="39" selection-end-line="53" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/themes/listify/page-templates/template-full-width.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.75">
+          <caret line="26" column="68" selection-start-line="26" selection-start-column="68" selection-end-line="26" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Sites/wordpress/wp-includes/general-template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.5">
+          <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
+          <folding>
+            <marker date="1439310328000" expanded="true" signature="-1:-1" placeholder="SELECT YEAR(..." />
+            <marker date="1439310328000" expanded="true" signature="-1:-1" placeholder="SELECT YEAR(..." />
+            <marker date="1439310328000" expanded="true" signature="-1:-1" placeholder="SELECT YEAR(..." />
+            <marker date="1439310328000" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..." />
+            <marker date="1439310328000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..wp_posts..." />
+            <marker date="1439310328000" expanded="true" signature="-1:-1" placeholder="SELECT 1 as ..wp_posts..." />
+            <marker date="1439310328000" expanded="true" signature="-1:-1" placeholder="SELECT MONTH..." />
+            <marker date="1439310328000" expanded="true" signature="-1:-1" placeholder="SELECT MONTH..." />
+            <marker date="1439310328000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1439310328000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1439310328000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1439310328000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1439310328000" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..wp_posts..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/functions/booking.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/functions/account.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30450132">
+          <caret line="58" column="53" selection-start-line="58" selection-start-column="53" selection-end-line="58" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/themes/listify/inc/custom-header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34300125">
+          <caret line="49" column="30" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Sites/wordpress/themes/listify/css/sass/_header.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.958333">
+          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="62" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/templates/template-profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.5">
+          <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+          <folding>
+            <element signature="e#6#42#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.4117646">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/themes/listify/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-41.25">
+          <caret line="72" column="28" selection-start-line="72" selection-start-column="28" selection-end-line="72" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/templates/midwife-profile-header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.0">
+          <caret line="32" column="6" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/booking-type-selection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify/inc/integrations/wp-job-manager/class-wp-job-manager-template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1453286959000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1453286959000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/plugins/easy-sign-up/lib/esu-widget-class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-21.208334">
+          <caret line="110" column="11" selection-start-line="110" selection-start-column="11" selection-end-line="110" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/plugins/easy-sign-up/lib/esu-utility-functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-46.875">
+          <caret line="80" column="8" selection-start-line="80" selection-start-column="8" selection-end-line="80" selection-end-column="8" />
+          <folding>
+            <marker date="1443809846000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1443809846000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1443809846000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1443809846000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/plugins/easy-sign-up/easy_sign_up.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.375">
+          <caret line="41" column="31" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/plugins/easy-sign-up/css/stylesheet.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/plugins/easy-sign-up/css/esu-styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/plugins/easy-sign-up/lib/esu-front-end-class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="24.375">
+          <caret line="46" column="43" selection-start-line="46" selection-start-column="43" selection-end-line="46" selection-end-column="43" />
+          <folding>
+            <marker date="1443809846000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1443809846000" expanded="true" signature="-1:-1" placeholder="/*...*/" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/plugins/easy-sign-up/lib/esu-form-process-class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.125">
+          <caret line="79" column="32" selection-start-line="79" selection-start-column="32" selection-end-line="79" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify/inc/integrations/wp-job-manager/widgets/class-widget-home-search-listings.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.921569">
+          <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="357" column="1" selection-start-line="357" selection-start-column="1" selection-end-line="357" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/templates/template-landing.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.875">
+          <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
+          <folding>
+            <element signature="e#6#42#0#PHP" expanded="true" />
+            <element signature="e#210#267#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wordpress/wp-includes/wp-db.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.25">
+          <caret line="659" column="0" selection-start-line="659" selection-start-column="0" selection-end-line="659" selection-end-column="0" />
+          <folding>
+            <marker date="1441868124000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1441868124000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1441868124000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1441868124000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wordpress/wp-includes/cache.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.274509">
+          <caret line="719" column="0" selection-start-line="719" selection-start-column="0" selection-end-line="719" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wordpress/wp-includes/load.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.9607844">
+          <caret line="613" column="0" selection-start-line="613" selection-start-column="0" selection-end-line="613" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/themes/listify/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.375">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Sites/wordpress/wp-load.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-30.0">
+          <caret line="65" column="5" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Sites/wordpress/wp-includes/template-loader.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-23.125">
+          <caret line="40" column="11" selection-start-line="40" selection-start-column="11" selection-end-line="40" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/plugins/woocommerce/templates/cart/cart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.625">
+          <caret line="31" column="12" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Sites/wordpress/plugins/woocommerce/templates/cart/cart-empty.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.0">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wordpress/wp-blog-header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.875">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wordpress/wp-includes/template-loader.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.352942">
+          <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wordpress/wp-includes/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.980392">
+          <caret line="556" column="0" selection-start-line="556" selection-start-column="0" selection-end-line="556" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wordpress/wp-includes/plugin.php">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state vertical-scroll-proportion="0.0">
+          <caret line="63" column="44" selection-start-line="63" selection-start-column="44" selection-end-line="63" selection-end-column="44" />
+>>>>>>> cce5aecd82b8a4aa0b0aa391b125a42090833a8f
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/themes/listify/languages/listify.pot">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="39" column="17" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
+=======
+        <state vertical-scroll-proportion="-4.9607844">
+          <caret line="212" column="0" selection-start-line="212" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
+>>>>>>> 140116
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/themes/listify/functions.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding>
-            <marker date="1446213434000" expanded="true" signature="-1:-1" placeholder="SELECT ID FR..wp_posts..." />
-            <marker date="1446213434000" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..wp_posts..." />
+            <marker date="1446213434000" expanded="true" signature="12149:12223" placeholder="SELECT ID FR..wp_posts..." />
+            <marker date="1446213434000" expanded="true" signature="13467:13588" placeholder="SELECT COUNT..wp_posts..." />
+=======
+    <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/plugins/facetwp/includes/facets/checkboxes.php">
+=======
+    <entry file="file://$PROJECT_DIR$/wordpress/wp-admin/admin-ajax.php">
+>>>>>>> 140116
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.3529413">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/plugins/php-code-for-posts/PHPPostCode.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.916667">
+          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding>
+<<<<<<< HEAD
+            <marker date="1452338613000" expanded="true" signature="15004:15051" placeholder="select targe..wp_translations..." />
+            <marker date="1452338613000" expanded="true" signature="15004:15052" placeholder="select targe..wp_translations..." />
+            <marker date="1452338613000" expanded="true" signature="15004:15088" placeholder="select targe..wp_translations..." />
+            <marker date="1452338613000" expanded="true" signature="15004:15102" placeholder="select targe..wp_translations..." />
+            <marker date="1452338613000" expanded="true" signature="15004:15103" placeholder="select targe..wp_translations..." />
+>>>>>>> cce5aecd82b8a4aa0b0aa391b125a42090833a8f
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/themes/listify-child/functions/profile.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.0183767">
@@ -1736,57 +2537,154 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="103" column="65" selection-start-line="103" selection-start-column="65" selection-end-line="103" selection-end-column="65" />
           <folding>
-            <marker date="1442148864000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1442148864000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1442148864000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1442148864000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1442148864000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1442148864000" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..wp_postmeta..." />
-            <marker date="1442148864000" expanded="true" signature="-1:-1" placeholder="SELECT ID, p..wp_posts..." />
+            <marker date="1442148864000" expanded="false" signature="20399:20413" placeholder="..." />
+            <marker date="1442148864000" expanded="true" signature="20414:20625" placeholder="..." />
+            <marker date="1442148864000" expanded="true" signature="20423:20537" placeholder="..." />
+            <marker date="1442148864000" expanded="true" signature="20429:20527" placeholder="..." />
+            <marker date="1442148864000" expanded="true" signature="20586:20616" placeholder="..." />
+            <marker date="1442148864000" expanded="true" signature="23714:23864" placeholder="SELECT DISTI..wp_postmeta..." />
+            <marker date="1442148864000" expanded="true" signature="31498:31616" placeholder="SELECT ID, p..wp_posts..." />
+=======
+            <marker date="1430941790000" expanded="true" signature="-1:-1" placeholder="DROP TABLE `..." />
+            <marker date="1430941790000" expanded="true" signature="-1:-1" placeholder="CREATE TABLE..IF..." />
+            <marker date="1430941790000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1430941790000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1430941790000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1430941790000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+>>>>>>> 140116
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/themes/listify-child/functions/booking.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/wordpress/wp-includes/l10n.php">
+=======
+    <entry file="file://$PROJECT_DIR$/wordpress/wp-includes/post-template.php">
+>>>>>>> 140116
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.8431373">
+          <caret line="232" column="1" selection-start-line="232" selection-start-column="1" selection-end-line="232" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/plugins/woocommerce/templates/cart/cart-empty.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.0">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/plugins/woocommerce/includes/wc-core-functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="46" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
+>>>>>>> cce5aecd82b8a4aa0b0aa391b125a42090833a8f
+=======
+        <state vertical-scroll-proportion="-10.916667">
+          <caret line="197" column="0" selection-start-line="197" selection-start-column="0" selection-end-line="197" selection-end-column="0" />
+>>>>>>> 140116
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/plugins/woocommerce/templates/myaccount/my-account.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/js/booking.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+>>>>>>> cce5aecd82b8a4aa0b0aa391b125a42090833a8f
+=======
+    <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-cart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-27.833334">
+          <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+>>>>>>> 140116
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/wordpress/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/templates/booking-form/bh_booking.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.823529">
+          <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+>>>>>>> cce5aecd82b8a4aa0b0aa391b125a42090833a8f
+=======
+    <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/plugins/woocommerce/includes/class-wc-shortcodes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.916667">
+          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+>>>>>>> 140116
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/plugins/woocommerce-bookings/assets/js/date-picker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="145" column="0" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
+>>>>>>> cce5aecd82b8a4aa0b0aa391b125a42090833a8f
+=======
+    <entry file="file://$PROJECT_DIR$/wordpress/wp-includes/shortcodes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.9607844">
+          <caret line="214" column="0" selection-start-line="214" selection-start-column="0" selection-end-line="214" selection-end-column="0" />
+>>>>>>> 140116
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/functions/search.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="63" column="44" selection-start-line="63" selection-start-column="44" selection-end-line="63" selection-end-column="44" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/plugins/woocommerce-bookings/assets/js/date-picker.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="7848" selection-start-line="0" selection-start-column="7848" selection-end-line="0" selection-end-column="7848" />
+>>>>>>> cce5aecd82b8a4aa0b0aa391b125a42090833a8f
+=======
+    <entry file="file://$USER_HOME$/Sites/wordpress/wp-includes/plugin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.916667">
+          <caret line="219" column="0" selection-start-line="219" selection-start-column="0" selection-end-line="219" selection-end-column="0" />
+>>>>>>> 140116
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/plugins/facetwp/includes/facets/checkboxes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1796,9 +2694,21 @@
             <marker date="1452335244000" expanded="true" signature="2624:2929" placeholder="SELECT f.fac..." />
             <marker date="1452335244000" expanded="true" signature="6061:6164" placeholder="SELECT DISTI..." />
           </folding>
+=======
+    <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/plugins/wdm-booking-availability-search/readme.txt">
+=======
+    <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/functions.php">
+>>>>>>> 140116
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.470589">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+>>>>>>> cce5aecd82b8a4aa0b0aa391b125a42090833a8f
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/functions/profile.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1809,77 +2719,7 @@
             <marker date="1452338613000" expanded="true" signature="15004:15088" placeholder="select targe..wp_translations..." />
             <marker date="1452338613000" expanded="true" signature="15004:15102" placeholder="select targe..wp_translations..." />
             <marker date="1452338613000" expanded="true" signature="15004:15103" placeholder="select targe..wp_translations..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wordpress/wp-includes/l10n.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34421888">
-          <caret line="207" column="1" selection-start-line="207" selection-start-column="1" selection-end-line="207" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/plugins/woocommerce/templates/myaccount/my-account.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.25">
-          <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/js/facetsupport.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="46" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/js/booking.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/templates/booking-form/bh_booking.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.823529">
-          <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/plugins/woocommerce-bookings/assets/js/date-picker.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="145" column="0" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/plugins/woocommerce-bookings/assets/js/date-picker.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="7848" selection-start-line="0" selection-start-column="7848" selection-end-line="0" selection-end-column="7848" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/plugins/wdm-booking-availability-search/readme.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.6551723">
-          <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
+=======
     <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/plugins/woocommerce-bookings/woocommmerce-bookings.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-18.75">
@@ -1888,25 +2728,68 @@
             <element signature="e#6#451#0#PHP" expanded="true" />
             <marker date="1440781650000" expanded="true" signature="3646:3758" placeholder="SELECT post_..wp_postmeta..." />
             <marker date="1440781650000" expanded="true" signature="4174:4272" placeholder="SELECT ID, p..wp_posts..." />
+>>>>>>> cce5aecd82b8a4aa0b0aa391b125a42090833a8f
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/wordpress/wp-includes/l10n.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34421888">
+          <caret line="207" column="1" selection-start-line="207" selection-start-column="1" selection-end-line="207" selection-end-column="1" />
+=======
     <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/plugins/woocommerce-bookings/includes/booking-form/class-wc-booking-form.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.62059623">
           <caret line="76" column="65" selection-start-line="76" selection-start-column="65" selection-end-line="76" selection-end-column="65" />
+>>>>>>> cce5aecd82b8a4aa0b0aa391b125a42090833a8f
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/plugins/woocommerce/templates/myaccount/my-account.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23275863">
+          <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
+=======
+    <entry file="file://$USER_HOME$/Sites/wordpress/wp-content/themes/listify-child/functions/landing.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.875">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Sites/wordpress/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.25">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+>>>>>>> 140116
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/functions/landing.php">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state vertical-scroll-proportion="0.4525862">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+=======
     <entry file="file://$PROJECT_DIR$/src/wordpress/wp-content/themes/listify-child/functions.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.51724136">
           <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+>>>>>>> cce5aecd82b8a4aa0b0aa391b125a42090833a8f
           <folding>
             <element signature="e#6#37#0#PHP" expanded="true" />
           </folding>
+=======
+        <state vertical-scroll-proportion="0.49872124">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+>>>>>>> 140116
         </state>
       </provider>
     </entry>

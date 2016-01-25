@@ -727,8 +727,11 @@ class Listify_WP_Job_Manager_Template extends listify_Integration {
 		} else {
 			$url = '#respond';
 		}
+
+		$dispText = get_current_user_id() === get_the_author_meta( 'ID') ? __( 'Respond to Reviews', 'babyhallo') : __('Submit a Review', 'listify');
+
 		?>
-		<a href="<?php echo esc_url( $url ); ?>" class="single-job_listing-respond button button-secondary"><?php _e( 'Submit a Review', 'listify' ); ?></a>
+		<a href="<?php echo esc_url( $url ); ?>" class="single-job_listing-respond button button-secondary"><?php echo $dispText; ?></a>
 		<?php
 	}
 

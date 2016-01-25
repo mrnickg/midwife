@@ -191,7 +191,22 @@ class Listify_Widget_Search_Listings extends Listify_Widget {
 					window.location.href = '<?php echo get_post_type_archive_link( 'job_listing' ); ?>' + url;
 				}
 			</script>
+
 			<?php
+			 if ( !is_user_logged_in() ) {
+				 ?>
+				 <br/>
+				 <br/>
+				 <div class="bh-newuser-info-container col-xs-12 col-sm-8 col-md-6">
+					 <h2 class="bh-newuser-info-h2"><?php _e('For parents', 'babyhallo'); ?></h2>
+					 <h3 class="bh-newuser-info-h3"><?php _e("Fill in your postcode and due date above to start searching for midwives now, or <a href='/my-account'>create an account</a>", 'babyhallo'); ?></h3>
+					 <h2 class="bh-newuser-info-h2"><?php _e('For Midwives', 'babyhallo'); ?></h2>
+					 <h3 class="bh-newuser-info-h3"><?php _e("<a href='/my-account'>Sign up now</a> to create your profile page and start taking bookings from parents"); ?></h3>
+				 </div>
+
+				 <?php
+			 }
+
 		} else {
 			locate_template( array( 'job-filters-flat.php', 'job-filters.php'), true, false );
 		}
