@@ -26,10 +26,10 @@ define('DB_NAME', 'ebdb');
 define('DB_USER', 'root');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'ng562051');
+define('DB_PASSWORD', 'vax_vex_grog');
 
 /** MySQL hostname */
-define('DB_HOST', 'aan0ghlptv7h6k.cqkoeb0qtjh8.eu-central-1.rds.amazonaws.com');
+define('DB_HOST', 'aa1pzupxa6owm86.cqkoeb0qtjh8.eu-central-1.rds.amazonaws.com');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8mb4');
@@ -39,8 +39,8 @@ define('DB_COLLATE', '');
 
 define('SCRIPT_DEBUG', false);
 
-define('WP_HOME','http://babyhallo-test.elasticbeanstalk.com');
-define('WP_SITEURL','http://babyhallo-test.elasticbeanstalk.com');
+define('WP_HOME','http://babyhallo.com');
+define('WP_SITEURL','http://babyhallo.com');
 
 /**#@+
  * Authentication Unique Keys and Salts.
