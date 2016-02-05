@@ -1,6 +1,6 @@
 branch-defaults:
   default:
-    environment: babyhallo-env
+    environment: babyhallo-prod
 global:
   application_name: babyhallo
   default_ec2_keyname: null

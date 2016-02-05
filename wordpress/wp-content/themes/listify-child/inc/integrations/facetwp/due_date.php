@@ -16,7 +16,7 @@ class BH_Due_Date_Facet {
 
 		$value = $params['selected_values'];
 
-		$output = '<input type="text" class="facetwp-date facetwp-date-min" value="' . $value[0] . '" placeholder="' . __( 'Due Date', 'fwp' ) . '" />';
+		$output = '<input type="text" class="facetwp-date facetwp-date-min" value="' . $value[0] . '" placeholder="' . __( 'Due Date', 'babyhallo' ) . '" />';
 
 		return $output;
 	}

@@ -32,7 +32,7 @@ $col = 1;
 <h2><?php echo $page_title; ?></h2>
 
 <p class="myaccount_address">
-	<?php echo 'The following address will be used by default on the booking page for any at-home appointments with Midwives.' ?>
+	<?php _e('The following address will be used by default on the booking page for any at-home appointments with Midwives.', 'babyhallo'); ?>
 </p>
 
 <?php if ( ! wc_ship_to_billing_address_only() && get_option( 'woocommerce_calc_shipping' ) !== 'no' ) echo '<div class="col2-set addresses">'; ?>
