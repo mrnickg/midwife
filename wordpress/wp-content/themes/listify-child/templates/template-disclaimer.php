@@ -9,14 +9,14 @@ get_header();
 	<div class="landing-cover container">
 		<div class="landing-block-container col-xs12 col-sm-12 col-md-12" >
 			<div class="landing-block col-xs12 col-sm-12 col-md-12" id="tag">
-				<p>Impressum/Disclaimer</p>
+				<p>Impressum/Disclosure</p>
 			</div>
 		</div>
 		<div class="landing-block-container col-xs12 col-sm-12 col-md-12" >
 			<div class="landing-block col-xs12 col-sm-12 col-md-12">
 				<p><b>Impressum</b></p>
 
-				<p>Michi Beverages Gesellschaft mit beschränkter Haftung<p>
+				<p>Michi Gesellschaft mit beschränkter Haftung<p>
 				<p>Im Trutz Frankfurt 33</p>
 				<p>D-60322 Frankfurt am Main</p>
 				<br/>
@@ -37,7 +37,7 @@ get_header();
 				<br/>
 				<br/>
 
-				<p><b>Disclaimer</b></p>
+				<p><b>Disclosure</b></p>
 
 				<p>Haftungsbeschränkung</p>
 

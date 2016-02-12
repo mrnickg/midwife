@@ -4,7 +4,7 @@
  * Disable menus for the landing page
  */
 function display_menus( $display ) {
-	return get_the_title() != 'Landing' && get_the_title() != 'Disclaimer';
+	return get_the_title() != 'Landing' && get_the_title() != 'Disclaimer' && get_the_title() != 'LandingMVP1';
 }
 
 add_filter( 'listify_display_menus', 'display_menus');
@@ -14,11 +14,11 @@ add_filter( 'listify_display_menus', 'display_menus');
  */
 function add_header_banner() {
 ?>
-	<div class="header-banner"><?php _e('LAUNCHING SPRING 2016', 'babyhallo'); ?></div>
+	<div class="header-banner"><?php _e('THE SIMPLEST WAY TO FIND A MIDWIFE', 'babyhallo'); ?></div>
 <?php
 }
 
-add_action( 'listify_header_flavour', 'add_header_banner');
+//add_action( 'listify_header_flavour', 'add_header_banner');
 
 
 /*
