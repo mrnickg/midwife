@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: babyhallo\n"
-"POT-Creation-Date: 2016-01-25 12:20+0000\n"
-"PO-Revision-Date: 2016-01-25 12:20+0000\n"
+"POT-Creation-Date: 2016-02-11 13:30+0100\n"
+"PO-Revision-Date: 2016-02-12 09:38+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -810,12 +810,13 @@ msgid "Type:"
 msgstr "Type:"
 
 #: themes/listify-child/functions.php:29
-msgid "Your email address"
-msgstr "Deine E-Mail-Adresse"
+msgid "e.g. me@google.com"
+msgstr "z.B. me@google.com"
 
 #: themes/listify-child/functions.php:30
-msgid "Tell me more"
-msgstr "Ich will mehr wissen"
+#: themes/listify-child/functions/profile.php:317
+msgid "Submit"
+msgstr "Submit"
 
 #: themes/listify-child/functions/account.php:26
 msgid "I am a..."
@@ -891,8 +892,8 @@ msgstr ""
 "time and location provided."
 
 #: themes/listify-child/functions/landing.php:17
-msgid "LAUNCHING SPRING 2016"
-msgstr "LAUNCH IM FRÜHLING 2016"
+msgid "THE SIMPLEST WAY TO FIND A MIDWIFE"
+msgstr ""
 
 #: themes/listify-child/functions/profile.php:28
 msgid "Maximum Postpartum Bookings"
@@ -912,10 +913,6 @@ msgstr "Do you offer Postpartum Care?"
 #: themes/listify-child/functions/profile.php:54
 msgid "Closed"
 msgstr "Closed"
-
-#: themes/listify-child/functions/profile.php:317
-msgid "Submit"
-msgstr "Submit"
 
 #: themes/listify-child/functions/profile.php:357
 msgid "Edit Profile"
@@ -1091,6 +1088,73 @@ msgstr ""
 msgid "<b>Receive</b> monthly summaries about your business activities"
 msgstr "<b>Lass</b> Dir alle geleisteten Aktivitäten monatlich zusammenfassen"
 
+#: themes/listify-child/templates/template_mvp1.php:20
+msgid "Welcome to"
+msgstr "Willkommen bei"
+
+#: themes/listify-child/templates/template_mvp1.php:21
+msgid "BABYHALLO"
+msgstr "BABYHALLO"
+
+#: themes/listify-child/templates/template_mvp1.php:24
+msgid "The simplest way to find a midwife"
+msgstr "Wir machen eure Hebammensuche einfach"
+
+#: themes/listify-child/templates/template_mvp1.php:37
+msgid "HOW IT WORKS"
+msgstr "WIE FUNKTIONIERT ES?"
+
+#: themes/listify-child/templates/template_mvp1.php:49
+msgid "You tell us what you need from your Midwife"
+msgstr "Du erzählst uns, wie Deine perfekte Hebamme sein sollte"
+
+#: themes/listify-child/templates/template_mvp1.php:65
+msgid "We search for local Midwives that fit your needs"
+msgstr "Wir suchen die idealen Hebammen für Dich"
+
+#: themes/listify-child/templates/template_mvp1.php:81
+msgid ""
+"We send you a shortlist of the best profiles and you pick the Midwife that "
+"you prefer"
+msgstr ""
+"Wir schicken Dir eine Liste von passenden Profilen und Du wählst daraus aus"
+
+#: themes/listify-child/templates/template_mvp1.php:97
+msgid "We register you for Postpartum Care and book your initial appointment"
+msgstr "Wir kümmern uns um Deine Wochenbettbetreuung und Deine ersten Termine"
+
+#: themes/listify-child/templates/template_mvp1.php:108
+msgid "WHAT IT COSTS"
+msgstr "WAS KOSTET ES?"
+
+#: themes/listify-child/templates/template_mvp1.php:128
+msgid ""
+"No payment upfront.  You pay if you wish to see the shortlist of Midwives we "
+"have selected"
+msgstr ""
+"Keine Vorauszahlung – Du bezahlst nur, wenn Du die Hebammenprofile sehen "
+"möchtest"
+
+#: themes/listify-child/templates/template_mvp1.php:131
+msgid ""
+"We will immediately refund the full amount with no questions asked if you "
+"are unsatisfied with our selection"
+msgstr ""
+"Wir geben Dir Dein Geld ohne Fragen zurück, wenn Du mit unserer Auswahl "
+"unzufrieden bist"
+
+#: themes/listify-child/templates/template_mvp1.php:142
+msgid "LET US FIND YOU A MIDWIFE TODAY"
+msgstr "LASS UNS EINE HEBAMME FÜR DICH FINDEN"
+
+#: themes/listify-child/templates/template_mvp1.php:143
+msgid ""
+"Fill in your details below and we will get back to you within 10 days with "
+"your shortlist of personally selected Midwives."
+msgstr ""
+"Bitte fülle das folgende Formular aus und wir kontaktieren Dich innerhalb "
+"von 10 Tagen mit Deinem persönlichen Ergebnis"
+
 #: themes/listify/comments.php:26
 msgid "Sort By"
 msgstr "Sort By"
@@ -1253,3 +1317,12 @@ msgid ""
 msgstr ""
 "<a href='/my-account'>Sign up now</a> to create your profile page and start "
 "taking bookings from parents"
+
+#~ msgid "Your email address"
+#~ msgstr "Deine E-Mail-Adresse"
+
+#~ msgid "Tell me more"
+#~ msgstr "Ich will mehr wissen"
+
+#~ msgid "LAUNCHING SPRING 2016"
+#~ msgstr "LAUNCH IM FRÜHLING 2016"

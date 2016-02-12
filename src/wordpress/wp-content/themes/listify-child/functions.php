@@ -26,8 +26,8 @@ function bh_enqueue_scripts() {
 		wp_enqueue_script( 'bh_landing', get_stylesheet_directory_uri() . "/js/landing.js", array( 'jquery' ), BH_VERSION );
 
 		wp_localize_script( 'bh_landing', 'objectL10n', array(
-			'email'  => esc_html__('Your email address', 'babyhallo'),
-			'submit' => esc_html__( 'Tell me more', 'babyhallo' ),
+			'email'  => esc_html__('e.g. me@google.com', 'babyhallo'),
+			'submit' => esc_html__( 'Submit', 'babyhallo' ),
 		) );
 	}
 }
