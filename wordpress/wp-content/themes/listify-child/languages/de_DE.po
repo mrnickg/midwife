@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: babyhallo\n"
-"POT-Creation-Date: 2016-02-11 13:30+0100\n"
-"PO-Revision-Date: 2016-02-12 09:38+0100\n"
+"POT-Creation-Date: 2016-02-13 19:45+0100\n"
+"PO-Revision-Date: 2016-02-13 19:46+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -1088,46 +1088,66 @@ msgstr ""
 msgid "<b>Receive</b> monthly summaries about your business activities"
 msgstr "<b>Lass</b> Dir alle geleisteten Aktivitäten monatlich zusammenfassen"
 
-#: themes/listify-child/templates/template_mvp1.php:20
+#: themes/listify-child/templates/template_mvp1.php:13
+msgid "Midwife Frankfurt Search and Book."
+msgstr "Hebammen Frankfurt"
+
+#: themes/listify-child/templates/template_mvp1.php:21
 msgid "Welcome to"
 msgstr "Willkommen bei"
 
-#: themes/listify-child/templates/template_mvp1.php:21
+#: themes/listify-child/templates/template_mvp1.php:22
 msgid "BABYHALLO"
 msgstr "BABYHALLO"
 
-#: themes/listify-child/templates/template_mvp1.php:24
-msgid "The simplest way to find a midwife"
-msgstr "Wir machen eure Hebammensuche einfach"
+#: themes/listify-child/templates/template_mvp1.php:25
+msgid "Find and book a Midwife in Frankfurt"
+msgstr "Wir finden eure Hebammen in Frankfurt"
 
-#: themes/listify-child/templates/template_mvp1.php:37
+#: themes/listify-child/templates/template_mvp1.php:38
 msgid "HOW IT WORKS"
 msgstr "WIE FUNKTIONIERT ES?"
 
-#: themes/listify-child/templates/template_mvp1.php:49
+#: themes/listify-child/templates/template_mvp1.php:45
+msgid "Midwife Frankfurt details"
+msgstr "Hebammen Frankfurt Details"
+
+#: themes/listify-child/templates/template_mvp1.php:50
 msgid "You tell us what you need from your Midwife"
 msgstr "Du erzählst uns, wie Deine perfekte Hebamme sein sollte"
 
-#: themes/listify-child/templates/template_mvp1.php:65
+#: themes/listify-child/templates/template_mvp1.php:61
+msgid "Midwife Frankfurt search"
+msgstr "Hebammen Frankfurt suche"
+
+#: themes/listify-child/templates/template_mvp1.php:66
 msgid "We search for local Midwives that fit your needs"
 msgstr "Wir suchen die idealen Hebammen für Dich"
 
-#: themes/listify-child/templates/template_mvp1.php:81
+#: themes/listify-child/templates/template_mvp1.php:77
+msgid "Midwife Frankfurt choose"
+msgstr "Hebammen Frankfurt wählen"
+
+#: themes/listify-child/templates/template_mvp1.php:82
 msgid ""
 "We send you a shortlist of the best profiles and you pick the Midwife that "
 "you prefer"
 msgstr ""
 "Wir schicken Dir eine Liste von passenden Profilen und Du wählst daraus aus"
 
-#: themes/listify-child/templates/template_mvp1.php:97
+#: themes/listify-child/templates/template_mvp1.php:93
+msgid "Midwife Frankfurt book"
+msgstr "Midwife Frankfurt buchen"
+
+#: themes/listify-child/templates/template_mvp1.php:98
 msgid "We register you for Postpartum Care and book your initial appointment"
 msgstr "Wir kümmern uns um Deine Wochenbettbetreuung und Deine ersten Termine"
 
-#: themes/listify-child/templates/template_mvp1.php:108
+#: themes/listify-child/templates/template_mvp1.php:109
 msgid "WHAT IT COSTS"
 msgstr "WAS KOSTET ES?"
 
-#: themes/listify-child/templates/template_mvp1.php:128
+#: themes/listify-child/templates/template_mvp1.php:129
 msgid ""
 "No payment upfront.  You pay if you wish to see the shortlist of Midwives we "
 "have selected"
@@ -1135,7 +1155,7 @@ msgstr ""
 "Keine Vorauszahlung – Du bezahlst nur, wenn Du die Hebammenprofile sehen "
 "möchtest"
 
-#: themes/listify-child/templates/template_mvp1.php:131
+#: themes/listify-child/templates/template_mvp1.php:132
 msgid ""
 "We will immediately refund the full amount with no questions asked if you "
 "are unsatisfied with our selection"
@@ -1143,11 +1163,11 @@ msgstr ""
 "Wir geben Dir Dein Geld ohne Fragen zurück, wenn Du mit unserer Auswahl "
 "unzufrieden bist"
 
-#: themes/listify-child/templates/template_mvp1.php:142
+#: themes/listify-child/templates/template_mvp1.php:143
 msgid "LET US FIND YOU A MIDWIFE TODAY"
 msgstr "LASS UNS EINE HEBAMME FÜR DICH FINDEN"
 
-#: themes/listify-child/templates/template_mvp1.php:143
+#: themes/listify-child/templates/template_mvp1.php:144
 msgid ""
 "Fill in your details below and we will get back to you within 10 days with "
 "your shortlist of personally selected Midwives."
@@ -1317,6 +1337,9 @@ msgid ""
 msgstr ""
 "<a href='/my-account'>Sign up now</a> to create your profile page and start "
 "taking bookings from parents"
+
+#~ msgid "The simplest way to find a midwife"
+#~ msgstr "Wir machen eure Hebammensuche einfach"
 
 #~ msgid "Your email address"
 #~ msgstr "Deine E-Mail-Adresse"

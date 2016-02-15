@@ -10,6 +10,7 @@ if (has_post_thumbnail( $post->ID )) :
 	$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
 	?>
 
+	<p class="hidden"><?php _e("Midwife Frankfurt Search and Book.", "babyhallo"); ?></p>
 
 	<div class="bh-banner-container container">
 		<div style="background-image: url(<?php echo $image[0]; ?>);" class="banner-image">
@@ -21,7 +22,7 @@ if (has_post_thumbnail( $post->ID )) :
 							<div class="banner-title blue"><?php _e('BABYHALLO', 'babyhallo'); ?></div>
 							<br/>
 							<br/>
-							<div class="banner-sub-title"><?php _e('The simplest way to find a midwife', 'babyhallo'); ?></div>
+							<h1 class="banner-sub-title"><?php _e('Find and book a Midwife in Frankfurt', 'babyhallo'); ?></h1>
 						</div>
 					</div>
 				</div>
@@ -41,7 +42,7 @@ if (has_post_thumbnail( $post->ID )) :
 									<ul class="vertical">
 										<li>
 											<div class="bh-content no-box">
-												<img src="<?php echo get_home_url().'/wp-content/uploads/2016/02/how_it_works_form.jpg'; ?>"/>
+												<img alt="<?php _e('Midwife Frankfurt details', "babyhallo"); ?>" src="<?php echo get_home_url().'/wp-content/uploads/how_it_works_form.jpg'; ?>"/>
 											</div>
 										</li>
 										<li>
@@ -57,7 +58,7 @@ if (has_post_thumbnail( $post->ID )) :
 									<ul class="vertical">
 										<li>
 											<div class="bh-content no-box">
-												<img src="<?php echo get_home_url().'/wp-content/uploads/2016/02/how_it_works_search.jpg'; ?>"/>
+												<img alt="<?php _e('Midwife Frankfurt search', "babyhallo"); ?>" src="<?php echo get_home_url().'/wp-content/uploads/how_it_works_search.jpg'; ?>"/>
 											</div>
 										</li>
 										<li>
@@ -73,7 +74,7 @@ if (has_post_thumbnail( $post->ID )) :
 									<ul class="vertical">
 										<li>
 											<div class="bh-content no-box">
-												<img src="<?php echo get_home_url().'/wp-content/uploads/2016/02/how_it_works_tick.jpg'; ?>"/>
+												<img alt="<?php _e('Midwife Frankfurt choose', "babyhallo"); ?>" src="<?php echo get_home_url().'/wp-content/uploads/how_it_works_tick.jpg'; ?>"/>
 											</div>
 										</li>
 										<li>
@@ -89,7 +90,7 @@ if (has_post_thumbnail( $post->ID )) :
 									<ul class="vertical">
 										<li>
 											<div class="bh-content no-box">
-												<img src="<?php echo get_home_url().'/wp-content/uploads/2016/02/how_it_works_cal.jpg'; ?>"/>
+												<img alt="<?php _e('Midwife Frankfurt book', "babyhallo"); ?>" src="<?php echo get_home_url().'/wp-content/uploads/how_it_works_cal.jpg'; ?>"/>
 											</div>
 										</li>
 										<li>

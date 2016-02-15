@@ -4,7 +4,7 @@
  * Disable menus for the landing page
  */
 function display_menus( $display ) {
-	return get_the_title() != 'Landing' && get_the_title() != 'Disclaimer' && get_the_title() != 'LandingMVP1';
+	return !is_front_page() && get_the_title() != 'Disclaimer';
 }
 
 add_filter( 'listify_display_menus', 'display_menus');
