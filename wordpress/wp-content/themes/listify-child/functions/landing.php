@@ -25,7 +25,7 @@ function add_header_banner() {
  * Redirect everything to landing page
  */
 function wpse_131562_redirect() {
-	if ( $_SERVER['REQUEST_URI'] != "/") {
+	if ( $_SERVER['REQUEST_URI'] != "/" && $_SERVER['REQUEST_URI'] != "/robots.txt") {
 		if ( isset( $_SERVER['HTTP_REFERER'] ) ) {
 			$refer = trim( $_SERVER['HTTP_REFERER'] );
 			if ( empty( $refer ) ) {
