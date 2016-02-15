@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: babyhallo\n"
 "POT-Creation-Date: 2016-02-13 19:45+0100\n"
-"PO-Revision-Date: 2016-02-13 19:46+0100\n"
+"PO-Revision-Date: 2016-02-15 11:46+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -1102,7 +1102,7 @@ msgstr "BABYHALLO"
 
 #: themes/listify-child/templates/template_mvp1.php:25
 msgid "Find and book a Midwife in Frankfurt"
-msgstr "Wir finden eure Hebammen in Frankfurt"
+msgstr "Wir finden Deine perfekte Hebamme in Frankfurt"
 
 #: themes/listify-child/templates/template_mvp1.php:38
 msgid "HOW IT WORKS"
